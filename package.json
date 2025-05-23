@@ -18,5 +18,8 @@
     "astro": "^5.7.13",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@astrojs/cloudflare": "^12.5.3"
   }
 }

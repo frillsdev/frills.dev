@@ -1,11 +1,9 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-
 import react from '@astrojs/react';
+import cloudflare from '@astrojs/cloudflare';
 
-// https://astro.build/config
 export default defineConfig({
     site: 'https://frills.dev',
     integrations: [mdx(), sitemap(), react()],
@@ -39,5 +37,7 @@ export default defineConfig({
         "/blog/240614-gemini/": "/blog/2024/june/gemini/",
         "/blog/241108-fill-up-your-cup.md/": "/blog/2024/november/fill-up-your-cup/",
         "/blog/241122-legends-lattes.md/": "/blog/2024/november/legends-and-lattes/",
-    }
+    },
+    output: 'server',
+    adapter: cloudflare(),
 });
