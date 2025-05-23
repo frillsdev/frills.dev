@@ -6,7 +6,6 @@ import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
     site: 'https://frills.dev',
-    integrations: [mdx(), sitemap(), react()],
     prefetch: {
         prefetchAll: true
     },
@@ -39,5 +38,12 @@ export default defineConfig({
         "/blog/241122-legends-lattes.md/": "/blog/2024/november/legends-and-lattes/",
     },
     output: 'server',
-    adapter: cloudflare(),
+    adapter: cloudflare({
+        routes: {
+            extend: {
+                include: [{ pattern: 'src/pages/api/*' }]
+            }
+        },
+    }),
+    integrations: [mdx(), sitemap(), react()]
 });
