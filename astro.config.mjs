@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
-import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
   site: 'https://frills.dev',
@@ -11,11 +10,6 @@ export default defineConfig({
   },
   integrations: [mdx(), sitemap(), react()],
   output: 'server',
-  adapter: cloudflare({
-    routes: {
-      include: ['/api/*'],
-    },
-  }),
   redirects: {
     "/blog/230525-dev-rabbit-hole/": "/blog/2023/may/dev-rabbit-hole/",
     "/blog/2023-june/": "/blog/2023/june/notes/",
