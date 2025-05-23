@@ -9,6 +9,24 @@ export default defineConfig({
     prefetch: {
         prefetchAll: true
     },
+    integrations: [mdx(), sitemap(), react()],
+    output: 'server',
+    adapter: cloudflare({
+        routes: {
+            extend: {
+                include: [{ pattern: 'src/pages/api/**' }],
+            },
+        },
+    }),
+    vite: {
+        resolve: {
+            alias: {
+                'react-dom/server': import.meta.env.PROD
+                    ? 'react-dom/server.edge'
+                    : 'react-dom/server',
+            },
+        }
+    },
     redirects: {
         "/blog/230525-dev-rabbit-hole/": "/blog/2023/may/dev-rabbit-hole/",
         "/blog/2023-june/": "/blog/2023/june/notes/",
@@ -37,13 +55,4 @@ export default defineConfig({
         "/blog/241108-fill-up-your-cup.md/": "/blog/2024/november/fill-up-your-cup/",
         "/blog/241122-legends-lattes.md/": "/blog/2024/november/legends-and-lattes/",
     },
-    output: 'server',
-    adapter: cloudflare({
-        routes: {
-            extend: {
-                include: [{ pattern: 'src/pages/api/*' }]
-            }
-        },
-    }),
-    integrations: [mdx(), sitemap(), react()]
 });
