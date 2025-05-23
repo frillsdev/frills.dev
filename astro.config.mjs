@@ -13,11 +13,10 @@ export default defineConfig({
   output: 'server',
   adapter: cloudflare({
     routes: {
-      extend: {
-        include: ['/api/*']
-      },
+      include: ['/api/*'],
     },
   }),
+
   vite: {
     resolve: {
       alias: {
