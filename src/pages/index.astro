@@ -8,6 +8,7 @@ import BioGrid from "../components/homepage/BioGrid.astro";
 import Link from "../components/Link.astro";
 import CallOut from "../components/CallOut.astro";
 import LatestItem from "../components/LatestItem.astro";
+import NowPlaying from "../components/NowPlaying.jsx";
 ---
 
 <HomeLayout>
@@ -60,18 +61,15 @@ import LatestItem from "../components/LatestItem.astro";
       </a>
     </div>
     <article class="item">
-      <CallOut as="article" class={["callout--small", "callout--mastodon", "bg-wiggly"]} emoji={"🐘"} headerText={"<h2><a href='https://indieweb.social/@frills''>Mastodon</a></h2>"} bodyText={"<p class='small'>Follow me for toots!</p>"} />
+      <CallOut as="article" class={["callout--small", "callout--mastodon", "bg-wiggly"]} emoji={"🐘"} headerText={"<h2><a href='https://indieweb.social/@frills'>Mastodon</a></h2>"} bodyText={"<p class='small'>Follow me for toots!</p>"} />
     </article>
-    <article class="item">
-      <CallOut as="article" class={["callout--small", "callout--neocities", "bg-wiggly"]} emoji={"🐘"} headerText={"<h2><a href='https://indieweb.social/@frills''>Mastodon</a></h2>"} bodyText={"<p class='small'>Follow me for toots!</p>"} />
-    </article>
-    <div class="item">
-      <!-- {% for latest in collections.status %} {% if latest.data.type == 'microblog' %} {% set latestStatus = latest.data.status | last %} {{ macro.callout( element = 'article', modifiers = 'callout--small', style = 'background:'+ latestStatus.bg +'!important; color:'+ latestStatus.textColor, emoji = '<img src="https://emojicdn.elk.sh/'+latestStatus.emoji+'?style=apple" alt="" />', header = '
+    <!-- <div class="item">
+      {% for latest in collections.status %} {% if latest.data.type == 'microblog' %} {% set latestStatus = latest.data.status | last %} {{ macro.callout( element = 'article', modifiers = 'callout--small', style = 'background:'+ latestStatus.bg +'!important; color:'+ latestStatus.textColor, emoji = '<img src="https://emojicdn.elk.sh/'+latestStatus.emoji+'?style=apple" alt="" />', header = '
     <h2>Latest status</h2>
-    ', body = latestStatus.text + '<small class="d-b subtext">'+latestStatus.date | readableDate("dd/MM/yy")+'</small> <a href="/status/" style="color: '+ latestStatus.textColor+'">See past statuses</a>' )}} {% endif %} {% endfor %} -->
-    </div>
+    ', body = latestStatus.text + '<small class="d-b subtext">'+latestStatus.date | readableDate("dd/MM/yy")+'</small> <a href="/status/" style="color: '+ latestStatus.textColor+'">See past statuses</a>' )}} {% endif %} {% endfor %}
+    </div> -->
     <div class="item">
-      <CallOut as="article" class={["callout--small", "noscriptHide"]} emoji={"🎧"} headerText={"<h2>Last played</h2>"} bodyText={"<span id='lfmSong'>No recently played song :(</span><small class='d-b subtext'><span id='lfmTime'>right now</span></small>"} />
+      <NowPlaying client:only="react" />
     </div>
     <div class="item item--safari">
       <!-- {{ macro.callout( element = 'article', modifiers = 'callout--small', emoji = '<img src="/images/emoji/book.png" alt="Books emoji" />', header = '

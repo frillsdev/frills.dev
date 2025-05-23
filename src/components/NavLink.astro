@@ -8,7 +8,7 @@ const isActive = href === pathname || href === "/" + (subpath?.[0] || "");
 ---
 
 <li>
-    <span class="emoji" aria-hidden="true">{emoji}</span>
+  <span class="emoji" aria-hidden="true">{emoji}</span>
   <Link href={href} class:list={[className]} {...props}>
     <slot />
   </Link>
