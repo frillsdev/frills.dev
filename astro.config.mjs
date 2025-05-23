@@ -16,16 +16,6 @@ export default defineConfig({
       include: ['/api/*'],
     },
   }),
-
-  vite: {
-    resolve: {
-      alias: {
-        'react-dom/server': import.meta.env.PROD
-          ? 'react-dom/server.edge'
-          : 'react-dom/server',
-      },
-    }
-  },
   redirects: {
     "/blog/230525-dev-rabbit-hole/": "/blog/2023/may/dev-rabbit-hole/",
     "/blog/2023-june/": "/blog/2023/june/notes/",
