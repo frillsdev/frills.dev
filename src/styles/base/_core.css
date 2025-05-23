@@ -1,0 +1,39 @@
+html {
+  font-size: var(--font-size);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:var(--font-family);
+  color: var(--text);
+  padding: 0;
+  margin: 0;
+  background-color: var(--bg);
+  position: relative;
+  padding-top: 0.25rem;
+}
+
+body::before {
+  content: '';
+  height: 0.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to right, var(--logo-anim-1), var(--logo-anim-2), var(--logo-anim-3), var(--logo-anim-4), gold, var(--logo-anim-6));
+}
+
+*:focus-visible {
+  outline: 3px solid orangered;
+  outline-offset: 5px;
+}
+
+*::selection {
+  color: var(--accentcontrast);
+  background-color: var(--accent);
+}
+
+main {
+  padding: 3rem 0 0 0;
+}

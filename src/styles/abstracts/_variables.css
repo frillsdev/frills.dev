@@ -1,0 +1,123 @@
+/* Global variables */
+:root {
+  font-family: "InterVariable", 'Tahoma', sans-serif;
+  font-optical-sizing: auto;
+  font-feature-settings: 'cv05' 1,
+    'cv06' 1,
+    'cv10' 1,
+    'cv11' 1,
+    'liga' 1,
+    'calt' 1,
+    'zero' 1,
+    'frac' 1,
+    'tnum' 1,
+    'dlig' 1,
+    'ss01' 1,
+    'ss02' 1,
+    'ss03' 1;
+  --font-size: 16px;
+  --wiggledown: radial-gradient(15.37px at 50% calc(100% - 21.60px), #000 99%, #0000 101%) calc(50% - 24px) 0/48px 100%, radial-gradient(15.37px at 50% calc(100% + 9.60px), #0000 99%, #000 101%) 50% calc(100% - 12px)/48px 100% repeat-x;
+  --wiggleup: radial-gradient(15.37px at 50% 21.60px, #000 99%, #0000 101%) 50% 0/48px 100%, radial-gradient(15.37px at 50% -9.6px, #0000 99%, #000 101%) calc(50% - 24px) 12px/48px 100% repeat-x;
+}
+
+@media (min-width: 576px) {
+  :root {
+    --font-size: 20px;
+  }
+}
+
+/* Colours */
+/* Dark mode */
+:root {
+  --bodybg: hsl(228, 38%, 13%);
+  --bg: hsl(228, 32%, 7%);
+  --highlight: Gold;
+  --accent: hsl(340, 100%, 67%);
+  --accentcontrast: Black;
+  --separator: PaleGreen;
+  --quote: PaleGreen;
+  --interactive: OrangeRed;
+  --input-bg: hsl(228, 38%, 13%);
+  --input-border: SpringGreen;
+  --input-text: hsl(228, 32%, 7%);
+  --link: DeepPink;
+  --linkaccent: hsl(328, 100%, 19%);
+  --linkhover: SpringGreen;
+  --linkvisited: Violet;
+  --text: LavenderBlush;
+  --subtext: PeachPuff;
+  --marker: "⭐";
+  --dashboard-header-bg: Gold;
+  --dashboard-text: Black;
+  --callout-info: DeepSkyBlue;
+  --logo-x: Gold;
+  --logo-anim-1: hsl(255, 70%, 70%);
+  --logo-anim-2: hsl(330, 70%, 70%);
+  --logo-anim-3: hsl(10, 100%, 60%);
+  --logo-anim-4: hsl(51, 100%, 60%);
+  --logo-anim-5: hsl(153, 70%, 70%);
+  --logo-anim-6: hsl(204, 70%, 70%);
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bodybg: hsl(340, 100%, 95%);
+    --bg: hsl(340, 100%, 92%);
+    --interactive: hsl(328, 100%, 44%);
+    --input-bg: LavenderBlush;
+    --input-border: DeepPink;
+    --input-text: hsl(228, 32%, 7%);
+    --separator: DeepPink;
+    --quote: hsl(328, 100%, 38%);
+    --highlight: hsl(195, 100%, 28%);
+    --accent: hsl(340, 100%, 67%);
+    --accentcontrast: Black;
+    --link: hsl(253, 100%, 37%);
+    --linkaccent: #FFB8D0;
+    --linkhover: hsl(253, 100%, 27%);
+    --linkvisited: Purple;
+    --text: hsl(253, 88%, 16%);
+    --subtext: DarkRed;
+    --marker: "💖";
+    --dashboard-header-bg: Gold;
+    --dashboard-text: Black;
+    --logo-x: Gold;
+    --logo-anim-1: hsl(255, 70%, 70%);
+    --logo-anim-2: hsl(330, 100%, 40%);
+    --logo-anim-3: hsl(10, 100%, 50%);
+    --logo-anim-4: hsl(320, 100%, 50%);
+    --logo-anim-5: hsl(204, 100%, 50%);
+    --logo-anim-6: hsl(153, 100%, 30%);
+  }
+}
+
+:root[data-scheme='light'] {
+  --bodybg: hsl(340, 100%, 95%);
+  --bg: hsl(340, 100%, 92%);
+  --interactive: hsl(328, 100%, 44%);
+  --input-bg: LavenderBlush;
+  --input-border: DeepPink;
+  --input-text: hsl(228, 32%, 7%);
+  --separator: DeepPink;
+  --quote: hsl(328, 100%, 38%);
+  --highlight: hsl(195, 100%, 28%);
+  --accent: hsl(340, 100%, 67%);
+  --accentcontrast: Black;
+  --link: hsl(253, 100%, 37%);
+  --linkaccent: #FFB8D0;
+  --linkhover: hsl(253, 100%, 27%);
+  --linkvisited: Purple;
+  --text: hsl(253, 88%, 16%);
+  --subtext: DarkRed;
+  --marker: "💖";
+  --dashboard-header-bg: Gold;
+  --dashboard-text: Black;
+  --logo-x: Gold;
+  --logo-anim-1: hsl(255, 70%, 70%);
+  --logo-anim-2: hsl(330, 100%, 40%);
+  --logo-anim-3: hsl(10, 100%, 50%);
+  --logo-anim-4: hsl(320, 100%, 50%);
+  --logo-anim-5: hsl(204, 100%, 50%);
+  --logo-anim-6: hsl(153, 100%, 30%);
+}

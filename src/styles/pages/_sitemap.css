@@ -1,0 +1,46 @@
+ul.files li {
+  padding-left: 0.5rem;
+}
+
+ul.files ul {
+  padding-top: 1rem;
+}
+
+ul.files li {
+  list-style-type: '📄';
+}
+
+ul.files li li {
+  list-style-type: '📝';
+}
+
+ul.files li ul {
+  border-left: 2px solid var(--bodybg);
+  padding-left: 2rem;
+}
+
+ul.files li:has(details) {
+  list-style-type: '📁';
+}
+ul.files li:has(details[open]) {
+  list-style-type: '📂';
+}
+
+ul.files details>summary {
+  text-decoration: none;
+  list-style: none;
+}
+
+ul.files details>summary::hover,
+ul.files details>summary::focus,
+ul.files details>summary::active {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-style: wavy;
+  text-underline-offset: 2px;
+}
+
+ul.files details>summary::marker,
+ul.files details>summary::-webkit-details-marker {
+  display: none;
+}

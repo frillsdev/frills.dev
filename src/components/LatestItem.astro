@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+
+const { collection = "blog", title, basePath = `/${collection}` } = Astro.props;
+
+const items = await getCollection(collection);
+const sortedItems = items.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+const latest = sortedItems[0];
+---
+
+{
+  latest && (
+    <article class="pb-1 h-sm">
+      <h3>{title}</h3>
+      <a href={`${basePath}/${latest.slug}`}>{latest.data.title}</a>
+      <p class="description">{latest.data.description}</p>
+    </article>
+  )
+}

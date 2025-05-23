@@ -1,0 +1,17 @@
+<div class="sidebar">
+  <slot />
+</div>
+<style>
+  .sidebar {
+    width: 100%;
+    flex: 0 0 100%;
+    height: auto;
+  }
+
+  @media (min-width: 992px) {
+    .sidebar {
+      width: 240px;
+      flex: 0 0 240px;
+    }
+  }
+</style>

@@ -1,0 +1,298 @@
+.settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1rem;
+  position: absolute;
+  top: 36px;
+  right: 1rem;
+}
+
+@media (min-width: 992px) {
+  .settings {
+    position: relative;
+    top: inherit;
+    right: inherit;
+    width: auto;
+    flex: 1 1 auto;
+  }
+}
+
+.bio {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 26px;
+  align-items: center;
+}
+
+@media (min-width: 480px) {
+  .bio {
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .bio {
+    grid-template-columns: 1fr;
+  }
+}
+
+.biogrid {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 8px;
+}
+
+.biogrid__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.biogrid__content {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+/* Avatar */
+.avatar {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 480px) {
+  .avatar {
+    max-width: 200px;
+  }
+}
+
+.avatar.__noradius img {
+  border-radius: 0;
+}
+
+@media (max-width: 768px) {
+  .avatar__hide {
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+
+.avatar__extra {
+  background-color: var(--bodybg);
+  padding: 30px 6px 12px 6px;
+  border-radius: 0 0 10px 10px;
+  mask: var(--wiggleup);
+  font-size: 75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  white-space: nowrap;
+  margin-top: -10px;
+}
+
+@media (min-width: 768px) {
+  .avatar__extra {
+    font-size: 50%;
+    border-radius: 0 0 20px 20px;
+    padding: 30px 10px 15px 10px;
+  }
+}
+
+.avatar img {
+  mask: var(--wiggledown);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 100px 100px 0 0;
+  overflow: hidden;
+}
+
+.avatar__script {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.avatar__script img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.swapped img {
+  background-color: transparent;
+}
+
+/* Status */
+.teams-status {
+  aspect-ratio: 1 / 1;
+  border-radius: 100px;
+  width: 24px;
+  display: inline-block;
+  position: relative;
+  transform: scale(0.75);
+}
+
+@media (min-width: 576px) {
+  .teams-status {
+    transform: scale(1);
+  }
+}
+
+/* Available */
+.teams-status[data-status="online"] {
+  background-color: #3db838;
+}
+
+.teams-status[data-status="online"]::before {
+  content: '';
+  width: 8px;
+  height: 4px;
+  border-bottom: 3px solid var(--bg);
+  border-left: 3px solid var(--bg);
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Offline */
+.teams-status[data-status="offline"] {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px grey;
+}
+
+.teams-status[data-status="offline"]::before,
+.teams-status[data-status="offline"]::after {
+  content: '';
+  width: 8px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: grey;
+}
+
+.teams-status[data-status="offline"]::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.teams-status[data-status="offline"]::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Busy */
+.teams-status[data-status="busy"] {
+  background-color: #cc0033;
+}
+
+/* Do Not Disturb */
+.teams-status[data-status="donotdisturb"] {
+  background-color: #cc0033;
+}
+
+.teams-status[data-status="donotdisturb"]::before {
+  content: '';
+  width: 10px;
+  height: 4px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: var(--bg);
+  transform: translate(-50%, -50%);
+}
+
+/* Away */
+.teams-status[data-status="away"] {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px Plum;
+}
+
+.teams-status[data-status="away"]::before,
+.teams-status[data-status="away"]::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.teams-status[data-status="away"]::before {
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid Plum;
+  border-top: 2px solid Plum;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  box-sizing: border-box;
+}
+
+.teams-status[data-status="away"]::after {
+  width: 10px;
+  height: 2px;
+  border-radius: 2px 0 0 2px;
+  background-color: Plum;
+  transform: translate(-50%, -50%);
+}
+
+.callout--neocities {
+  background-color: var(--accent);
+  color: var(--accentcontrast);
+  align-items: center;
+  position: relative;
+}
+
+.callout--neocities a {
+  color: var(--accentcontrast);
+}
+
+.callout--neocities a:hover,
+.callout--neocities a:focus,
+.callout--neocities a:active {
+  color: var(--accentcontrast);
+}
+
+.callout--neocities a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.callout--mastodon {
+  background-color: var(--callout-info);
+  color: var(--accentcontrast);
+  align-items: center;
+  position: relative;
+}
+
+.callout--mastodon a {
+  color: var(--accentcontrast);
+}
+
+.callout--mastodon a:hover,
+.callout--mastodon a:focus,
+.callout--mastodon a:active {
+  color: var(--accentcontrast);
+}
+
+.callout--mastodon a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#omglolh {
+  display: none;
+  padding-bottom: 5px;
+}
+
+.teams-statuslol_content #omglolh {
+  display: block;
+}

@@ -1,0 +1,59 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import * as CONSTS from "../consts";
+import { ClientRouter } from "astro:transitions";
+---
+
+<!doctype html>
+<html lang={CONSTS.SITE_LANGUAGE}>
+  <head>
+    <BaseHead title={CONSTS.SITE_TITLE} description={CONSTS.SITE_DESCRIPTION} />
+    <ClientRouter />
+    <style>
+      .page {
+        background-color: var(--bg);
+        max-width: 1600px;
+        margin: 0 auto;
+        min-height: 100vh;
+        padding: 0 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .page {
+          padding: 0 1.5rem;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .page {
+          padding: 0 4rem;
+        }
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+      }
+
+      main {
+        width: 100%;
+        flex: 1 1 auto;
+        display: flex;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <Header transition:persist />
+      <main>
+        <slot />
+      </main>
+    </div>
+    <Footer transition:persist />
+  </body>
+</html>

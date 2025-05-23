@@ -1,0 +1,21 @@
+details {}
+
+details.hidden summary:not(:hover):not(:focus):not(:active) {
+    color: var(--text);
+}
+
+summary {
+  text-decoration: underline;
+  color: var(--link);
+}
+
+summary:hover,
+summary:focus,
+summary:active,
+details[open] summary {
+  color: var(--linkhover);
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-style: wavy;
+  text-underline-offset: 2px;
+}

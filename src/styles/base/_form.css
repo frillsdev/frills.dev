@@ -1,0 +1,47 @@
+textarea,
+input,
+select {
+    display: block;
+    color: var(--text);
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    margin: 0 0 1rem 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+    outline: 3px solid var(--input-border);
+}
+
+textarea {
+    min-height: 5rem;
+    font-family:var(--font-family);
+}
+
+textarea.textarea--code {
+    font-family:monospace;
+    white-space: pre-wrap;
+    font-size: 0.5rem;
+    padding: 8px 10px;
+}
+
+input {
+    accent-color: var(--input-border);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin: 0 0 0.25rem 0;
+}
+
+.formhelp {
+    color: var(--quote)
+}

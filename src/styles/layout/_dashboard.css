@@ -1,0 +1,143 @@
+.dashboard {
+  column-width: 20rem;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-size: 90%;
+  flex: 1;
+}
+
+@media (min-width: 1435px) {
+  .dashboard {
+    column-width: 16em;
+  }
+}
+
+
+.dashboard.w-100 {
+  max-width: 100%;
+}
+
+.item {
+  width: 100%;
+  margin: 1rem 0;
+  break-inside: avoid;
+  display: flow-root;
+}
+
+@media (min-width: 992px) {
+  .item--safari:first-of-type,
+  .item:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.item figure {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.item .callout {
+  margin-bottom: 0;
+}
+
+.item-image {
+  background-color: var(--dashboard-header-bg);
+}
+
+.item-image img {
+  border-radius: 0.7rem;
+}
+
+.item--card {
+  background-color: var(--bodybg);
+  max-width: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.item--card header h2 {
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 0;
+  background-color: var(--dashboard-header-bg);
+  color: var(--dashboard-text);
+}
+
+.item--card>div {
+  padding: 1rem;
+}
+
+.item--card div :last-child {
+  margin-bottom: 0;
+}
+
+.item--center {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.item--gallery,
+.gallery {
+  image-rendering: crisp-edges;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.item--gallery figure,
+.gallery figure {
+  aspect-ratio: 1 / 1;
+}
+
+.item--gallery img,
+.gallery img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
+.item--latestposts .description {
+  font-size: 90%;
+  margin-bottom: 0rem;
+  background: var(--bg);
+  padding: 0.5rem;
+  margin-top: 3px;
+  border-radius: 0.375rem;
+  line-height: 1.2;
+}
+
+.item--latestposts .description>ul,
+.item--latestposts .description>ol {
+  padding: 0;
+  margin: 0;
+}
+
+.item--latestposts .description>ul li::marker,
+.item--latestposts .description>ol li::marker {
+  content: '';
+}
+
+.item--latestposts .description code,
+.item--latestposts .description pre {
+  font-size: inherit;
+  padding: 0.1rem 0.2rem 0.2rem 0.2rem;
+}
+
+.item--latestposts .description a,
+.item--latestposts .description a:visited {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.item--latestposts .description a:hover,
+.item--latestposts .description a:focus,
+.item--latestposts .description a:active {
+  color: var(--linkhover);
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-style: wavy;
+  text-underline-offset: 2px;
+}

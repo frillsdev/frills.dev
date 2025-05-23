@@ -1,0 +1,20 @@
+.curios.cards,
+.experiments.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .curios.cards,
+  .experiments.cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .curios.cards,
+  .experiments.cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

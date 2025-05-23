@@ -1,0 +1,142 @@
+.button {
+  font-family:var(--font-family);
+  text-decoration: none;
+  will-change: transform;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: gold;
+  color: black;
+  border: 0;
+  box-shadow: 4px 4px 0 0 DarkGoldenRod;
+  cursor: pointer;
+  transition: 0.3s ease transform, 0.3s ease background-color, 0.3s ease box-shadow;
+  display: inline-block;
+}
+
+.button.large {
+  font-size: 1rem;
+}
+
+.button:hover {
+  background-color: #eec900;
+}
+
+.button:hover,
+.button:active,
+.button[aria-pressed="true"] {
+  text-decoration: none;
+  color: black;
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 0 DarkGoldenRod;
+}
+
+.button.secondary,
+button.secondary {
+  color: var(--bg);
+  background-color: var(--link);
+  box-shadow: 4px 4px 0 0 var(--linkaccent);
+}
+
+.button.secondary:hover,
+button.secondary:hover {
+  background-color: var(--linkhover);
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 0 DarkGoldenRod;
+}
+
+.button.ghost,
+button.ghost {
+  will-change: transform;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: var(--bodybg);
+  color: var(--text);
+  border: 0;
+  box-shadow: inset 0 0 0 2px var(--link), 4px 4px 0 0 var(--linkaccent);
+  transition: 0.3s ease transform, 0.3s ease background-color, 0.3s ease box-shadow;
+}
+
+.button.ghost:hover,
+button.ghost:hover {
+  background-color: var(--bodybg);
+}
+.button.ghost:hover,
+button.ghost:hover,
+.button.ghost:active,
+.button.ghost[aria-pressed="true"],
+button.ghost:active,
+button.ghost[aria-pressed="true"] {
+  transform: translate(4px, 4px);
+  box-shadow: inset 0 0 0 2px var(--link), 0 0 0 0 var(--linkaccent);
+}
+
+button.hidden {
+  transform: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  color: var(--text);
+  font-size: inherit;
+}
+button.hidden:hover,
+button.hidden:focus,
+button.hidden:active,
+button[aria-pressed="true"] {
+  border: 0;
+  transform: none;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--linkhover);
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-style: wavy;
+  text-underline-offset: 2px;
+}
+
+button.dotted {
+  transform: none;
+  padding: 1px 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--text);
+  font-size: inherit;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+}
+button.dotted:hover,
+button.dotted:focus,
+button.dotted:active {
+  transform: none;
+  padding: 1px 0;
+  margin: 0;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--linkhover);
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  }
+
+/* Button groups */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+}
+
+.tinylytics_kudos.did_select {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 0 var(--link);
+    cursor: not-allowed;
+}
+.tinylytics_kudos.did_select:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 0 var(--link);
+    cursor: not-allowed;
+}

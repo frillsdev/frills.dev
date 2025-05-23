@@ -1,0 +1,74 @@
+.callout {
+  background-color: var(--bodybg);
+  margin: 0 0 1rem 0;
+  font-size: 90%;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .callout--right {
+    float: right;
+    width: 40%;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-size: 80%;
+  }
+}
+
+.callout-emoji,
+.callout-content {
+  padding: 1rem;
+}
+
+.callout-content {
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.callout--center {
+  align-items: center;
+}
+
+.callout--small .callout-emoji,
+.callout--small .callout-content {
+  padding: 0.5rem 0.75rem;
+}
+
+.callout-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0!important;
+}
+
+.callout-emoji,
+.callout-emoji .emoji {
+  font-size: 50px;
+  line-height: 1.5;
+  width: 84px;
+  flex: 0 0 84px;
+  text-align: center;
+}
+
+.callout-content header {
+  padding-bottom: 5px;
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.callout h2 {
+  font-size: inherit;
+  padding: 0;
+  margin: 0;
+  display: inline;
+  font-size: 111.111%;
+}
+
+small.subtext {
+  opacity: 0.75;
+  font-size: 0.7rem;
+}

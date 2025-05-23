@@ -1,0 +1,5 @@
+.listing li {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  margin-bottom: 0.1rem;
+}

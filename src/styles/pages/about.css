@@ -1,0 +1,377 @@
+:root,
+:root[data-scheme='dark'] {
+  --hue: 340;
+  --bg: hsl(var(--hue), 100%, 5%);
+  --bodybg: hsl(var(--hue), 45%, 15%);
+  --main-color: hsl(var(--hue), 100%, 86%);
+  --about-color: hsl(var(--hue), 100%, 74%);
+  --link: hsl(var(--hue), 100%, 74%);
+  --linkaccent: hsl(var(--hue), 100%, 74%);
+  --linkvisited: hsl(var(--hue), 100%, 80%);
+  --border-width: 0.25rem;
+  --border-color: hsl(var(--hue), 45%, 20%);
+  --bento-bg: hsl(var(--hue), 38%, 13%);
+  --bento-text: hsl(var(--hue), 100%, 90%);
+}
+
+:root[data-scheme='light'] {
+  --hue: 340;
+  --bg: hsl(var(--hue), 100%, 90%);
+  --bodybg: hsl(var(--hue), 100%, 94%);
+  --main-color: hsl(var(--hue), 100%, 86%);
+  --about-color: hsl(var(--hue), 100%, 31%);
+  --link: hsl(var(--hue), 100%, 31%);
+  --linkaccent: hsl(var(--hue), 100%, 31%);
+  --linkvisited: hsl(var(--hue), 100%, 31%);
+  --border-width: 0.25rem;
+  --border-color: hsl(var(--hue), 100%, 86%);
+  --bento-bg: hsl(var(--hue), 100%, 95%);
+  --bento-text: hsl(var(--hue), 100%, 13%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --hue: 340;
+    --bg: hsl(var(--hue), 100%, 90%);
+    --bodybg: hsl(var(--hue), 100%, 94%);
+    --main-color: hsl(var(--hue), 100%, 86%);
+    --about-color: hsl(var(--hue), 100%, 31%);
+    --link: hsl(var(--hue), 100%, 31%);
+    --linkaccent: hsl(var(--hue), 100%, 31%);
+    --linkvisited: hsl(var(--hue), 100%, 31%);
+    --border-width: 0.25rem;
+    --border-color: hsl(var(--hue), 100%, 86%);
+    --bento-bg: hsl(var(--hue), 100%, 95%);
+    --bento-text: hsl(var(--hue), 100%, 13%);
+  }
+}
+
+h1 {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Developement */
+
+.bigboibanner {
+  font-family: "Shrikhand", var(--font-family);
+  font-size: clamp(10vw, 10vw, 195px);
+  line-height: 1;
+  text-transform: lowercase;
+  display: flex;
+  align-items: center;
+  color: var(--about-color);
+  grid-column: 2 / span 1;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .bigboibanner {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width: 1400px) {
+  .bigboibanner {
+    font-size: 7rem;
+  }
+}
+
+.character-scroll {
+  color: var(--about-color);
+}
+
+.party-leader {
+  row-gap: clamp(0.5rem, 2.5vw, 1rem);
+  column-gap: clamp(0.5rem, 5vw, 1000rem);
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 30vw 1fr;
+}
+
+@media (min-width: 768px) {
+  .party-leader {
+    row-gap: clamp(0.5rem, 2.5vw, 1rem);
+    align-items: center;
+    grid-template-columns: 1fr 15rem;
+  }
+}
+
+.stat-block {
+  width: 100%;
+  flex: 1 1 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: var(--border-width) solid var(--border-color);
+  background-color: var(--border-color);
+  border-radius: 0.75rem;
+  gap: var(--border-width);
+  overflow: hidden;
+  grid-column: 1 / span 2;
+}
+
+@media (min-width: 768px) {
+  .stat-block {
+    grid-column: 1 / span 1;
+  }
+}
+
+.stat-block>* {
+  background-color: var(--bg);
+  padding: 0.9rem 1.1rem;
+  grid-column: span 2;
+}
+
+.stat-alignment,
+.stat-class {
+  grid-column: span 3;
+}
+
+[class^="stat-"] h2 {
+  font-family: "Shrikhand", var(--font-family);
+  font-size: 2vw;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+[class^="stat-"] p {
+  font-size: clamp(1.25rem, 3.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.character-portrait {
+  border-radius: 0.75rem;
+  border: var(--border-width) solid var(--border-color);
+  overflow: hidden;
+  display: flex;
+  place-items: center;
+  padding: calc(var(--border-width) * 2);
+  aspect-ratio: 1 / 1;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.character-portrait img {
+  border-radius: 0.5rem;
+  background-color: var(--main-color);
+}
+
+@media (min-width: 768px) {
+  .character-portrait {
+    border-radius: 1000px;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  .character-portrait img {
+    border-radius: 1000px;
+  }
+}
+
+.ability-scores {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  row-gap: 1rem;
+  column-gap: 2.5rem;
+  padding-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .ability-scores {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+.ability-scores>* {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ability-scores>*>h3 {
+  font-family: "Shrikhand", var(--font-family);
+  font-weight: 400;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.score,
+.score-modifier {
+  font-family: "Shrikhand", var(--font-family);
+  border-radius: 0.75rem;
+  background: var(--about-color);
+  color: var(--bg);
+  text-align: center;
+  margin: 0;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score {
+  border-radius: 2vw;
+  font-size: clamp(1.5rem, 3.5vw, 5rem);
+  aspect-ratio: 1 / 1;
+  padding: 1rem;
+  box-shadow: 0 0 0 var(--border-width) var(--border-color);
+  border: calc(var(--border-width) * 2) solid var(--bg);
+}
+
+.score-modifier {
+  font-size: 1rem;
+  font-family: var(--font-family);
+  border-radius: 100px;
+  border: var(--border-width) solid var(--bg);
+  padding: 4px 10px 2px 10px;
+  transform: translateY(-50%);
+  margin-bottom: 1rem;
+  min-width: 1.5rem;
+}
+
+.adventurer-tome {
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+  color: var(--bento-text);
+}
+
+@media (min-width: 768px) {
+  .adventurer-tome {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .adventure-tome-main {
+      grid-column: 1 / span 2;
+      grid-row: 1;
+    }
+  
+    .adventure-tome-stats {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  
+    .adventure-tome-items {
+      grid-column: 2;
+      grid-row: 2;
+    }
+}
+
+@media (min-width: 1060px) {
+  .adventurer-tome {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .adventure-tome-main {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .adventure-tome-stats {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .adventure-tome-items {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+.tome-entry {
+  border-radius: 0.75rem;
+  padding: 1rem;
+  border: var(--border-width) solid var(--border-color);
+  margin-bottom: 1rem;
+  flex: 1 1 auto;
+}
+
+.tome-entry :last-child {
+  margin-bottom: 0;
+}
+
+.tome-entry:not(:first-child):has(.tome-entry-title) {
+  margin-top: 1.5rem;
+}
+
+.tome-entry-title {
+  margin-top: -2rem;
+}
+
+.tome-entry-title span {
+  background-color: var(--bg);
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  font-family: "Shrikhand", var(--font-family);
+}
+
+.skill-scores .skill {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 90%;
+}
+
+.skill-scores .skill::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100px;
+  box-shadow: 0 0 0 0.1rem var(--bento-text);
+  border: 0.25rem solid var(--bg);
+  background-color: transparent;
+}
+
+.skill-scores .skill.proficient::before {
+  background-color: var(--bento-text);
+}
+
+.skill-modifier {
+  font-family: "Shrikhand", var(--font-family);
+  border-bottom: 0.1rem solid var(--border-color);
+  padding: 0 0.25rem;
+  margin-right: 0.25rem;
+  text-align: center;
+}
+
+#hp::-webkit-progress-value {
+  background-color: deeppink;
+}
+
+#xp::-webkit-progress-value {
+  background-color: MediumSeaGreen;
+}
+
+#mana::-webkit-progress-value {
+  background-color: deepskyblue;
+}
+
+#hp::-moz-progress-bar {
+  background-color: deeppink;
+}
+
+#xp::-moz-progress-bar {
+  background-color: MediumSeaGreen;
+}
+
+#mana::-moz-progress-bar {
+  background-color: deepskyblue;
+}

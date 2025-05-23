@@ -1,0 +1,17 @@
+---
+const { as: Element = "div", class: className, emoji, style, headerText, bodyText, ...props } = Astro.props;
+---
+
+<Element class:list={["callout", className]} style={style} {...props}>
+  {
+    emoji && (
+      <div class="callout-emoji">
+        <img src={`https://emojicdn.elk.sh/${emoji}?style=apple`} alt={emoji} />
+      </div>
+    )
+  }
+  <div class="callout-content">
+    {headerText && <header set:html={headerText} />}
+    {bodyText && <span set:html={bodyText} />}
+  </div>
+</Element>

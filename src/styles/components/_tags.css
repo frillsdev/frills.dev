@@ -1,0 +1,13 @@
+.tag {
+  color: var(--text);
+  font-size: 90%;
+  text-decoration: none;
+}
+.tag:visited {
+  color: var(--text);
+}
+
+.tag sup {
+  color: var(--accent);
+  padding: 0 0.2rem;
+}
