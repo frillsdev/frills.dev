@@ -1,15 +1,16 @@
+// @ts-check
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 
+// https://astro.build/config
 export default defineConfig({
   site: 'https://frills.dev',
+  integrations: [mdx(), sitemap(), react()],
   prefetch: {
     prefetchAll: true
   },
-  integrations: [mdx(), sitemap(), react()],
-  output: 'server',
   redirects: {
     "/blog/230525-dev-rabbit-hole/": "/blog/2023/may/dev-rabbit-hole/",
     "/blog/2023-june/": "/blog/2023/june/notes/",
@@ -37,5 +38,5 @@ export default defineConfig({
     "/blog/240614-gemini/": "/blog/2024/june/gemini/",
     "/blog/241108-fill-up-your-cup.md/": "/blog/2024/november/fill-up-your-cup/",
     "/blog/241122-legends-lattes.md/": "/blog/2024/november/legends-and-lattes/",
-  },
+  }
 });
