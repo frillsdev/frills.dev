@@ -8,7 +8,7 @@ import BioGrid from "../components/homepage/BioGrid.astro";
 import Link from "../components/Link.astro";
 import CallOut from "../components/CallOut.astro";
 import LatestItem from "../components/LatestItem.astro";
-import NowPlaying from "../components/NowPlaying.jsx";
+import SpotifyPlayer from "../components/SpotifyPlayer.jsx";
 ---
 
 <HomeLayout>
@@ -42,63 +42,54 @@ import NowPlaying from "../components/NowPlaying.jsx";
         <img src="https://piclog.blue/latest.php?id=152" alt="" loading="lazy" width="100" height="100" />
       </figure>
     </article>
-    <div class="item">
-      <h2 class="visually-hidden">Intro</h2>
-      <p>
-        <Greeting client:only="react" forceMessage={""}><span slot="fallback">Greetings</span></Greeting>, world wide web adventurer! Step into my humble internet emporium, where a delightful array of digital knick-knacks, whimsical whirligigs, half-baked thoughts and musings await you.
-      </p>
-      <p>
-        I am Frills <Speak client:only="react" speak={{ speakText: "Frills", speakPhonetics: "/frɪlz/" }} />, the proud webmistress of this website in this wondrous wifi world, learn more <Link href={"/about"}>about me</Link> or <Link href={"/colophon"}>about this website</Link>.
-      </p>
-      <p>Here you will find my latest <Link href={"/blog"}>thoughts</Link> and <Link href={"/experiments"}>experiments</Link>, <a href="/links">portals to other websites</a>, and <Link href={"/guestbook"}>messages</Link> left by other wanderers.</p>
+    <div class="av-br">
+      <div class="item">
+        <h2 class="visually-hidden">Intro</h2>
+        <p>
+          <Greeting client:only="react" forceMessage={""}><span slot="fallback">Greetings</span></Greeting>, world wide web adventurer! Step into my humble internet emporium, where a delightful array of digital knick-knacks, whimsical whirligigs, half-baked thoughts and musings await you.
+        </p>
+        <p>
+          I am Frills <Speak client:only="react" speak={{ speakText: "Frills", speakPhonetics: "/frɪlz/" }} />, the proud webmistress of this website in this wondrous wifi world, learn more <Link href={"/about"}>about me</Link> or <Link href={"/colophon"}>about this website</Link>.
+        </p>
+        <p>Here you will find my latest <Link href={"/blog"}>thoughts</Link> and <Link href={"/experiments"}>experiments</Link>, <a href="/links">portals to other websites</a>, and <Link href={"/guestbook"}>messages</Link> left by other wanderers.</p>
+      </div>
+      <div class="item">
+        <h2 class="visually-hidden">Shrines</h2>
+        <a href="/curios/orla" class="gallery" aria-label="Orla (my dog) shrine">
+          <img src="/images/curios/orla/orla1.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!" />
+          <img src="/images/curios/orla/orla16.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!" />
+          <img src="/images/curios/orla/orla17.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!" />
+        </a>
+      </div>
     </div>
     <div class="item">
-      <h2 class="visually-hidden">Shrines</h2>
-      <a href="/curios/orla" class="gallery" aria-label="Orla (my dog) shrine">
-        <img src="/images/curios/orla/orla1.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!" />
-        <img src="/images/curios/orla/orla16.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!" />
-        <img src="/images/curios/orla/orla17.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!" />
-      </a>
+      <CallOut as="article" class={["callout--small", "callout--mastodon"]} emoji={"🐘"} headerText={"<h2><a href='https://indieweb.social/@frills' class='hidden'>Mastodon</a></h2>"} bodyText={"<p class='small'>Follow me for toots!</p>"} />
     </div>
-    <article class="item">
-      <CallOut as="article" class={["callout--small", "callout--mastodon", "bg-wiggly"]} emoji={"🐘"} headerText={"<h2><a href='https://indieweb.social/@frills'>Mastodon</a></h2>"} bodyText={"<p class='small'>Follow me for toots!</p>"} />
-    </article>
+
+    <div class="item">
+      <article class="callout callout--small" style="background:indigo!important; color:Thistle">
+        <div class="callout-emoji">
+          <img src="https://emojicdn.elk.sh/🌌?style=apple" alt="" />
+        </div><div class="callout-content"><header><h2>Latest status</h2></header>Having insane fun with Astro! <small class="d-b subtext">27/04/25</small> <a href="/status/" style="color:Thistle" class="subtext">See past statuses</a></div>
+      </article>
+    </div>
+
+    <div class="item">
+      <SpotifyPlayer client:load="react" />
+    </div>
+
+    <div class="item">
+      <CallOut as="article" emoji={"📚"} headerText={"<h2>Currently reading</h2>"} bodyText={"<ol class='unstyled mb-0'><li><a href='https://app.thestorygraph.com/books/536ef25c-0b0f-48e8-a6bb-67856f21a223' class='hidden'>Welsh Witchcraft</a><small class='d-b small subtext'>Read last week</small></li><li><a href='https://app.thestorygraph.com/profile/frills' class='large-target subtext'>See what I'm reading on StoryGraph</a></li></ol>"} />
+    </div>
+
     <!-- <div class="item">
       {% for latest in collections.status %} {% if latest.data.type == 'microblog' %} {% set latestStatus = latest.data.status | last %} {{ macro.callout( element = 'article', modifiers = 'callout--small', style = 'background:'+ latestStatus.bg +'!important; color:'+ latestStatus.textColor, emoji = '<img src="https://emojicdn.elk.sh/'+latestStatus.emoji+'?style=apple" alt="" />', header = '
     <h2>Latest status</h2>
     ', body = latestStatus.text + '<small class="d-b subtext">'+latestStatus.date | readableDate("dd/MM/yy")+'</small> <a href="/status/" style="color: '+ latestStatus.textColor+'">See past statuses</a>' )}} {% endif %} {% endfor %}
     </div> -->
+
     <div class="item">
-      <NowPlaying client:only="react" />
-    </div>
-    <div class="item item--safari">
-      <!-- {{ macro.callout( element = 'article', modifiers = 'callout--small', emoji = '<img src="/images/emoji/book.png" alt="Books emoji" />', header = '
-    <h2>Currently reading</h2>
-    ', body = '
-    <ol class="unstyled mb-0">
-      <li>
-        <a href="https://app.thestorygraph.com/books/536ef25c-0b0f-48e8-a6bb-67856f21a223" class="hidden">Welsh Witchcraft</a>
-        <small class="d-b subtext"> Song of Achilles </small>
-      </li>
-      <li>
-        <a href="https://app.thestorygraph.com/profile/frills" class="large-target">See what I\'m reading on StoryGraph</a>
-      </li>
-    </ol>
-    ' )}} -->
-    </div>
-    <div class="item">
-      <!-- {{ macro.callout( element = 'article', modifiers = 'callout--small', emoji = '🎮', header = '
-    <h2>Currently playing</h2>
-    ', body = '
-    <ol class="unstyled mb-0">
-      <li>
-        <a href="https://store.steampowered.com/app/582500/We_Were_Here/" class="hidden">We Were Here</a>
-      </li>
-      <li>
-        <a href="https://store.steampowered.com/app/1435790/Escape_Simulator/" class="hidden">Escape Room Simulator</a>
-      </li>
-    </ol>
-    ' )}} -->
+      <CallOut as="article" emoji={"🍿"} headerText={"<h2>Last Watched</h2>"} bodyText={"<ol class='unstyled mb-0'><li><a href='https://app.thestorygraph.com/books/536ef25c-0b0f-48e8-a6bb-67856f21a223' class='hidden'>Welsh Witchcraft</a><small class='d-b small subtext'>Watched last week</small></li></ol>"} />
     </div>
     <section class="item item--card item--latestposts" aria-labelledby="latestposts--title">
       <header>

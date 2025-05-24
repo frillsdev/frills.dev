@@ -1,69 +1,183 @@
 .callout {
-  background-color: var(--bodybg);
-  margin: 0 0 1rem 0;
-  font-size: 90%;
-  border-radius: 0.75rem;
-  display: flex;
-  align-items: flex-start;
-}
-
-@media (min-width: 768px) {
-  .callout--right {
-    float: right;
-    width: 40%;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    font-size: 80%;
-  }
+    background-color: var(--bodybg);
+    margin: 0 0 1rem 0;
+    font-size: 90%;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.25;
 }
 
 .callout-emoji,
 .callout-content {
-  padding: 1rem;
+    padding: 1rem;
 }
 
 .callout-content {
-  width: 100%;
-  box-sizing: content-box;
+    width: 100%;
+    box-sizing: content-box;
 }
 
-.callout--center {
-  align-items: center;
-}
-
-.callout--small .callout-emoji,
-.callout--small .callout-content {
-  padding: 0.5rem 0.75rem;
+.callout .subtext {
+    font-size: 80%;
+    opacity: 0.7;
+    margin-top: 0.25rem;
 }
 
 .callout-emoji {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 0!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0 !important;
 }
 
 .callout-emoji,
 .callout-emoji .emoji {
-  font-size: 50px;
-  line-height: 1.5;
-  width: 84px;
-  flex: 0 0 84px;
-  text-align: center;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    width: 84px;
+    flex: 0 0 84px;
+    text-align: center;
 }
 
 .callout-content header {
-  padding-bottom: 5px;
+    padding-bottom: 0.25rem;
+}
+
+.callout header * {
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    font-size: 111.111%;
 }
 
 .callout p:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
-.callout h2 {
-  font-size: inherit;
-  padding: 0;
-  margin: 0;
-  display: inline;
-  font-size: 111.111%;
+.callout--small .callout-emoji,
+.callout--small .callout-content {
+    padding: 0.5rem 0.75rem;
+}
+
+.callout--mastodon {
+    background-color: deeppink;
+    color: black;
+    position: relative;
+    align-items: center;
+}
+
+.callout--mastodon a:hover,
+.callout--mastodon a:focus,
+.callout--mastodon a:active {
+    color: inherit;
+}
+
+.callout--mastodon a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.callout[data-player] {
+    transition: 0.3s ease all;
+    background-color: Plum;
+    color: Navy;
+    position: relative;
+}
+
+.callout[data-player] a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@keyframes shimmer {
+    to {
+        background-position-x: 0%
+    }
+}
+
+.callout[data-player="loading"] .callout-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.callout[data-player="loading"] span {
+    position: relative;
+    color: transparent;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.callout[data-player="loading"] span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    border-radius: 0.25rem;
+    background: linear-gradient(-45deg, rgb(201, 134, 201) 40%, Plum 50%, rgb(201, 134, 201) 60%);
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s infinite linear;
+}
+
+.callout[data-player="loading"] .callout-emoji span::before {
+    right: auto;
+    bottom: auto;
+    height: 64px;
+    width: 64px;
+    animation: shimmer 1s infinite linear;
+}
+
+.callout[data-player] .callout-emoji {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.callout[data-player] .callout-emoji img,
+.callout[data-player] .callout-emoji span {
+    border-radius: 0.75rem;
+}
+
+.callout[data-player] .callout-content a:hover,
+.callout[data-player] .callout-content a:focus,
+.callout[data-player] .callout-content a:active {
+    color: inherit;
+}
+
+.callout[data-player] .progress-time {
+    font-size: 0.5rem;
+    display: block;
+}
+
+.callout[data-player] progress {
+    height: 0.25rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.callout[data-player] progress[value]::-webkit-progress-bar,
+.callout[data-player] progress[value] {
+    background-color: rgba(0, 0, 128, 0.15);
+}
+
+.callout[data-player] progress[value]::-webkit-progress-value {
+    background-color: rgba(0, 0, 128, 0.15);
+}
+
+.callout[data-player] progress[value]::-moz-progress-bar {
+    background-color: rgba(0, 0, 128, 0.75);
 }
