@@ -1,14 +1,10 @@
 ---
 import NavLink from "./NavLink.astro";
 import Logo from "./Logo.astro";
-import { SITE_TITLE } from "../consts";
 ---
 
 <header class="grid grid--header">
-  <a href="/" class="logo">
-    <span class="visually-hidden">{SITE_TITLE}</span>
-    <Logo />
-  </a>
+  <Logo />
   <nav aria-label="Top level" class="page__nav page__nav--top">
     <ul>
       <NavLink href="/about" emoji="🌷">About</NavLink>
@@ -20,19 +16,20 @@ import { SITE_TITLE } from "../consts";
       <NavLink href="/guestbook" emoji="👋">Guestbook</NavLink>
     </ul>
   </nav>
-  <!-- <div class="settings noscriptHide">
-    <button id="colorSchemeButton" class="toggle toggle--colorscheme" aria-pressed="true"> Toggle dark theme </button>
-  </div> -->
 </header>
+
 <style>
   header {
     padding: 1.5rem 0 0 0;
     display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
   }
 
   @media (min-width: 768px) {
     header {
       padding: 3rem 0 0 0;
+      gap: 1.25rem;
     }
   }
 </style>

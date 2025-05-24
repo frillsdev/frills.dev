@@ -21,7 +21,7 @@ body::before {
   top: 0;
   left: 0;
   right: 0;
-  background-image: linear-gradient(to right, var(--logo-anim-1), var(--logo-anim-2), var(--logo-anim-3), var(--logo-anim-4), gold, var(--logo-anim-6));
+  background-image: linear-gradient(to right, violet, deeppink, orangered, gold, springgreen, deepskyblue);
 }
 
 *:focus-visible {
