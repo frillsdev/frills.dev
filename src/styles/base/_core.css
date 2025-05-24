@@ -17,11 +17,12 @@ body {
 body::before {
   content: '';
   height: 0.25rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-image: linear-gradient(to right, violet, deeppink, orangered, gold, springgreen, deepskyblue);
+  z-index: 99999999;
 }
 
 *:focus-visible {

@@ -63,7 +63,7 @@
 
 .callout--mastodon {
     background-color: deeppink;
-    color: black;
+    color: #430024;
     position: relative;
     align-items: center;
 }
@@ -179,5 +179,5 @@
 }
 
 .callout[data-player] progress[value]::-moz-progress-bar {
-    background-color: rgba(0, 0, 128, 0.75);
+    background-color: Navy;
 }

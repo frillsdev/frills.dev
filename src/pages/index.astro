@@ -8,7 +8,8 @@ import BioGrid from "../components/homepage/BioGrid.astro";
 import Link from "../components/Link.astro";
 import CallOut from "../components/CallOut.astro";
 import LatestItem from "../components/LatestItem.astro";
-import SpotifyPlayer from "../components/SpotifyPlayer.jsx";
+import SpotifyPlayer from "../components/LatestSong.jsx";
+import LatestBook from "../components/LatestBook.jsx";
 ---
 
 <HomeLayout>
@@ -72,6 +73,10 @@ import SpotifyPlayer from "../components/SpotifyPlayer.jsx";
           <img src="https://emojicdn.elk.sh/🌌?style=apple" alt="" />
         </div><div class="callout-content"><header><h2>Latest status</h2></header>Having insane fun with Astro! <small class="d-b subtext">27/04/25</small> <a href="/status/" style="color:Thistle" class="subtext">See past statuses</a></div>
       </article>
+    </div>
+
+    <div class="item">
+      <LatestBook client:only="react" />
     </div>
 
     <div class="item">
@@ -159,5 +164,4 @@ import SpotifyPlayer from "../components/SpotifyPlayer.jsx";
 	h >= 0 && h < 12 ? (m = "Good morning") : h >= 12 && h < 17 ? (m = "Good afternoon") : h >= 17 && h < 24 && (m = "Good evening"), (document.querySelector("#greetingText").innerHTML = m);
 
 	</script>
-	<script>let user="ooohbrap",url="https://lastfm-last-played.biancarosa.com.br/"+user+"/latest-song",song=document.querySelector("#lfmSong"),lastplayed=document.querySelector("#lfmTime");fetch(url).then(function(e){return e.json()}).then(function(e){song.innerHTML=e.track.name+" - "+e.track.artist["#text"],lastplayedunix=parseInt(e.track.date.uts),lastplayed.innerHTML=timeSince(lastplayedunix)});var timeSince=function(e){"object"!=typeof e&&(e=new Date(e));var t,o=Math.floor(new Date().getTime()/1e3-e),r=Math.floor(o/31536e3);return r>=1?t="year":(r=Math.floor(o/2592e3))>=1?t="month":(r=Math.floor(o/86400))>=1?t="day":(r=Math.floor(o/3600))>=1?t="hour":(r=Math.floor(o/60))>=1?t="minute":(r=o,t="second"),(r>1||0===r)&&(t+="s"),r+" "+t+" ago"};</script>
-	<script src="/js/avatar.js"></script> -->
+	-->

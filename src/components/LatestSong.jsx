@@ -24,7 +24,7 @@ function formatTimeAgo(iso) {
 
 }
 
-export default function LastPlayed() {
+export default function LastSong() {
   const [data, setData] = useState(null);
   const [progress, setProgress] = useState(null);
 
