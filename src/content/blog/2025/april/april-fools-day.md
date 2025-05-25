@@ -69,7 +69,7 @@ Next time you laugh at a prank on April Fools' Day, you're also laughing with hi
 
 
 <aside class="callout">
-  <div class="callout-emoji">
+  <div class="callout-image">
     🤔
   </div>
   <div class="callout-content">

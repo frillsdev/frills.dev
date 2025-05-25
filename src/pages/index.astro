@@ -63,20 +63,16 @@ import LatestBook from "../components/LatestBook.jsx";
         </a>
       </div>
     </div>
-    <div class="item">
+    <!-- <div class="item">
       <CallOut as="article" class={["callout--small", "callout--mastodon"]} emoji={"🐘"} headerText={"<h2><a href='https://indieweb.social/@frills' class='hidden'>Mastodon</a></h2>"} bodyText={"<p class='small'>Follow me for toots!</p>"} />
-    </div>
+    </div> -->
 
     <div class="item">
-      <article class="callout callout--small" style="background:indigo!important; color:Thistle">
-        <div class="callout-emoji">
+      <article class="callout" style="background:indigo!important; color:Thistle">
+        <div class="callout-image">
           <img src="https://emojicdn.elk.sh/🌌?style=apple" alt="" />
         </div><div class="callout-content"><header><h2>Latest status</h2></header>Having insane fun with Astro! <small class="d-b subtext">27/04/25</small> <a href="/status/" style="color:Thistle" class="subtext">See past statuses</a></div>
       </article>
-    </div>
-
-    <div class="item">
-      <LatestBook client:only="react" />
     </div>
 
     <div class="item">
@@ -84,7 +80,7 @@ import LatestBook from "../components/LatestBook.jsx";
     </div>
 
     <div class="item">
-      <CallOut as="article" emoji={"📚"} headerText={"<h2>Currently reading</h2>"} bodyText={"<ol class='unstyled mb-0'><li><a href='https://app.thestorygraph.com/books/536ef25c-0b0f-48e8-a6bb-67856f21a223' class='hidden'>Welsh Witchcraft</a><small class='d-b small subtext'>Read last week</small></li><li><a href='https://app.thestorygraph.com/profile/frills' class='large-target subtext'>See what I'm reading on StoryGraph</a></li></ol>"} />
+      <LatestBook client:only="react" />
     </div>
 
     <!-- <div class="item">

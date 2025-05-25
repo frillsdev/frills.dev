@@ -1,16 +1,33 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import TimeAgo from "./TimeAgo";
 
-export default function currentBook() {
+export default function CurrentBooks() {
+  const [currentBookList, setCurrentBookList] = useState([]);
 
-  const fetchBook = async () => {
-    const res = await fetch("https://literal-club-worker.frills-dev.workers.dev/");
-    const json = await res.json();
-    console.table(json);
-  };
-
-  useEffect(() => {
+  useState(() => {
+    const fetchBook = async () => {
+      const response = await fetch("https://literal-club-worker.frills-dev.workers.dev/reading");
+      const json = await response.json();
+      setCurrentBookList(json)
+    };
     fetchBook();
-  }, []);
-
-  return <span>Book</span>;
+  });
+  return (
+    <div>
+      {currentBookList.map((book) => (
+        <div className="callout callout--book" key={book.id}>
+          <div className="callout-image">
+            <img src={book.image} alt="" className="square"/>
+          </div>
+          <div className="callout-content">
+            <header><h2>Currently reading</h2></header>
+            <a href={book.link} className="hidden">{book.title} – {book.author}</a>
+            <p className="small subtext">
+              <TimeAgo dateTime={book.startedAt}/>
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 }

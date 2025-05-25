@@ -8,7 +8,7 @@
     line-height: 1.25;
 }
 
-.callout-emoji,
+.callout-image,
 .callout-content {
     padding: 1rem;
 }
@@ -24,15 +24,15 @@
     margin-top: 0.25rem;
 }
 
-.callout-emoji {
+.callout-image {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-right: 0 !important;
 }
 
-.callout-emoji,
-.callout-emoji .emoji {
+.callout-image,
+.callout-image .emoji {
     font-size: 2.5rem;
     line-height: 1.5;
     width: 84px;
@@ -56,7 +56,7 @@
     margin-bottom: 0;
 }
 
-.callout--small .callout-emoji,
+.callout--small .callout-image,
 .callout--small .callout-content {
     padding: 0.5rem 0.75rem;
 }
@@ -133,7 +133,7 @@
     animation: shimmer 1s infinite linear;
 }
 
-.callout[data-player="loading"] .callout-emoji span::before {
+.callout[data-player="loading"] .callout-image span::before {
     right: auto;
     bottom: auto;
     height: 64px;
@@ -141,14 +141,14 @@
     animation: shimmer 1s infinite linear;
 }
 
-.callout[data-player] .callout-emoji {
+.callout[data-player] .callout-image {
     display: flex;
     flex-direction: column;
     gap: 0;
 }
 
-.callout[data-player] .callout-emoji img,
-.callout[data-player] .callout-emoji span {
+.callout[data-player] .callout-image img,
+.callout[data-player] .callout-image span {
     border-radius: 0.75rem;
 }
 
@@ -180,4 +180,13 @@
 
 .callout[data-player] progress[value]::-moz-progress-bar {
     background-color: Navy;
+}
+
+.callout--player .callout-image img,
+.callout--book .callout-image img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    border-radius: 0.75rem;
 }

@@ -7,7 +7,7 @@ rss: true
 ---
 
 <aside class="callout">
-  <div class="callout-emoji">
+  <div class="callout-image">
     👩‍⚕️
   </div>
   <div class="callout-content">

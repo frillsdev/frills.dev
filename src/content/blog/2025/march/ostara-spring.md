@@ -53,7 +53,7 @@ Happy Ostara. May your days be lengthened by the light.
 🌷🌻🌼🌞
 
 <aside class="callout callout--center">
-  <div class="callout-emoji">
+  <div class="callout-image">
     🌸
   </div>
   <div class="callout-content">
