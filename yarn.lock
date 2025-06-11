@@ -3011,6 +3011,11 @@ graphql@^15.0.0:
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-15.10.1.tgz#e9ff3bb928749275477f748b14aa5c30dcad6f2f"
   integrity sha512-BL/Xd/T9baO6NFzoMpiMD7YUZ62R6viR5tp/MULVEnbYJXZA//kRNW7J0j1w/wXArgL0sCxhDfK5dczSKn3+cg==
 
+graphql@^16.11.0:
+  version "16.11.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.11.0.tgz#96d17f66370678027fdf59b2d4c20b4efaa8a633"
+  integrity sha512-mS1lbMsxgQj6hge1XZ6p7GPhbrtFwUFYi3wRzXAC/FmYnyXMTvvI3td3rjmQ2u8ewXueaSvRPWaEcgVVOT9Jnw==
+
 gray-matter@^4.0.2:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/gray-matter/-/gray-matter-4.0.3.tgz#e893c064825de73ea1f5f7d88c7a9f7274288798"
@@ -5449,6 +5454,11 @@ redux@^4.0.0, redux@^4.0.5, redux@^4.1.1, redux@^4.2.1:
   dependencies:
     "@babel/runtime" "^7.9.2"
 
+redux@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-5.0.1.tgz#97fa26881ce5746500125585d5642c77b6e9447b"
+  integrity sha512-M9/ELqF6fy8FwmkpnF0S3YKOqMyoWJ4+CS5Efg2ct3oY9daQvd/Pc71FpGZsVsbl3Cpb+IIcjBDUnnyBdQbq4w==
+
 regex-recursion@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/regex-recursion/-/regex-recursion-6.0.2.tgz#a0b1977a74c87f073377b938dbedfab2ea582b33"
@@ -6341,6 +6351,11 @@ type-fest@^4.21.0:
   version "4.41.0"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.41.0.tgz#6ae1c8e5731273c2bf1f58ad39cbae2c91a46c58"
   integrity sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==
+
+typescript@^5.8.3:
+  version "5.8.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.8.3.tgz#92f8a3e5e3cf497356f4178c34cd65a7f5e8440e"
+  integrity sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==
 
 ufo@^1.5.4, ufo@^1.6.1:
   version "1.6.1"
