@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 const { collection = "blog", title, basePath = `/${collection}` } = Astro.props;
 
 const items = await getCollection(collection);
-const sortedItems = items.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+const sortedItems = items.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 const latest = sortedItems[0];
 ---
 

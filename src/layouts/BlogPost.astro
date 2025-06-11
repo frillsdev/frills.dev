@@ -4,14 +4,14 @@ import FormattedDate from "../components/FormattedDate.astro";
 
 import BaseLayout from "./BaseLayout.astro";
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, date, updatedDate, heroImage } = Astro.props;
 ---
 
 <BaseLayout>
   <div class="prose">
     <div class="title">
       <div class="date">
-        <FormattedDate date={pubDate} />
+        <FormattedDate date={date} />
         {
           updatedDate && (
             <div class="last-updated-on">

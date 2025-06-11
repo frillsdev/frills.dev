@@ -22,6 +22,8 @@ const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href={new URL("rss.xml", Astro.site)} />
 <meta name="generator" content={Astro.generator} />
+<meta name="theme-color" content="hsl(228, 32%, 7%)" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="hsl(340, 100%, 92%)" media="(prefers-color-scheme: light)" />
 
 <!-- Font preloads -->
 <link rel="preload" href="/fonts/InterVariable.woff2" as="font" type="font/woff" crossorigin />
