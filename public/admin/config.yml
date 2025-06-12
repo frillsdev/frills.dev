@@ -3,7 +3,8 @@ backend:
   repo: frillsdev/frills.dev
   branch: main
   auth_scope: repo
-  squash_merges: true
+  site_domain: https://frills-dev.pages.dev
+  base_url: https://frills-dev.pages.dev
   commit_messages:
     create: 📝 Add {{collection}} - {{slug}}
     update: 📝 Update {{collection}} - {{slug}}
