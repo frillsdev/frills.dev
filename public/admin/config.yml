@@ -5,6 +5,7 @@ backend:
   auth_scope: repo
   site_domain: https://frills-dev.pages.dev
   base_url: https://frills-dev.pages.dev
+  auth_endpoint: /api/auth
   commit_messages:
     create: 📝 Add {{collection}} - {{slug}}
     update: 📝 Update {{collection}} - {{slug}}
