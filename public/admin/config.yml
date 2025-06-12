@@ -20,7 +20,7 @@ collections:
     label: "Blog"
     folder: "src/content/blog"
     slug: "{{slug}}"
-    path: "{{year}}/{{month}}/{{slug}}"
+    # path: ""
     format: "frontmatter"
     extension: "md"
     create: true
