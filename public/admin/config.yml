@@ -3,13 +3,17 @@ backend:
   repo: frillsdev/frills.dev
   branch: main
   auth_scope: repo
-commit_messages:
+  squash_merges: true
+  commit_messages:
     create: 📝 Add {{collection}} - {{slug}}
     update: 📝 Update {{collection}} - {{slug}}
     delete: 🔥 Delete {{collection}} - {{slug}}
     uploadMedia: 🖼️ Upload {{path}}
     deleteMedia: 🔥 Delete “{{path}}”
     openAuthoring: '{{message}}'
+# local_backend: true
+publish_mode: editorial_workflow
+
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
@@ -24,7 +28,7 @@ collections:
     format: "frontmatter"
     extension: "md"
     create: true
-    # preview_path: "/blog/{{year}}/{{month}}/{{slug}}"
+    preview_path: "blog/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publication Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss" }
