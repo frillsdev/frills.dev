@@ -14,8 +14,10 @@ backend:
     deleteMedia: 🔥 Delete “{{path}}”
     openAuthoring: '{{message}}'
 
-media_folder: "assets/images/uploads"
-public_folder: "/assets/images/uploads"
+logo_url: /images/logo-cms.gif
+
+media_folder: "public/images/uploads"
+public_folder: "/public/images/uploads"
 
 collections:
   - name: "blog"
