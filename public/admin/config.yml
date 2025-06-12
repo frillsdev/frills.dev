@@ -11,24 +11,18 @@ backend:
     uploadMedia: 🖼️ Upload {{path}}
     deleteMedia: 🔥 Delete “{{path}}”
     openAuthoring: '{{message}}'
-# local_backend: true
-publish_mode: editorial_workflow
-
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
-
 
 collections:
   - name: "blog"
     label: "Blog"
     folder: "src/content/blog"
     slug: "{{slug}}"
-    # path: ""
     format: "frontmatter"
     extension: "md"
     create: true
-    preview_path: "blog/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publication Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss" }
