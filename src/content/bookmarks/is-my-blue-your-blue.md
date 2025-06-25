@@ -4,4 +4,7 @@ description: A colour naming test designed to measure your personal blue-green b
 url: https://ismy.blue/
 date: 2024-09-02
 rss: true
+tags:
+    - fun
+    - experiment
 ---

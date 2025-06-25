@@ -4,4 +4,9 @@ description: Discovered via <a href="https://brandonwrites.xyz/links/">Brandon W
 url: https://ooh.directory/
 date: 2024-01-17
 rss: true
+tags:
+    - archive
+    - tool
+    - search
+    - indie-web
 ---

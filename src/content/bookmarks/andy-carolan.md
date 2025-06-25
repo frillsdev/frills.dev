@@ -4,4 +4,7 @@ description: Andy is a talented illustrator and designer, every now and again he
 url: https://www.andycarolan.com/
 date: 2024-01-23
 rss: true
+tags:
+    - people
+    - designer
 ---

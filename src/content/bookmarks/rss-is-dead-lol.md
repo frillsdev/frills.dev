@@ -4,4 +4,7 @@ description: Type in your Mastodon URL and explore RSS feeds in your network. Re
 url: https://rss-is-dead.lol/
 date: 2024-03-01 02:40:00
 rss: true
+tags:
+    - tool
+    - rss
 ---

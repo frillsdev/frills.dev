@@ -4,4 +4,9 @@ description: Robb's extension on James' <a href="https://jamesg.blog/2024/02/19/
 url: https://rknight.me/blog/more-things-you-can-do-on-your-website/
 date: 2024-02-20
 rss: true
+tags:
+    - blog
+    - thoughts
+    - ideas
+    - indie-web
 ---

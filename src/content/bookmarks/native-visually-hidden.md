@@ -4,4 +4,8 @@ description: Ben Myers explores ideas for how we could turn <code>.visually-hidd
 url: https://benmyers.dev/blog/native-visually-hidden/
 date: 2024-04-10
 rss: true
+tags:
+    - blog
+    - thoughts
+    - web-technology
 ---

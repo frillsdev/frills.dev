@@ -4,4 +4,8 @@ description: Jessica Wang breakdowns down what SSH is with images and easy-to-un
 url: https://dev.to/therubberduckiee/explaining-ssh-to-my-uber-driver-38a
 date: 2024-01-16
 rss: true
+tags:
+    - blog
+    - ssh
+    - protocol
 ---

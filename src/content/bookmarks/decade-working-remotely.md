@@ -4,4 +4,8 @@ description: Lynn reflects on 10 years of working remotely with a list of though
 url: https://lynnandtonic.com/thoughts/entries/a-decade-of-working-remotely/
 date: 2024-02-22
 rss: true
+tags:
+    - blog
+    - remote-working
+    - thoughts
 ---

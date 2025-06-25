@@ -23,9 +23,10 @@ const bookmarks = defineCollection({
 	loader: glob({ base: './src/content/bookmarks', pattern: '**/*.md' }),
 	schema: z.object({
 		title: z.string(),
-		description: z.string(),
 		url: z.string().url(),
+		description: z.string(),
 		date: z.coerce.date(),
+		tags: z.array(z.string()).optional(), // 💡 this line
 		rss: z.boolean().default(true),
 	}),
 });

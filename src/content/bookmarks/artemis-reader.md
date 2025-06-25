@@ -4,4 +4,7 @@ description: Artemis is a calm web reader for following your favorite websites a
 url: https://artemis.jamesg.blog/
 date: 2024-12-19
 rss: true
+tags:
+    - tool
+    - rss
 ---

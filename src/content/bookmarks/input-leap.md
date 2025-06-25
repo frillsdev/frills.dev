@@ -4,4 +4,7 @@ description: Mimics the functionality of a KVM switch, which historically would 
 url: https://github.com/input-leap/input-leap
 date: 2025-02-21
 rss: true
+tags:
+    - tool
+    - remote-working
 ---

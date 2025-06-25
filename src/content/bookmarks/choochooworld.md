@@ -4,4 +4,7 @@ description: A research project by <a href="https://lusion.co/">Lusion</a>, aime
 url: https://choochooworld.com
 date: 2024-12-11
 rss: true
+tags:
+    - game
+    - webgl
 ---

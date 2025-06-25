@@ -4,4 +4,8 @@ description: Chris makes stuff. He made <a href="https://rogule.com/">Rogule</a>
 url: https://mccormick.cx/
 date: 2024-01-12
 rss: true
+tags:
+    - people
+    - developer
+    - game
 ---

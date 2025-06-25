@@ -4,4 +4,7 @@ description: This Bookmarks collection is inspired by Flamed Fury. They are an a
 url: https://flamedfury.com/bookmarks/
 date: 2024-01-10
 rss: true
+tags:
+    - people
+    - indie-web
 ---

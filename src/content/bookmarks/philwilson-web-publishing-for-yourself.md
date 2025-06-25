@@ -4,4 +4,8 @@ description: '"I do sometimes wonder if other people browse the web in the same 
 url: https://philwilson.org/blog/2024/03/web-publishing-for-yourself/
 date: 2024-03-18
 rss: true
+tags:
+    - blog
+    - thoughts
+    - people
 ---

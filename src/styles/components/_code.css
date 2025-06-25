@@ -41,6 +41,7 @@ code {
 	color: var(--subtext);
 	padding: 0.2rem 0.4rem;
 	margin: 0 0 1rem 0;
+	font-size: inherit;
 }
 
 pre.hidden,

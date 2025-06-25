@@ -4,4 +4,8 @@ description: Parks around the world handpicked by the internet that are perfect 
 url: https://www.placestoread.xyz/
 date: 2025-05-24
 rss: true
+tags:
+    - tool
+    - fun
+    - reading
 ---
