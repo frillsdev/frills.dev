@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+const posts = (await getCollection("bookmarks")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout>
+  <section>
+    <h1 class="">Bookmarks</h1>
+    <ol reversed class="bookmarks cards">
+      {
+        posts.map((post) => (
+          <li class="card h-cite u-like-of">
+            <div class="card__content">
+              <a rel="p-name u-url" href={`/bookmarks/${post.id}/`} class="card__title">
+                {post.data.title}
+              </a>
+              <p class="card__url">
+                <img src={`https://v1.indieweb-avatar.11ty.dev/${encodeURIComponent(post.data.url)}`} class="card__favicon" loading="lazy" alt="" />{post.data.url}</p>
+              <p class="card__description">{post.data.description}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+</BaseLayout>
+
+<style>
+  .bookmarks.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-inline-start: 0;
+    padding-top: 1rem;
+  }
+
+  @media (min-width: 576px) {
+    .bookmarks.cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .bookmarks.cards {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .bookmarks.cards {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  .bookmarks.cards .card__url {
+    position: static;
+    display: block;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: var(--link);
+    word-break: break-all;
+  }
+
+  .bookmarks.cards .card__title:visited ~ .bookmarks.cards .card__url {
+    color: var(--linkvisited);
+  }
+
+  .bookmarks.cards .card__title:hover ~ .card__url,
+  .bookmarks.cards .card__title:focus ~ .card__url {
+    color: var(--linkhover);
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-style: wavy;
+    text-underline-offset: 2px;
+  }
+
+  .bookmarks.cards .card__favicon {
+    width: 1rem;
+    height: 1rem;
+    display: inline;
+    margin-right: 0.5rem;
+    transform: translateY(0.2rem);
+  }
+</style>

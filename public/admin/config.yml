@@ -12,7 +12,7 @@ backend:
     delete: 🔥 Delete {{collection}} - {{slug}}
     uploadMedia: 🖼️ Upload {{path}}
     deleteMedia: 🔥 Delete “{{path}}”
-    openAuthoring: '{{message}}'
+    openAuthoring: "{{message}}"
 
 logo_url: /images/logo-cms.gif
 
@@ -35,3 +35,16 @@ collections:
       - { label: "Tags", name: "tags", widget: "list", default: [] }
       - { label: "Include in RSS", name: "rss", widget: "boolean", default: true }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "bookmarks"
+    label: "Bookmarks"
+    folder: "src/content/bookmarks"
+    slug: "{{slug}}"
+    format: "frontmatter"
+    extension: "md"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Publication Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", default: "" }
+      - { label: "Include in RSS", name: "rss", widget: "boolean", default: true }

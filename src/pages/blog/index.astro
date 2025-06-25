@@ -8,6 +8,7 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf()
 
 <BaseLayout>
   <section class="listing">
+    <h1>Blog</h1>
     <ol reversed>
       {
         posts.map((post) => (
