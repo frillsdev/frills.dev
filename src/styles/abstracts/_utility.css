@@ -109,8 +109,9 @@
 }
 
 .reading-width {
-  max-width: 700px;
   width: 100%;
+  max-width: 60ch;
+  flex: 0 1 60ch;
 }
 
 .full-width {

@@ -20,7 +20,7 @@ You need buy in. Not money buy in, like mind buy in. It feels weird to go round 
 
 - Decorate your surroundings with nature, bring the colours indoors, greens, browns, wood, house plants, essential oils.
 - Work outside if you can: take that meeting outside; bring your laptop into the garden; get some fresh air at lunchtime. 
-- If you can't work outside, open that goddamn window! Especially when it's raining. *Frills drools at the smell of petrichor*
+- If you can't work outside, open that goddamn window! Especially when it's raining. <i>drools at the smell of petrichor</i>
 - [Go for a stupid little walk for your stupid mental health](https://www.youtube.com/shorts/YLveBiwn3RY).
 - Look up, notice what isn't directly in your eyeline.
 - Touch grass. Honestly, just touch it.

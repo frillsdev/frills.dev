@@ -80,17 +80,7 @@ import LatestBook from "../components/LatestBook.jsx";
     </div>
 
     <div class="item">
-      <LatestBook client:only="react" />
-    </div>
-
-    <!-- <div class="item">
-      {% for latest in collections.status %} {% if latest.data.type == 'microblog' %} {% set latestStatus = latest.data.status | last %} {{ macro.callout( element = 'article', modifiers = 'callout--small', style = 'background:'+ latestStatus.bg +'!important; color:'+ latestStatus.textColor, emoji = '<img src="https://emojicdn.elk.sh/'+latestStatus.emoji+'?style=apple" alt="" />', header = '
-    <h2>Latest status</h2>
-    ', body = latestStatus.text + '<small class="d-b subtext">'+latestStatus.date | readableDate("dd/MM/yy")+'</small> <a href="/status/" style="color: '+ latestStatus.textColor+'">See past statuses</a>' )}} {% endif %} {% endfor %}
-    </div> -->
-
-    <div class="item">
-      <CallOut as="article" emoji={"🍿"} headerText={"<h2>Last Watched</h2>"} bodyText={"<ol class='unstyled mb-0'><li><a href='https://app.thestorygraph.com/books/536ef25c-0b0f-48e8-a6bb-67856f21a223' class='hidden'>Welsh Witchcraft</a><small class='d-b small subtext'>Watched last week</small></li></ol>"} />
+      <CallOut as="article" emoji={"📚"} headerText={"<h2>Currently Reading</h2>"} bodyText={"<ol class='unstyled mb-0'><li><a href='https://app.thestorygraph.com/books/536ef25c-0b0f-48e8-a6bb-67856f21a223' class='hidden'>Welsh Witchcraft</a><small class='d-b subtext'> Mhara Starling </small>  </li>  <li><a href='https://app.thestorygraph.com/books/d9c7ed04-6148-4e01-a118-d96cba16f507' class='hidden'>The Midnight Library</a><small class='d-b subtext'>Matt Haig</small></li><li><a href='https://app.thestorygraph.com/profile/frills' class='large-target'>See what I'm reading on StoryGraph</a></li></ol>"} />
     </div>
     <section class="item item--card item--latestposts" aria-labelledby="latestposts--title">
       <header>

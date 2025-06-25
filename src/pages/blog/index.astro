@@ -7,7 +7,7 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf()
 ---
 
 <BaseLayout>
-  <section>
+  <section class="listing">
     <ol reversed>
       {
         posts.map((post) => (
@@ -24,9 +24,23 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.date.valueOf()
 </BaseLayout>
 
 <style>
+  ol {
+    padding-inline-start: 0;
+  }
   ol li {
     display: grid;
     grid-template-columns: 8rem 1fr;
     margin-bottom: 0.1rem;
+  }
+
+  .listing {
+    width: 60ch;
+    flex: 0 1 60ch;
+  }
+
+  @media (min-width: 768px) {
+    .listing {
+      margin: 0 0 0 13.25rem;
+    }
   }
 </style>
