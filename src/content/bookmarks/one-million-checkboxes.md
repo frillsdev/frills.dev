@@ -5,7 +5,7 @@ url: https://eieio.games/essays/the-secret-in-one-million-checkboxes/
 date: 2024-08-31
 rss: true
 tags:
-    - blog
+    - article
     - info-sec
     - fun
 ---

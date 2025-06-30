@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import "../../styles/components/_avatar.css";
 import AvatarImage from "./AvatarImage.jsx";
 
 export default function AvatarSwapper() {
@@ -20,4 +21,3 @@ export default function AvatarSwapper() {
     </div>
   )
 }
-

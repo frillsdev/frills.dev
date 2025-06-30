@@ -6,6 +6,6 @@ date: 2024-06-03
 rss: true
 tags:
     - tool
-    - blog
+    - article
     - food
 ---

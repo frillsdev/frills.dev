@@ -5,6 +5,7 @@ date: 2025-05-09 14:00:00
 tags:
   - interests
 rss: true
+heroImage: /images/blog/2025/may/dokiwatch.webp
 ---
 
 For my sins, I play Overwatch. <em>A lot</em>.

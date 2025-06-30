@@ -1,9 +1,13 @@
 ---
 title: Down The Garden Path - Digital Gardens
+description: A link series on Digital Gardens
 date: 2025-06-23 09:33:22
 updatedDate: ""
 draft: false
-tags: []
+tags:
+    - links
+    - digital-garden
+    - article
 rss: false
 ---
 I fell down the garden path, reading about digital gardens and the small web. Please follow me down...

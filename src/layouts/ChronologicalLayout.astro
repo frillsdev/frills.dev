@@ -1,0 +1,48 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import { getCollection } from "astro:content";
+
+const { collections, title } = Astro.props;
+
+// fetch posts from each collection
+const allPosts = (await Promise.all(collections.map((name) => getCollection(name)))).flat();
+
+// sort them by date (descending)
+const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout>
+  <div class="grid grid__2">
+    <section class="listing">
+      <h1>{title}</h1>
+      <ol reversed class="reading-width">
+        {
+          posts.map((post) => (
+            <li>
+              <FormattedDate date={post.data.date} />
+              <div>
+                <a href={`/blog/${post.id}/`}>{post.data.title}</a>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+  </div>
+
+  <style>
+    ol {
+      padding-inline-start: 0;
+    }
+    ol li {
+      display: grid;
+      grid-template-columns: 8rem 1fr;
+      margin-bottom: 0.1rem;
+    }
+
+    .listing {
+      grid-area: main;
+    }
+  </style>
+</BaseLayout>

@@ -5,7 +5,8 @@ url: https://benmyers.dev/blog/native-visually-hidden/
 date: 2024-04-10
 rss: true
 tags:
-    - blog
+    - article
     - thoughts
     - web-technology
+    - accessibility
 ---

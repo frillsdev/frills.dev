@@ -123,7 +123,7 @@
 }
 
 .large-target {
-  position: relative;
+  position: static;
 }
 
 .large-target::before {

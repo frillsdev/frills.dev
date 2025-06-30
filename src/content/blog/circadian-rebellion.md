@@ -1,5 +1,6 @@
 ---
 title: Circadian Rebellion
+description: Despite continuously aging, I stay the same in many ways
 date: 2025-06-11 13:00:00
 tags:
 - personal

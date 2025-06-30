@@ -13,83 +13,84 @@ import LatestBook from "../components/LatestBook.jsx";
 ---
 
 <HomeLayout>
-  <SideBar>
-    <div class="bio">
-      <h2 class="visually-hidden">Bio</h2>
-      <Avatar client:only="react" />
-      <BioGrid />
-    </div>
-  </SideBar>
+  <div class="grid grid__2">
+    <SideBar>
+      <div class="bio">
+        <h2 class="visually-hidden">Bio</h2>
+        <Avatar />
+        <BioGrid />
+      </div>
+    </SideBar>
 
-  <div class="dashboard">
-    <noscript>
-      <div class="item">
-        <!-- {{ macro.callout( element = 'article', modifiers = 'callout--small mb-0', emoji = '<span class="emoji" role="img" aria-label="Spanner and hammer">🛠️</span>', header = '
+    <div class="dashboard">
+      <noscript>
+        <div class="item">
+          <!-- {{ macro.callout( element = 'article', modifiers = 'callout--small mb-0', emoji = '<span class="emoji" role="img" aria-label="Spanner and hammer">🛠️</span>', header = '
       <h2>Your JavaScipt is disabled</h2>
       ', body = '
       <p>This website uses JavaScript, please read the <a href="/colophon#javascript">Colophon</a> to understand why</p>
       ') }} -->
+        </div>
+      </noscript>
+      <article class="item item--gallery mt-0">
+        <h2 class="visually-hidden">Gallery</h2>
+        <figure>
+          <img src="/images/piclog/piclog2.jpg" alt="Caucasian woman (me) stood with their back to the camera standing on a wooden jetty looking out at the lake with my labrador, Orla. A lens flare from the sun in the top left." loading="lazy" width="100" height="100" />
+        </figure>
+        <figure>
+          <img src="/images/piclog/piclog0.jpg" alt="Caucasian woman (me) with brown hair wearing an orange hat looks away from the camera to the left." loading="lazy" width="100" height="100" />
+        </figure>
+        <figure>
+          <img src="https://piclog.blue/latest.php?id=152" alt="" loading="lazy" width="100" height="100" />
+        </figure>
+      </article>
+      <div class="av-br">
+        <div class="item">
+          <h2 class="visually-hidden">Intro</h2>
+          <p>
+            <Greeting client:only="react" forceMessage={""}><span slot="fallback">Greetings</span></Greeting>, world wide web adventurer! Step into my humble internet emporium, where a delightful array of digital knick-knacks, whimsical whirligigs, half-baked thoughts and musings await you.
+          </p>
+          <p>
+            I am Frills <Speak client:only="react" speak={{ speakText: "Frills", speakPhonetics: "/frɪlz/" }} />, the proud webmistress of this website in this wondrous wifi world, learn more <Link href={"/about"}>about me</Link> or <Link href={"/colophon"}>about this website</Link>.
+          </p>
+          <p>Here you will find my latest <Link href={"/blog"}>thoughts</Link> and <Link href={"/experiments"}>experiments</Link>, <a href="/links">portals to other websites</a>, and <Link href={"/guestbook"}>messages</Link> left by other wanderers.</p>
+        </div>
+        <div class="item">
+          <h2 class="visually-hidden">Shrines</h2>
+          <a href="/curios/orla" class="gallery" aria-label="Orla (my dog) shrine">
+            <img src="/images/curios/orla/orla1.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!" />
+            <img src="/images/curios/orla/orla16.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!" />
+            <img src="/images/curios/orla/orla17.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!" />
+          </a>
+        </div>
       </div>
-    </noscript>
-    <article class="item item--gallery mt-0">
-      <h2 class="visually-hidden">Gallery</h2>
-      <figure>
-        <img src="/images/piclog/piclog2.jpg" alt="Caucasian woman (me) stood with their back to the camera standing on a wooden jetty looking out at the lake with my labrador, Orla. A lens flare from the sun in the top left." loading="lazy" width="100" height="100" />
-      </figure>
-      <figure>
-        <img src="/images/piclog/piclog0.jpg" alt="Caucasian woman (me) with brown hair wearing an orange hat looks away from the camera to the left." loading="lazy" width="100" height="100" />
-      </figure>
-      <figure>
-        <img src="https://piclog.blue/latest.php?id=152" alt="" loading="lazy" width="100" height="100" />
-      </figure>
-    </article>
-    <div class="av-br">
-      <div class="item">
-        <h2 class="visually-hidden">Intro</h2>
-        <p>
-          <Greeting client:only="react" forceMessage={""}><span slot="fallback">Greetings</span></Greeting>, world wide web adventurer! Step into my humble internet emporium, where a delightful array of digital knick-knacks, whimsical whirligigs, half-baked thoughts and musings await you.
-        </p>
-        <p>
-          I am Frills <Speak client:only="react" speak={{ speakText: "Frills", speakPhonetics: "/frɪlz/" }} />, the proud webmistress of this website in this wondrous wifi world, learn more <Link href={"/about"}>about me</Link> or <Link href={"/colophon"}>about this website</Link>.
-        </p>
-        <p>Here you will find my latest <Link href={"/blog"}>thoughts</Link> and <Link href={"/experiments"}>experiments</Link>, <a href="/links">portals to other websites</a>, and <Link href={"/guestbook"}>messages</Link> left by other wanderers.</p>
-      </div>
-      <div class="item">
-        <h2 class="visually-hidden">Shrines</h2>
-        <a href="/curios/orla" class="gallery" aria-label="Orla (my dog) shrine">
-          <img src="/images/curios/orla/orla1.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!" />
-          <img src="/images/curios/orla/orla16.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!" />
-          <img src="/images/curios/orla/orla17.jpg" width="100" height="100" alt="" loading="lazy" title="My shrine to Orla!" />
-        </a>
-      </div>
-    </div>
-    <!-- <div class="item">
+      <!-- <div class="item">
       <CallOut as="article" class={["callout--small", "callout--mastodon"]} emoji={"🐘"} headerText={"<h2><a href='https://indieweb.social/@frills' class='hidden'>Mastodon</a></h2>"} bodyText={"<p class='small'>Follow me for toots!</p>"} />
     </div> -->
 
-    <div class="item">
-      <article class="callout" style="background:indigo!important; color:Thistle">
-        <div class="callout-image">
-          <img src="https://emojicdn.elk.sh/🌌?style=apple" alt="" />
-        </div><div class="callout-content"><header><h2>Latest status</h2></header>Having insane fun with Astro! <small class="d-b subtext">27/04/25</small> <a href="/status/" style="color:Thistle" class="subtext">See past statuses</a></div>
-      </article>
-    </div>
-
-    <div class="item">
-      <SpotifyPlayer client:only="react" />
-    </div>
-
-    <div class="item">
-      <CallOut as="article" emoji={"📚"} headerText={"<h2>Currently Reading</h2>"} bodyText={"<ol class='unstyled mb-0'><li><a href='https://app.thestorygraph.com/books/536ef25c-0b0f-48e8-a6bb-67856f21a223' class='hidden'>Welsh Witchcraft</a><small class='d-b subtext'> Mhara Starling </small>  </li>  <li><a href='https://app.thestorygraph.com/books/d9c7ed04-6148-4e01-a118-d96cba16f507' class='hidden'>The Midnight Library</a><small class='d-b subtext'>Matt Haig</small></li><li><a href='https://app.thestorygraph.com/profile/frills' class='large-target'>See what I'm reading on StoryGraph</a></li></ol>"} />
-    </div>
-    <section class="item item--card item--latestposts" aria-labelledby="latestposts--title">
-      <header>
-        <h2 id="latestposts--title">Latest posts</h2>
-      </header>
-      <div class="p-1">
-        <LatestItem collection="blog" basePath="/blog" title="Blog" />
+      <div class="item">
+        <article class="callout" style="background:indigo!important; color:Thistle">
+          <div class="callout-image">
+            <img src="https://emojicdn.elk.sh/🌌?style=apple" alt="" />
+          </div><div class="callout-content"><header><h2>Latest status</h2></header>Having insane fun with Astro! <small class="d-b subtext">27/04/25</small> <a href="/status/" style="color:Thistle" class="subtext">See past statuses</a></div>
+        </article>
       </div>
-      <!-- {%- set latestBlog = collections.posts | reverse | first -%} {%- set latestExperiment = collections.experiments | reverse | first -%} {%- set latestBookmark = collections.bookmarks | reverse | first -%}
+
+      <div class="item">
+        <SpotifyPlayer client:only="react" />
+      </div>
+
+      <div class="item pos-r">
+        <CallOut as="article" emoji={"📚"} headerText={"<h2>Currently Reading</h2>"} bodyText={"<ol class='unstyled mb-0'><li><a href='https://app.thestorygraph.com/books/536ef25c-0b0f-48e8-a6bb-67856f21a223' class='hidden'>Welsh Witchcraft</a><small class='d-b subtext'> Mhara Starling </small>  </li>  <li><a href='https://app.thestorygraph.com/books/d9c7ed04-6148-4e01-a118-d96cba16f507' class='hidden'>The Midnight Library</a><small class='d-b subtext'>Matt Haig</small></li><li><a href='https://app.thestorygraph.com/profile/frills' class='large-target'>See what I'm reading on StoryGraph</a></li></ol>"} />
+      </div>
+      <section class="item item--card item--latestposts" aria-labelledby="latestposts--title">
+        <header>
+          <h2 id="latestposts--title">Latest posts</h2>
+        </header>
+        <div class="p-1">
+          <LatestItem collection="blog" basePath="/blog" title="Blog" />
+        </div>
+        <!-- {%- set latestBlog = collections.posts | reverse | first -%} {%- set latestExperiment = collections.experiments | reverse | first -%} {%- set latestBookmark = collections.bookmarks | reverse | first -%}
     <div class="h-sm">
       <article class="pb-1">
         <h3>Blog</h3>
@@ -102,41 +103,61 @@ import LatestBook from "../components/LatestBook.jsx";
         <a href="{{ latestExperiment.url }}">{% if latestExperiment.data.title %}{{ latestExperiment.data.title | safe }}{% else %}{{ latestExperiment.url }}{% endif %}</a>{% if latestExperiment.data.description %}
         <p class="description">{{ latestExperiment.data.description | safe }}</p>
         {%endif%} -->
-    </section>
+      </section>
 
-    <nav aria-label="RSS Feeds" class="item item--card">
-      <div>
-        <h2 class="visually-hidden">RSS feeds</h2>
-        <ul class="unstyled inline small">
-          <li>
-            <a href="/all.xml" class="rss">All<span class="visually-hidden"> RSS feeds</span></a>
-          </li>
-          <li>
-            <a href="/rss.xml" class="rss">Blog<span class="visually-hidden"> RSS feed</span></a>
-          </li>
-          <li>
-            <a href="/bookmarks.xml" class="rss">Bookmarks<span class="visually-hidden"> RSS feed</span></a>
-          </li>
-          <li>
-            <a href="/changelog.xml" class="rss">Changelog<span class="visually-hidden"> RSS feed</span></a>
-          </li>
-        </ul>
+      <nav aria-label="RSS Feeds" class="item item--card">
+        <div>
+          <h2 class="visually-hidden">RSS feeds</h2>
+          <ul class="unstyled inline small">
+            <li>
+              <a href="/all.xml" class="rss">All<span class="visually-hidden"> RSS feeds</span></a>
+            </li>
+            <li>
+              <a href="/rss.xml" class="rss">Blog<span class="visually-hidden"> RSS feed</span></a>
+            </li>
+            <li>
+              <a href="/bookmarks.xml" class="rss">Bookmarks<span class="visually-hidden"> RSS feed</span></a>
+            </li>
+            <li>
+              <a href="/changelog.xml" class="rss">Changelog<span class="visually-hidden"> RSS feed</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="item">
+        <a href="https://www.codelikeagirl.com/"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPAgMAAAAOp6AcAAAACVBMVEXfOHf///8cGx0Yk1ajAAAAZUlEQVQY06WPsQ2AMAwEv3BS21K8jy2FPgVhLhqWyJS4oSFpEFeeTpYfYwGuPnHgxET+Iqmk5I3IFQUqzSwkO1cBUWU4TMg4pFnIKJuiY4uS3qULR/ncTNU1ZBHaLf/8c719LLgB7XE6FjMry00AAAAASUVORK5CYII=" alt="Code like a girl" width="80" height="15" class="pixelated" /></a>
+        <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAAXNSR0IArs4c6QAAAFFQTFRFKCgoPDg2UElFZlxUfG9kkoN0qJmEva6T1cSh69uy+/HHAAAAzCQd1l0O15khmJcaaJ1qRYWIsWKGAAAA+0k0/oAZ+r0vuLsmjsB8g6WY04ab+RL+6wAAABt0Uk5TAP//////////////////////////////////xGlyNQAAAJ5JREFUOI3N07EOgzAMBFBuZG+N4///0J5NDCQFpFYZOEEIGZ6OREzz4EwzhsbB15q3RzyLp3jMoD/lAJ57jwERHrdAhAM9juEFyJc6aE6wT7W5jyCiIDlehV5BgqobkW/oF+ojwSgotSH4wQQ5uWmIFsyxBQW1YYB217Bf6EGQ9HKyrAUJmtk5+LWH207u4MUR/33K194zwNH/8uB8AKLfSKW+l9mPAAAAAElFTkSuQmCC" alt="LGBTQIA+ Friendly" width="80" height="15" class="pixelated" />
+        <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAAAXNSR0IArs4c6QAAAO1JREFUSIljbF46g2EkARaydQY8ZKaiO+gDNsj/Jd/DDAwMGtk61HIKHcCNqVcYGBhYhmJEUQKYBtoB9AYUJWk4cHTPhzD275yIzEaWhXAd3fMxGWjqMQWxKkYzClMLprEMDAwsZOdDSJbAtB7NlVh9iBwWaA5CNpN4xQzYggCrMurEMBpAjlIGpMBGdhkaG9N9xIijmYxpBaZ2muTh/TsnovkKzWJkLppiYsTR1BDjBjhgQU6Z9Ae4chpWgNUDpBrLeLltNikuRAFDrh7eIP935FVLG+T/kqdziLZYKCqlBzb/kwfI9zDZSWNgAQCjEKqx3SeKrAAAAABJRU5ErkJggg==" alt="Trans rights" width="80" height="15" class="pixelated" />
+        <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAYAAABzyUiPAAAAAXNSR0IArs4c6QAAASxJREFUWIXtlzESgjAQRb8OB/AcVPTWljS2ahtLOg5hZ0mttjaW1PZWnsMbaMGEWTbLsETQEXkzDGR3k8CfHwgTY8wTI94EAJCt59++j59ke7wWAgLA7bLrdbIoThGu+p3jk9xPKQBg+uX7+HkCHlgeHk7ReTNrzNE8jQ0d0YFWAC4EjUsidSHcfb8oDylO2zwv9ZfG09RocRxYJxpneXg4ORuTcm0IkxxA8WBhkpdnGrPwNu1fN562RoPXO1Bayl1i3dDmQXj/pvF83CbhOFCDdZlEF+JqhKPO5OL4ONAXLwEBOEuVL9t3lzHFimSvm9DU8po241Mmxphntp5X9oHURdJXlsLdKLWBYe4DKxtpSp1ztPG/38aM6CkdGMVp75PZ358hEQDFT/GIHy+CbLl++5lT8QAAAABJRU5ErkJggg==" alt="Tea Powered" width="80" height="15" class="pixelated" />
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri={{ permalink | absoluteUrl(metadata.url) | encodeUrl}}"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1QYSEx41Z+WrXQAAAhBQTFRFAAAAAESKAESLAEWMAkWLAkaMA0aMBEWLBEaMBUaMBUeMBUeNB0iNCEmOCEuPCkuQDk6RD06REVCSEVGTE1KTFBQUGleXHFaWH1uZIFqYIVyZIl2aJF6bJl+bKioqK2SeLS0tLWWgLmWgL2afMGegMWegM2ihNTU1N2yjOW2lPDw8PHClPnGnQEBAQ3SpQ3WpRXaqR3irSkpKTExMTnytT09PUoCwWISyXYe1X4m1X4m2You2ZmZmZ4+5aGhoaJC6apG6b5W9cJW9cJa+cpi+dZm/dnZ2d5vBfJ7CfaDEgqPGg4ODhISEhKTGhKXHhqXHhqbHh4eHiqjKiqnJi6nJjKrKlpaWl7LPl7TQmLPQnAAAnQIBngMCngQCnwYDoAgEoAkEoQoFobrUornTo7rUpLvVpRIJpbzWp6enqBgMqKioqamprCEQrq6usCoVscbcsy4XtDIZt8vfuMreuczfu83gvc7gvc7hwcHBwdLiwdLjx9XlyNbmy2Ixy8vLzmg0z8/P0Gw20W020dHR0d3q0nA40t7q03I509/r1eDs19fX24FA29vb3IVC3YZD3+jx4eHh5ZdM5ubm6O/17KRS7e3t76pV8fHx8vLy9fj79/f39/r8+L5f+Pr8+fv8+fv9+sJh+vz9+/v7+/z9/MVi/Pz8/clk/f39/f3+/f7+/spl/v7+/v7//8tm/8xm////VM1bDQAAAWRJREFUOMtjsKEyYLBZT1UANlDNff16Ewsgz0oQCPTWTzC2m561fv06MgDEQFeVxesDROavnytoHuHMlLRcV8FIy44MA+fMgRpYxdKyPp2pbH05R+cafY15zeozVod1kW7glJzCZRADZ4t5rbdmdlzvIbE4lat6fUYuJDjAqhgYwAQDlMADJibEtEJduN5Sc76UqvRCJfu5snzBK7InIQwEGbSOAcrCCaYtWbe2Ly66FhaG61O4S3iK2PM5i+cmO7BGNkxFMRDhTJzmxectaIqNrodHyvrJ/MraK2UUBeauX7/aQHX5UjQXrluH35FL8qLSYqMbEbG8fr0Os/96F2YzENNJaNF6tDAkGIRLChIz29chGxjKWrO+kjG8LXz9GkP5utXr18/yISmWV3X3rkUxsENy4fqZ4v2lvJ5+bEE93j0NpoGUJOz161f6AgnflatDhPls566vkBN1W0SZgVTNy1QGAIC0hiM7IZxZAAAAAElFTkSuQmCC" alt="W3C CSS Validated" width="80" height="15" class="pixelated" /></a>
+        <a href="https://validator.w3.org/nu/?doc={{ permalink | absoluteUrl(metadata.url) | encodeUrl}}"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxEAAAsRAX9kX5EAAAAHdElNRQfVBhUIOSEqXrltAAACEFBMVEUAAAAARIoARIsARYwCRYsCRowDRowERYsERowFRowFR4wFR40HSI0ISY4IS48KS5AOTpEPTpERUJIRUZMTUpMUFBQaV5ccVpYfW5kgWpghXJkiXZokXpsmX5sqKiorZJ4tLS0tZaAuZaAvZp8wZ6AxZ6AzaKE1NTU3bKM5baU8PDw8cKU+cadAQEBDdKlDdalFdqpHeKtKSkpMTExOfK1PT09SgLBYhLJdh7VfibVfibZii7ZmZmZnj7loaGhokLpqkbpvlb1wlb1wlr5ymL51mb92dnZ3m8F8nsJ9oMSCo8aDg4OEhISEpMaEpceGpceGpseHh4eKqMqKqcmLqcmMqsqWlpaXss+XtNCYs9CcAACdAgGeAwKeBAKfBgOgCASgCQShCgWhutSiudOjutSku9WlEgmlvNanp6eoGAyoqKipqamsIRCurq6wKhWxxtyzLhe0Mhm3y9+4yt65zN+7zeC9zuC9zuHBwcHB0uLB0uPH1eXI1ubLYjHLy8vOaDTPz8/QbDbRbTbR0dHR3erScDjS3urTcjnT3+vV4OzX19fbgUDb29vchULdhkPf6PHh4eHll0zm5ubo7/XspFLt7e3vqlXx8fHy8vL1+Pv39/f3+vz4vl/4+vz5+/z5+/36wmH6/P37+/v7/P38xWL8/Pz9yWT9/f39/f79/v7+ymX+/v7+/v//y2b/zGb///9UzVsNAAAAAWJLR0SuuWuTpwAAAXFJREFUOMtjsKEyYLBZT1UANlDNff16Ewsgz0oQCPTWTzC2m561fv06MgDEQFeVxesDROavnytoHuHMlLRcV8FIy44MA+fMgRpYxdKyPp2pbH05R+cafY15zeozVod1kW7glJzCZRADZ4t5rbdmdlzvIbE4lat6fUYuJDhAihhAiIGBAcRYByHBXCxgYkJMK9SF6y0150upSi9Usp8ryxe8InsSmoFgxLCOAWYghlnTlqxb2xcXXQsLw/Up3CU8Rez5nMVzkx1YIxumIhkIdg7EnThdOC0+b0FTbHQ9PFLWT+ZX1l4poygwd/361Qaqy5dicyHCyxhuXJIXlRYb3YiI5fXrdZj917swm4GYTkKL1uM2kAHiezSwpCAxs30dsoGhrDXrKxnD28LXrzGUr1u9fv0sH5JieVV371oUAzskF66fKd5fyuvpxxbU493TYBpIScJev36lL5DwXbk6RJjPdu76CjlRt0WUGUjVvExlAAC+JXiL+DgKGQAAAABJRU5ErkJggg==" alt="W3C HTML Validated" width="80" height="15" class="pixelated" /></a>
       </div>
-    </nav>
-    <div class="item">
-      <a href="https://www.codelikeagirl.com/"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPAgMAAAAOp6AcAAAACVBMVEXfOHf///8cGx0Yk1ajAAAAZUlEQVQY06WPsQ2AMAwEv3BS21K8jy2FPgVhLhqWyJS4oSFpEFeeTpYfYwGuPnHgxET+Iqmk5I3IFQUqzSwkO1cBUWU4TMg4pFnIKJuiY4uS3qULR/ncTNU1ZBHaLf/8c719LLgB7XE6FjMry00AAAAASUVORK5CYII=" alt="Code like a girl" width="80" height="15" class="pixelated" /></a>
-      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAAXNSR0IArs4c6QAAAFFQTFRFKCgoPDg2UElFZlxUfG9kkoN0qJmEva6T1cSh69uy+/HHAAAAzCQd1l0O15khmJcaaJ1qRYWIsWKGAAAA+0k0/oAZ+r0vuLsmjsB8g6WY04ab+RL+6wAAABt0Uk5TAP//////////////////////////////////xGlyNQAAAJ5JREFUOI3N07EOgzAMBFBuZG+N4///0J5NDCQFpFYZOEEIGZ6OREzz4EwzhsbB15q3RzyLp3jMoD/lAJ57jwERHrdAhAM9juEFyJc6aE6wT7W5jyCiIDlehV5BgqobkW/oF+ojwSgotSH4wQQ5uWmIFsyxBQW1YYB217Bf6EGQ9HKyrAUJmtk5+LWH207u4MUR/33K194zwNH/8uB8AKLfSKW+l9mPAAAAAElFTkSuQmCC" alt="LGBTQIA+ Friendly" width="80" height="15" class="pixelated" />
-      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAIAAAD8q9/YAAAAAXNSR0IArs4c6QAAAO1JREFUSIljbF46g2EkARaydQY8ZKaiO+gDNsj/Jd/DDAwMGtk61HIKHcCNqVcYGBhYhmJEUQKYBtoB9AYUJWk4cHTPhzD275yIzEaWhXAd3fMxGWjqMQWxKkYzClMLprEMDAwsZOdDSJbAtB7NlVh9iBwWaA5CNpN4xQzYggCrMurEMBpAjlIGpMBGdhkaG9N9xIijmYxpBaZ2muTh/TsnovkKzWJkLppiYsTR1BDjBjhgQU6Z9Ae4chpWgNUDpBrLeLltNikuRAFDrh7eIP935FVLG+T/kqdziLZYKCqlBzb/kwfI9zDZSWNgAQCjEKqx3SeKrAAAAABJRU5ErkJggg==" alt="Trans rights" width="80" height="15" class="pixelated" />
-      <img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAYAAABzyUiPAAAAAXNSR0IArs4c6QAAASxJREFUWIXtlzESgjAQRb8OB/AcVPTWljS2ahtLOg5hZ0mttjaW1PZWnsMbaMGEWTbLsETQEXkzDGR3k8CfHwgTY8wTI94EAJCt59++j59ke7wWAgLA7bLrdbIoThGu+p3jk9xPKQBg+uX7+HkCHlgeHk7ReTNrzNE8jQ0d0YFWAC4EjUsidSHcfb8oDylO2zwv9ZfG09RocRxYJxpneXg4ORuTcm0IkxxA8WBhkpdnGrPwNu1fN562RoPXO1Bayl1i3dDmQXj/pvF83CbhOFCDdZlEF+JqhKPO5OL4ONAXLwEBOEuVL9t3lzHFimSvm9DU8po241Mmxphntp5X9oHURdJXlsLdKLWBYe4DKxtpSp1ztPG/38aM6CkdGMVp75PZ358hEQDFT/GIHy+CbLl++5lT8QAAAABJRU5ErkJggg==" alt="Tea Powered" width="80" height="15" class="pixelated" />
-      <a href="https://jigsaw.w3.org/css-validator/validator?uri={{ permalink | absoluteUrl(metadata.url) | encodeUrl}}"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1QYSEx41Z+WrXQAAAhBQTFRFAAAAAESKAESLAEWMAkWLAkaMA0aMBEWLBEaMBUaMBUeMBUeNB0iNCEmOCEuPCkuQDk6RD06REVCSEVGTE1KTFBQUGleXHFaWH1uZIFqYIVyZIl2aJF6bJl+bKioqK2SeLS0tLWWgLmWgL2afMGegMWegM2ihNTU1N2yjOW2lPDw8PHClPnGnQEBAQ3SpQ3WpRXaqR3irSkpKTExMTnytT09PUoCwWISyXYe1X4m1X4m2You2ZmZmZ4+5aGhoaJC6apG6b5W9cJW9cJa+cpi+dZm/dnZ2d5vBfJ7CfaDEgqPGg4ODhISEhKTGhKXHhqXHhqbHh4eHiqjKiqnJi6nJjKrKlpaWl7LPl7TQmLPQnAAAnQIBngMCngQCnwYDoAgEoAkEoQoFobrUornTo7rUpLvVpRIJpbzWp6enqBgMqKioqamprCEQrq6usCoVscbcsy4XtDIZt8vfuMreuczfu83gvc7gvc7hwcHBwdLiwdLjx9XlyNbmy2Ixy8vLzmg0z8/P0Gw20W020dHR0d3q0nA40t7q03I509/r1eDs19fX24FA29vb3IVC3YZD3+jx4eHh5ZdM5ubm6O/17KRS7e3t76pV8fHx8vLy9fj79/f39/r8+L5f+Pr8+fv8+fv9+sJh+vz9+/v7+/z9/MVi/Pz8/clk/f39/f3+/f7+/spl/v7+/v7//8tm/8xm////VM1bDQAAAWRJREFUOMtjsKEyYLBZT1UANlDNff16Ewsgz0oQCPTWTzC2m561fv06MgDEQFeVxesDROavnytoHuHMlLRcV8FIy44MA+fMgRpYxdKyPp2pbH05R+cafY15zeozVod1kW7glJzCZRADZ4t5rbdmdlzvIbE4lat6fUYuJDjAqhgYwAQDlMADJibEtEJduN5Sc76UqvRCJfu5snzBK7InIQwEGbSOAcrCCaYtWbe2Ly66FhaG61O4S3iK2PM5i+cmO7BGNkxFMRDhTJzmxectaIqNrodHyvrJ/MraK2UUBeauX7/aQHX5UjQXrluH35FL8qLSYqMbEbG8fr0Os/96F2YzENNJaNF6tDAkGIRLChIz29chGxjKWrO+kjG8LXz9GkP5utXr18/yISmWV3X3rkUxsENy4fqZ4v2lvJ5+bEE93j0NpoGUJOz161f6AgnflatDhPls566vkBN1W0SZgVTNy1QGAIC0hiM7IZxZAAAAAElFTkSuQmCC" alt="W3C CSS Validated" width="80" height="15" class="pixelated" /></a>
-      <a href="https://validator.w3.org/nu/?doc={{ permalink | absoluteUrl(metadata.url) | encodeUrl}}"><img src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxEAAAsRAX9kX5EAAAAHdElNRQfVBhUIOSEqXrltAAACEFBMVEUAAAAARIoARIsARYwCRYsCRowDRowERYsERowFRowFR4wFR40HSI0ISY4IS48KS5AOTpEPTpERUJIRUZMTUpMUFBQaV5ccVpYfW5kgWpghXJkiXZokXpsmX5sqKiorZJ4tLS0tZaAuZaAvZp8wZ6AxZ6AzaKE1NTU3bKM5baU8PDw8cKU+cadAQEBDdKlDdalFdqpHeKtKSkpMTExOfK1PT09SgLBYhLJdh7VfibVfibZii7ZmZmZnj7loaGhokLpqkbpvlb1wlb1wlr5ymL51mb92dnZ3m8F8nsJ9oMSCo8aDg4OEhISEpMaEpceGpceGpseHh4eKqMqKqcmLqcmMqsqWlpaXss+XtNCYs9CcAACdAgGeAwKeBAKfBgOgCASgCQShCgWhutSiudOjutSku9WlEgmlvNanp6eoGAyoqKipqamsIRCurq6wKhWxxtyzLhe0Mhm3y9+4yt65zN+7zeC9zuC9zuHBwcHB0uLB0uPH1eXI1ubLYjHLy8vOaDTPz8/QbDbRbTbR0dHR3erScDjS3urTcjnT3+vV4OzX19fbgUDb29vchULdhkPf6PHh4eHll0zm5ubo7/XspFLt7e3vqlXx8fHy8vL1+Pv39/f3+vz4vl/4+vz5+/z5+/36wmH6/P37+/v7/P38xWL8/Pz9yWT9/f39/f79/v7+ymX+/v7+/v//y2b/zGb///9UzVsNAAAAAWJLR0SuuWuTpwAAAXFJREFUOMtjsKEyYLBZT1UANlDNff16Ewsgz0oQCPTWTzC2m561fv06MgDEQFeVxesDROavnytoHuHMlLRcV8FIy44MA+fMgRpYxdKyPp2pbH05R+cafY15zeozVod1kW7glJzCZRADZ4t5rbdmdlzvIbE4lat6fUYuJDhAihhAiIGBAcRYByHBXCxgYkJMK9SF6y0150upSi9Usp8ryxe8InsSmoFgxLCOAWYghlnTlqxb2xcXXQsLw/Up3CU8Rez5nMVzkx1YIxumIhkIdg7EnThdOC0+b0FTbHQ9PFLWT+ZX1l4poygwd/361Qaqy5dicyHCyxhuXJIXlRYb3YiI5fXrdZj917swm4GYTkKL1uM2kAHiezSwpCAxs30dsoGhrDXrKxnD28LXrzGUr1u9fv0sH5JieVV371oUAzskF66fKd5fyuvpxxbU493TYBpIScJev36lL5DwXbk6RJjPdu76CjlRt0WUGUjVvExlAAC+JXiL+DgKGQAAAABJRU5ErkJggg==" alt="W3C HTML Validated" width="80" height="15" class="pixelated" /></a>
     </div>
-  </div>
 
-  <!-- {%- endblock -%} {% block bottom %} -->
-  <!-- <div class="grid grid--offset">{% include "structure/components/colour-palette.njk" %}</div> -->
-  <!-- <div class="grid grid--offset">{% include "structure/components/webrings.njk" %}</div> -->
-  <!-- {% endblock %} -->
+    <div aria-hidden="true" class="colourpalette">
+      <div style="background-color: var(--text)"></div>
+      <div style="background-color: var(--subtext)"></div>
+      <div style="background-color: var(--accent)"></div>
+      <div style="background-color: var(--interactive)"></div>
+      <div style="background-color: var(--link)"></div>
+      <div style="background-color: var(--linkhover)"></div>
+      <div style="background-color: var(--linkvisited)"></div>
+      <div style="background-color: var(--dashboard-header-bg)"></div>
+      <div style="background-color: var(--callout-info)"></div>
+      <div style="background-color: var(--logo-anim-1)"></div>
+      <div style="background-color: var(--logo-anim-2)"></div>
+      <div style="background-color: var(--logo-anim-3)"></div>
+      <div style="background-color: var(--logo-anim-4)"></div>
+      <div style="background-color: var(--logo-anim-5)"></div>
+      <div style="background-color: var(--logo-anim-6)"></div>
+      <div style="background-color: var(--bodybg)"></div>
+    </div>
+
+    <!-- {%- endblock -%} {% block bottom %} -->
+    <!-- <div class="grid grid--offset">{% include "structure/components/colour-palette.njk" %}</div> -->
+    <!-- <div class="grid grid--offset">{% include "structure/components/webrings.njk" %}</div> -->
+    <!-- {% endblock %} -->
+  </div>
 </HomeLayout>
 
 <!-- <script>

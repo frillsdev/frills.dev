@@ -1,9 +1,16 @@
 ---
 title: My Media Orbit
+description: In this orbit&colon; brainy chaos, glittery pop music, and silly game videos I commonly consume.
 date: 2025-06-27 16:23:08
 updatedDate: 2025-06-27 16:23:08
 draft: true
-tags: []
+tags:
+    - personal
+    - media
+    - podcast
+    - TV
+    - video
+    - music
 rss: true
 ---
 I struggled with the name of this blog post.

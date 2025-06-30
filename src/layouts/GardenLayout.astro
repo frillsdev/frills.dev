@@ -1,0 +1,316 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { getCollection } from "astro:content";
+import TimeAgo from "../components/TimeAgo";
+
+const { collections, title } = Astro.props;
+
+// fetch posts from each collection
+const allPosts = (await Promise.all(collections.map((name) => getCollection(name)))).flat();
+const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<BaseLayout>
+  <div class="grid grid__2">
+    <section class="listing">
+      <h1>{title}</h1>
+      <div class="grid grid__3">
+        {
+          posts.map((post) => {
+            let descHtml = post.data.description || "";
+            descHtml = descHtml.replace(/<a\s/gi, '<a class="inherit-color" ');
+
+            return (
+              <article class={`pos-r collection__${post.collection}`} key={post.id}>
+                {post.data.heroImage && <img src={post.data.heroImage} class="image" alt="" style={post.data.heroImageWeighted ? `object-position: ${post.data.heroImageWeighted};` : undefined} />}
+                <div class="content">
+                  <div>
+                    <a class="large-target title" href={post.collection === "bookmarks" ? post.data.url : `/${post.collection}/${post.id}/`} rel={post.collection === "bookmarks" ? "noopener noreferrer" : undefined}>
+                      {post.data.title}
+                      {post.collection === "bookmarks" && (
+                        <>
+                          <span class="external" aria-hidden="true">
+                            ↗
+                          </span>
+                          <span class="visually-hidden">(external)</span>
+                        </>
+                      )}
+                    </a>
+
+                    {post.data.url && (
+                      <div aria-hidden="true">
+                        <img
+                          src={`https://favicone.com/${
+                            post.data.url
+                              .replace(/^https?:\/\//, "")
+                              .replace(/^www\./, "")
+                              .split("/")[0]
+                          }?s=40`}
+                          class="favicon"
+                          alt=""
+                        />
+                        <span class="url">
+                          {post.data.url
+                            .replace(/^https?:\/\//, "")
+                            .replace(/^www\./, "")
+                            .replace(/\/$/, "")}
+                        </span>
+                      </div>
+                    )}
+
+                    {descHtml && <div class="description" set:html={descHtml} />}
+                  </div>
+
+                  <footer>
+                    {post.data.tags?.length > 0 && (
+                      <p class="tags">
+                        <span class="emoji" aria-label="Tags">
+                          🏷️
+                        </span>
+                        {post.data.tags.map((tag) => (
+                          <span class="badge" key={tag}>
+                            {tag}
+                          </span>
+                        ))}
+                      </p>
+                    )}
+                    <p class="mb-0">
+                      <span class="emoji" aria-hidden="true">
+                        {post.collection === "bookmarks" ?
+                          "🔗"
+                        : post.collection === "blog" ?
+                          "📝"
+                        : ""}
+                      </span>
+                      <span class="badge">
+                        {post.collection === "bookmarks" ?
+                          "Bookmarked "
+                        : post.collection === "blog" ?
+                          "Published "
+                        : ""}
+                        <TimeAgo dateTime={post.data.date} />
+                      </span>
+                    </p>
+                  </footer>
+                </div>
+              </article>
+            );
+          })
+        }
+      </div>
+      <footer class="end">
+        <pre class="pb-2" role="img" aria-label="An ASCII art flowerbed full of red, purple, yellow, pink and blue flowers. Made by Joan G. Stark" class="ascii-flowerbed"><span class="c-yellow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _<span class="ascii-butterfly" /></span>
+<span class="c-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="c-yellow">_(_)_</span><span class="c-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span class="c-magenta">wWWWw</span><span class="c-white">&nbsp;&nbsp; </span><span class="c-red">_</span>
+<span class="c-white">&nbsp;&nbsp;&nbsp; </span><span class="c-red">@@@@</span><span class="c-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="c-yellow">(_)</span><span class="c-orange">@</span><span class="c-yellow">(_)</span><span class="c-white">&nbsp; </span><span class="c-blue">vVVVv</span><span class="c-white">&nbsp;&nbsp;&nbsp; </span><span class="c-light-yellow">_</span><span class="c-white">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="c-light-pink">@@@@</span><span class="c-white">&nbsp; </span><span class="c-magenta">(___)</span><span class="c-white"> </span><span class="c-red">_(_)_
+</span><span class="c-white">&nbsp;&nbsp; </span><span class="c-red">@@</span><span class="c-orange">()</span><span class="c-red">@@</span><span class="c-white">&nbsp;</span><span class="c-magenta">wWWWw</span><span class="c-white">&nbsp; </span><span class="c-yellow">(_)</span><span class="c-green">\</span><span class="c-white">&nbsp;&nbsp; </span><span class="c-blue">(___)</span><span class="c-white">&nbsp;</span><span class="c-light-yellow">&nbsp;_(_)_</span><span class="c-white">&nbsp; </span><span class="c-light-pink">@@</span><span class="c-orange">()</span><span class="c-light-pink">@@</span><span class="c-white">&nbsp;&nbsp; </span><span class="c-green">Y</span><span class="c-white">&nbsp; </span><span class="c-red">(_)</span><span class="c-yellow">@</span><span class="c-red">(_)
+</span><span class="c-white">&nbsp;&nbsp;&nbsp; </span><span class="c-red">@@@@</span><span class="c-white">&nbsp; </span><span class="c-magenta">(___)</span><span class="c-white">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="c-green">`|/&nbsp;&nbsp; Y</span><span class="c-white">&nbsp;&nbsp; </span><span class="c-light-yellow">(_)</span><span class="c-red">@</span><span class="c-light-yellow">(_)</span><span class="c-white">&nbsp; </span><span class="c-light-pink">@@@@</span><span class="c-white">&nbsp;&nbsp; </span><span class="c-green">\|/</span><span class="c-white">&nbsp;&nbsp; </span><span class="c-red">(_)</span><span class="c-green">\</span>
+<span class="c-white">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="c-green">/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \|&nbsp;&nbsp; \|/&nbsp;&nbsp; /</span><span class="c-light-yellow">(_)</span><span class="c-white">&nbsp;&nbsp;&nbsp; </span><span class="c-green">\|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</span>
+<span class="c-white">&nbsp; </span><span class="c-green">\ |&nbsp;&nbsp;&nbsp;&nbsp; \ |/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | /\ | / \|/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |/&nbsp;&nbsp;&nbsp; \|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \|/</span>
+<span class="">&nbsp;jgs</span><span class="c-green">|///&nbsp; \\|/// \\\\|//\\|///\|///&nbsp; \\\|//&nbsp; \\|//&nbsp; \\\|/</span>
+<span class="c-green">&nbsp;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+</pre>
+        <p>you’ve wandered to the edge of the garden — the rest is still growing.</p>
+        <p>leave a note in the <a href="/guestbook">guestbook</a> before you go?</p>
+      </footer>
+    </section>
+  </div>
+
+  <style>
+    article {
+      background: var(--bodybg);
+      border-radius: 1rem;
+      border: 2px solid transparent;
+      transition: 0.3s ease all;
+      display: flex;
+      flex-direction: row;
+      will-change: transform;
+      overflow: hidden;
+    }
+
+    article:hover,
+    article:focus-within {
+      border-color: var(--linkhover);
+      transform: scale(1.025);
+    }
+
+    article:hover .external,
+    article:focus-within .external {
+      opacity: 1;
+    }
+    article:hover .url,
+    article:focus-within .url {
+      color: var(--linkhover);
+      text-decoration-style: wavy;
+    }
+
+    .collection__bookmarks {
+      background: var(--bg);
+      border-color: var(--bodybg);
+    }
+
+    .collection__bookmarks .badge {
+      background: var(--bodybg);
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      height: 100%;
+      width: 100%;
+      flex: 1 1 auto;
+    }
+
+    .listing {
+      grid-area: sidebar / sidebar / main / main;
+    }
+
+    .image {
+      order: 2;
+      width: 25%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .external {
+      color: var(--linkhover);
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+      transition: 0.3s ease all;
+      opacity: 0;
+    }
+
+    .description {
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
+
+    .badge {
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      background-color: var(--bg);
+    }
+
+    .title {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--title);
+      text-decoration: none;
+      padding-right: 1rem;
+    }
+
+    .url {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      word-break: break-word;
+      font-size: 0.8rem;
+      margin: 0;
+      display: inline;
+    }
+
+    .favicon {
+      width: 1rem;
+      height: 1rem;
+      display: inline;
+      margin-right: 0.25rem;
+      transform: translateY(0.2rem);
+      border-radius: 0.25rem;
+      background-color: lavenderblush;
+      overflow: hidden;
+      padding: 1px;
+    }
+
+    article footer,
+    .tags {
+      font-size: 0.8rem;
+      display: flex;
+      gap: 1ch;
+      margin-bottom: 0;
+    }
+
+    .tags {
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    article footer {
+      padding-top: 1rem;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .end {
+      text-align: center;
+      margin: 5rem 0 3rem 0;
+    }
+
+    .end pre {
+      text-align: left;
+      margin: 0 auto;
+      width: fit-content;
+      line-height: 1;
+      font-family: monospace;
+      white-space: pre;
+    }
+
+    .c-white {
+      color: #ffffff;
+    }
+    .c-red {
+      color: plum;
+    }
+    .c-yellow {
+      color: gold;
+    }
+    .c-orange {
+      color: white;
+    }
+    .c-light-yellow {
+      color: orangered;
+    }
+    .c-light-pink {
+      color: violet;
+    }
+    .c-magenta {
+      color: deeppink;
+    }
+    .c-blue {
+      color: deepskyblue;
+    }
+    .c-green {
+      color: MediumSeaGreen;
+    }
+
+    @media (prefers-color-scheme: light) {
+      .c-red {
+        color: HotPink;
+      }
+      .c-yellow {
+        color: LightPink;
+      }
+      .c-orange {
+        color: GoldenRod;
+      }
+      .c-light-yellow {
+        color: MediumVioletRed;
+      }
+      .c-light-pink {
+        color: Plum;
+      }
+      .c-magenta {
+        color: MediumVioletRed;
+      }
+      .c-blue {
+        color: deepskyblue;
+      }
+      .c-green {
+        color: Olive;
+      }
+    }
+  </style>
+</BaseLayout>

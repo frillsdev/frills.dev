@@ -5,6 +5,6 @@ url: https://medium.com/@timberners_lee/marking-the-webs-35th-birthday-an-open-l
 date: 2024-03-12
 rss: true
 tags:
-    - blog
+    - article
     - web-technology
 ---

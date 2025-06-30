@@ -5,7 +5,7 @@ url: https://alexsirac.com/webmentions-make-me-sad/
 date: 2024-04-05
 rss: true
 tags:
-    - blog
+    - article
     - thoughts
     - indie-web
 ---

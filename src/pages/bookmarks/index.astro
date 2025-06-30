@@ -16,23 +16,40 @@ const posts = (await getCollection("bookmarks")).sort((a, b) => b.data.date.valu
       <!-- Tag buttons injected here -->
     </div>
 
-    <ol reversed class="bookmarks">
+    <ol reversed class="grid grid__3">
       {
         posts.map((post) => {
           let descHtml = post.data.description || "";
-          descHtml = descHtml.replace(/<a\s/gi, '<a class="hidden" ');
+          descHtml = descHtml.replace(/<a\s/gi, '<a class="inherit-color" ');
 
           return (
             <li class="bookmark h-cite u-like-of">
-              <div class="content" data-tags={JSON.stringify(post.data.tags || [])}>
-                <a rel="p-name u-url" href={post.data.url} class="title">
-                  {post.data.title}
-                </a>
-                <p class="url">
-                  <img src={`https://www.google.com/s2/favicons?domain=${encodeURIComponent(post.data.url)}`} class="favicon" alt=""/>{post.data.url}
-                </p>
-                <p class="description" set:html={descHtml} />
-              </div>
+              <article class="content pos-r" data-tags={JSON.stringify(post.data.tags || [])}>
+                <div class="pos-r">
+                  <a rel="p-name u-url" href={post.data.url} class="title large-target">
+                    {post.data.title}
+                  </a>
+                  <p class="description" set:html={descHtml} />
+                </div>
+                <footer>
+                  <img
+                    src={`https://favicone.com/${
+                      post.data.url
+                        .replace(/^https?:\/\//, "")
+                        .replace(/^www\./, "")
+                        .split("/")[0]
+                    }?s=40`}
+                    class="favicon"
+                    alt=""
+                  />
+                  <span class="url">
+                    {post.data.url
+                      .replace(/^https?:\/\//, "")
+                      .replace(/^www\./, "")
+                      .replace(/\/$/, "")}
+                  </span>
+                </footer>
+              </article>
             </li>
           );
         })
@@ -101,24 +118,6 @@ const posts = (await getCollection("bookmarks")).sort((a, b) => b.data.date.valu
       padding-inline-start: 0;
     }
 
-    @media (min-width: 576px) {
-      .bookmarks {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (min-width: 1200px) {
-      .bookmarks {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-    }
-
-    @media (min-width: 1600px) {
-      .bookmarks {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-      }
-    }
-
     .bookmark-tags {
       display: flex;
       flex-wrap: wrap;
@@ -146,28 +145,40 @@ const posts = (await getCollection("bookmarks")).sort((a, b) => b.data.date.valu
       border-radius: 0.75rem;
       overflow: hidden;
       background-color: var(--bodybg);
-      transition: 0.3s ease transform;
+      transition: 0.3s ease all;
+      border: 2px solid transparent;
     }
 
     .bookmark:hover,
     .bookmark:focus-within {
       transform: scale(1.025);
+      border-color: var(--linkhover);
+    }
+
+    .bookmark:hover .url,
+    .bookmark:focus-within .url {
+      text-decoration-style: wavy;
+      color: var(--linkhover);
     }
 
     .content {
-      padding: 1rem 1.5rem;
+      padding: 1rem;
+      color: var(--text);
       background-color: var(--bodybg);
       border-radius: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
     }
 
     .title {
       display: block;
       font-size: 1.2rem;
       font-weight: 700;
-      margin-bottom: 1rem;
-      color: var(--text);
+      margin-bottom: 0.5rem;
+      color: var(--title);
       text-decoration: none;
-      position: relative;
     }
 
     .title:hover,
@@ -178,27 +189,30 @@ const posts = (await getCollection("bookmarks")).sort((a, b) => b.data.date.valu
     }
 
     .url {
-      display: block;
-      margin-bottom: 1rem;
       text-decoration: underline;
       text-underline-offset: 2px;
       color: var(--link);
       word-break: break-word;
+      font-size: 0.8rem;
+      margin: 0;
+      display: inline;
     }
 
     .favicon {
       width: 1rem;
       height: 1rem;
       display: inline;
-      margin-right: 0.5rem;
+      margin-right: 0.25rem;
       transform: translateY(0.2rem);
-      border-radius: 50%;
-      border: 2px solid var(--bg);
+      border-radius: 0.25rem;
+      background-color: lavenderblush;
+      overflow: hidden;
+      padding: 1px;
     }
 
     .description {
       font-size: 80%;
-      margin-bottom: 0;
+      margin-bottom: 0.5rem;
     }
 
     .description__link {

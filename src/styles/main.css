@@ -1,8 +1,7 @@
 @import url('./vendor/_reset.css');
-
 @import url('./abstracts/_variables.css');
 @import url('./abstracts/_utility.css');
-@import url('./abstracts/_animation.css');
+/* @import url('./abstracts/_animation.css'); */
 
 @import url('./base/_font.css');
 @import url('./base/_form.css');
@@ -13,8 +12,8 @@
 @import url('./base/_page__empty.css');
 @import url('./base/_typography.css');
 @import url('./base/_backgrounds.css');
-
 @import url('./layout/_grid.css');
+/* 
 @import url('./layout/_dashboard.css');
 
 @import url('./components/_articles.css');
@@ -40,4 +39,4 @@
 @import url('./pages/_bookmarkslist.css');
 @import url('./pages/_experimentslist.css');
 @import url('./pages/_sitemap.css');
-@import url('./components/_progress.css');
+@import url('./components/_progress.css'); */

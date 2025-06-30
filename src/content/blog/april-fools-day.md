@@ -6,6 +6,7 @@ tags:
     - interests
 rss: true
 kudos: 📆
+heroImage: /images/blog/2025/april/april-fools-day.jpg
 ---
 
 <figure class="card fl-r" style="width: 40%; margin-left: 1rem; margin-bottom: 1rem;">

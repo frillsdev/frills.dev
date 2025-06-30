@@ -5,7 +5,7 @@ url: https://lynnandtonic.com/thoughts/entries/a-decade-of-working-remotely/
 date: 2024-02-22
 rss: true
 tags:
-    - blog
+    - article
     - remote-working
     - thoughts
 ---

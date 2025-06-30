@@ -5,7 +5,7 @@ url: https://philwilson.org/blog/2024/03/web-publishing-for-yourself/
 date: 2024-03-18
 rss: true
 tags:
-    - blog
+    - article
     - thoughts
     - people
 ---

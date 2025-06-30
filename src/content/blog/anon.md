@@ -1,6 +1,6 @@
 ---
 title: Why blog anonymously
-description: Response to Kev Quirk's 'What About Anonymous Blogging?'
+description: A response to Kev Quirk's <a href="https://kevquirk.com/blog/what-about-anonymous-blogging">What About Anonymous Blogging?</a>
 date: 2024-04-11 18:51:00
 tags:
 - personal

@@ -41,7 +41,9 @@ export default function TimeAgo({ dateTime }) {
     else if (w < 5) relDateTime = `${w} week${w !== 1 ? "s" : ""} ago`;
     else if (d < 60) relDateTime = "last month";
     else if (mo < 12) relDateTime = `${mo} month${mo !== 1 ? "s" : ""} ago`;
-    else relDateTime = "ages ago";
+    else { const years = Math.floor(mo / 12);
+      relDateTime = `${years} year${years !== 1 ? "s" : ""} ago`;
+    }
 
     return { relDateTime, formattedTitle };
   }, [dateTime]);

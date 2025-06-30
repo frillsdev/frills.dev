@@ -8,37 +8,5 @@ const { title, description, date, updatedDate, heroImage } = Astro.props;
 ---
 
 <BaseLayout>
-  <article class="reading-width">
-    <header>
-      <h1 class="mb-1">{title}</h1>
-    </header>
     <slot />
-    <footer>
-      <p class="date"><FormattedDate date={date} /></p>
-      {
-        updatedDate && (
-          <p class="date">
-            Last updated on <FormattedDate date={updatedDate} />
-          </p>
-        )
-      }
-    </footer>
-  </article>
 </BaseLayout>
-
-<style>
-  article {
-    margin: 0 auto;
-  }
-  @media (min-width: 1125px) {
-    article {
-      margin: 0 0 0 13.25rem;
-    }
-  }
-
-  .date {
-    font-size: 80%;
-    opacity: 0.7;
-    margin-top: 0.25rem;
-  }
-</style>

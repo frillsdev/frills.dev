@@ -5,7 +5,7 @@ url: https://sive.rs/hellyeah
 date: 2024-02-15
 rss: true
 tags:
-    - blog
+    - article
     - thoughts
     - remote-working
 ---

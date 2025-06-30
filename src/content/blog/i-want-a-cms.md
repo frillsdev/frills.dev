@@ -1,6 +1,6 @@
 ---
 title: I want a CMS
-description: Tired of the friction!
+description: A braindump/vent about Decap colliding with Neocities
 date: 2025-05-08 12:00:00
 tags:
   - dev

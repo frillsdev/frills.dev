@@ -5,7 +5,7 @@ url: https://rknight.me/blog/more-things-you-can-do-on-your-website/
 date: 2024-02-20
 rss: true
 tags:
-    - blog
+    - article
     - thoughts
     - ideas
     - indie-web

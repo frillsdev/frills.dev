@@ -44,7 +44,8 @@
   --linkaccent: hsl(328, 100%, 19%);
   --linkhover: SpringGreen;
   --linkvisited: Violet;
-  --text: LavenderBlush;
+  --title: LavenderBlush;
+  --text: Thistle;
   --subtext: PeachPuff;
   --marker: "⭐";
   --dashboard-header-bg: Gold;
@@ -77,7 +78,8 @@
     --linkaccent: #FFB8D0;
     --linkhover: hsl(253, 100%, 27%);
     --linkvisited: Purple;
-    --text: hsl(253, 88%, 16%);
+    --title: hsl(253,88%, 8%);
+    --text: hsl(253,88%, 16%);
     --subtext: DarkRed;
     --marker: "💖";
     --dashboard-header-bg: Gold;

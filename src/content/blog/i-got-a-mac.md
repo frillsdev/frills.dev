@@ -5,6 +5,8 @@ tags:
 - personal
 rss: true
 kudos: 💻
+heroImage: /images/blog/2025/february/i-got-a-mac.webp
+heroImageWeighted: right
 ---
 
 Continuing on from my seemed [Apple-ification](/blog/2025/january/i-got-an-iphone/), I got a new Macbook!
