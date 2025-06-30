@@ -58,15 +58,34 @@ h1 {
 /* Developement */
 
 .bigboibanner {
-  font-family: "Shrikhand", var(--font-family);
   font-size: clamp(10vw, 10vw, 195px);
   line-height: 1;
   text-transform: lowercase;
-  display: flex;
-  align-items: center;
-  color: var(--about-color);
+  column-gap: 0.25ch;
   grid-column: 2 / span 1;
   height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bigboibanner .internet,
+.bigboibanner .witch {
+  height: 10vw;
+  flex: 0 0 auto;
+}
+
+.bigboibanner .internet {
+  aspect-ratio: 54/10;
+}
+
+.bigboibanner .witch {
+  aspect-ratio: 36/10;
+}
+
+.bigboibanner-fill {
+  fill: var(--about-color);
 }
 
 @media (min-width: 768px) {
@@ -226,6 +245,7 @@ h1 {
 .score {
   border-radius: 2vw;
   font-size: clamp(1.5rem, 3.5vw, 5rem);
+  font-weight: 900;
   aspect-ratio: 1 / 1;
   padding: 1rem;
   box-shadow: 0 0 0 var(--border-width) var(--border-color);
@@ -253,23 +273,23 @@ h1 {
 
 @media (min-width: 768px) {
   .adventurer-tome {
-      grid-template-columns: 1fr 1fr;
-    }
-  
-    .adventure-tome-main {
-      grid-column: 1 / span 2;
-      grid-row: 1;
-    }
-  
-    .adventure-tome-stats {
-      grid-column: 1;
-      grid-row: 2;
-    }
-  
-    .adventure-tome-items {
-      grid-column: 2;
-      grid-row: 2;
-    }
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .adventure-tome-main {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .adventure-tome-stats {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .adventure-tome-items {
+    grid-column: 2;
+    grid-row: 2;
+  }
 }
 
 @media (min-width: 1060px) {

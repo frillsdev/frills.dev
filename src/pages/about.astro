@@ -1,62 +1,261 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/pages/about.css";
+import "../styles/components/_progress.css";
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	date={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<BaseLayout>
+  <h1 class="visually-hidden">About</h1>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+  <div class="character-scroll">
+    <div class="party-leader" title="Mid-Tier Wi-Fi Spellcaster">
+      <div class="bigboibanner">
+        <svg class="internet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 10" fill="none"><path class="bigboibanner-fill" d="M53.474 2.808c.152 0 .268.032.348.096a.309.309 0 0 1 .132.264c0 .032-.008.088-.024.168-.104.352-.344.528-.72.528h-.696l-.9 2.964c-.04.12-.06.244-.06.372 0 .144.04.244.12.3a.58.58 0 0 0 .336.084c.128 0 .288-.016.48-.048.096-.024.18-.036.252-.036.056 0 .096.02.12.06a.178.178 0 0 1 .048.132c.008.16-.112.356-.36.588-.24.224-.568.42-.984.588-.416.16-.876.24-1.38.24-.544 0-.98-.124-1.308-.372-.328-.248-.492-.588-.492-1.02 0-.2.032-.392.096-.576l.768-2.376c.04-.136.06-.244.06-.324 0-.16-.04-.296-.12-.408a1.718 1.718 0 0 0-.312-.348 1.739 1.739 0 0 1-.252-.276.36.36 0 0 1-.036-.276.4.4 0 0 1 .204-.24c.104-.056.268-.084.492-.084h.672l.756-.756c.264-.264.504-.448.72-.552.224-.104.512-.156.864-.156.504 0 .756.192.756.576 0 .12-.016.232-.048.336l-.168.552h.636ZM45.463 2.594c1.016 0 1.752.164 2.208.492.456.32.684.732.684 1.236 0 .152-.016.292-.048.42-.12.528-.456.908-1.008 1.14-.544.224-1.188.336-1.932.336-.376 0-.728-.024-1.056-.072-.008.416.104.708.336.876.232.168.556.252.972.252.192 0 .376-.02.552-.06.176-.048.4-.116.672-.204.224-.08.376-.12.456-.12.088 0 .132.052.132.156.008.28-.096.576-.312.888-.216.304-.536.564-.96.78-.424.216-.936.324-1.536.324-.888 0-1.616-.224-2.184-.672-.568-.448-.852-1.1-.852-1.956 0-.24.032-.52.096-.84.2-.984.636-1.724 1.308-2.22.68-.504 1.504-.756 2.472-.756Zm-1.068 2.832a.57.57 0 0 0 .132.012c.336 0 .592-.156.768-.468a2 2 0 0 0 .252-1.044c-.008-.224-.072-.336-.192-.336-.088 0-.192.072-.312.216-.12.136-.24.344-.36.624-.112.28-.208.612-.288.996ZM40.233 7.344a.334.334 0 0 0-.024.144c0 .056.012.1.036.132a.163.163 0 0 0 .12.048c.096 0 .176-.04.24-.12.072-.088.12-.132.144-.132.04 0 .072.028.096.084a.4.4 0 0 1 .036.18c.008.232-.068.46-.228.684-.16.216-.396.396-.708.54-.304.136-.672.204-1.104.204-.528 0-.948-.12-1.26-.36a1.228 1.228 0 0 1-.48-.984c0-.296.072-.628.216-.996l.66-1.728a.746.746 0 0 0 .06-.252.286.286 0 0 0-.108-.24.326.326 0 0 0-.24-.096c-.176 0-.344.084-.504.252a1.4 1.4 0 0 0-.348.6l-.744 2.448a.737.737 0 0 0-.048.252c0 .096.02.176.06.24.04.056.096.116.168.18a.576.576 0 0 1 .12.132c.024.04.028.088.012.144-.032.104-.108.18-.228.228-.12.048-.308.072-.564.072h-2.736c-.208 0-.356-.032-.444-.096-.096-.072-.132-.164-.108-.276.032-.096.116-.18.252-.252a1.1 1.1 0 0 0 .3-.228c.08-.088.148-.228.204-.42l1.068-3.468a.467.467 0 0 0 .024-.168.31.31 0 0 0-.06-.204 1.058 1.058 0 0 0-.168-.18.819.819 0 0 1-.168-.168c-.032-.048-.036-.112-.012-.192.048-.184.3-.344.756-.48a4.714 4.714 0 0 1 1.428-.216c.4 0 .716.112.948.336.232.216.336.52.312.912.328-.472.676-.796 1.044-.972a2.646 2.646 0 0 1 1.2-.276c.488 0 .88.148 1.176.444.304.296.456.68.456 1.152a2.3 2.3 0 0 1-.12.732l-.732 2.364ZM31.747 2.652c.448 0 .804.136 1.068.408.272.272.408.608.408 1.008 0 .152-.016.292-.048.42-.08.328-.232.58-.456.756a1.262 1.262 0 0 1-.804.264c-.304 0-.536-.072-.696-.216a2.042 2.042 0 0 1-.408-.576 1.33 1.33 0 0 0-.18-.3.25.25 0 0 0-.192-.096.298.298 0 0 0-.216.096.941.941 0 0 0-.156.336l-.924 3a.511.511 0 0 0-.024.18c0 .104.028.192.084.264.064.064.148.128.252.192.096.064.16.116.192.156a.2.2 0 0 1 .036.156.29.29 0 0 1-.18.228C29.407 8.976 29.24 9 29 9h-3.072c-.208 0-.356-.032-.444-.096-.096-.072-.132-.164-.108-.276.032-.096.116-.18.252-.252a1.1 1.1 0 0 0 .3-.228c.08-.088.148-.228.204-.42L27.2 4.26a.467.467 0 0 0 .024-.168.31.31 0 0 0-.06-.204 1.058 1.058 0 0 0-.168-.18.819.819 0 0 1-.168-.168c-.032-.048-.036-.112-.012-.192.048-.184.3-.344.756-.48A4.714 4.714 0 0 1 29 2.652c.328 0 .6.076.816.228a.991.991 0 0 1 .42.624c.384-.568.888-.852 1.512-.852ZM23.209 2.594c1.016 0 1.752.164 2.208.492.456.32.684.732.684 1.236 0 .152-.016.292-.048.42-.12.528-.456.908-1.008 1.14-.544.224-1.188.336-1.932.336-.376 0-.728-.024-1.056-.072-.008.416.104.708.336.876.232.168.556.252.972.252.192 0 .376-.02.552-.06.176-.048.4-.116.672-.204.224-.08.376-.12.456-.12.088 0 .132.052.132.156.008.28-.096.576-.312.888-.216.304-.536.564-.96.78-.424.216-.936.324-1.536.324-.888 0-1.616-.224-2.184-.672-.568-.448-.852-1.1-.852-1.956 0-.24.032-.52.096-.84.2-.984.636-1.724 1.308-2.22.68-.504 1.504-.756 2.472-.756Zm-1.068 2.832a.57.57 0 0 0 .132.012c.336 0 .592-.156.768-.468a2 2 0 0 0 .252-1.044c-.008-.224-.072-.336-.192-.336-.088 0-.192.072-.312.216-.12.136-.24.344-.36.624-.112.28-.208.612-.288.996ZM19.349 2.808c.152 0 .268.032.348.096a.309.309 0 0 1 .132.264c0 .032-.008.088-.024.168-.104.352-.344.528-.72.528h-.696l-.9 2.964c-.04.12-.06.244-.06.372 0 .144.04.244.12.3a.58.58 0 0 0 .336.084c.128 0 .288-.016.48-.048.096-.024.18-.036.252-.036.056 0 .096.02.12.06a.178.178 0 0 1 .048.132c.008.16-.112.356-.36.588-.24.224-.568.42-.984.588-.416.16-.876.24-1.38.24-.544 0-.98-.124-1.308-.372-.328-.248-.492-.588-.492-1.02 0-.2.032-.392.096-.576l.768-2.376c.04-.136.06-.244.06-.324 0-.16-.04-.296-.12-.408a1.718 1.718 0 0 0-.312-.348 1.739 1.739 0 0 1-.252-.276.36.36 0 0 1-.036-.276.4.4 0 0 1 .204-.24c.104-.056.268-.084.492-.084h.672l.756-.756c.264-.264.504-.448.72-.552.224-.104.512-.156.864-.156.504 0 .756.192.756.576 0 .12-.016.232-.048.336l-.168.552h.636ZM12.822 7.344a.334.334 0 0 0-.024.144c0 .056.012.1.036.132a.163.163 0 0 0 .12.048c.096 0 .176-.04.24-.12.072-.088.12-.132.144-.132.04 0 .072.028.096.084a.4.4 0 0 1 .036.18c.008.232-.068.46-.228.684-.16.216-.396.396-.708.54-.304.136-.672.204-1.104.204-.528 0-.948-.12-1.26-.36a1.228 1.228 0 0 1-.48-.984c0-.296.072-.628.216-.996l.66-1.728a.746.746 0 0 0 .06-.252.286.286 0 0 0-.108-.24.326.326 0 0 0-.24-.096c-.176 0-.344.084-.504.252a1.4 1.4 0 0 0-.348.6l-.744 2.448a.737.737 0 0 0-.048.252c0 .096.02.176.06.24.04.056.096.116.168.18a.576.576 0 0 1 .12.132c.024.04.028.088.012.144-.032.104-.108.18-.228.228-.12.048-.308.072-.564.072H5.466c-.208 0-.356-.032-.444-.096-.096-.072-.132-.164-.108-.276.032-.096.116-.18.252-.252a1.1 1.1 0 0 0 .3-.228c.08-.088.148-.228.204-.42L6.738 4.26a.467.467 0 0 0 .024-.168.31.31 0 0 0-.06-.204 1.058 1.058 0 0 0-.168-.18.819.819 0 0 1-.168-.168c-.032-.048-.036-.112-.012-.192.048-.184.3-.344.756-.48a4.714 4.714 0 0 1 1.428-.216c.4 0 .716.112.948.336.232.216.336.52.312.912.328-.472.676-.796 1.044-.972a2.646 2.646 0 0 1 1.2-.276c.488 0 .88.148 1.176.444.304.296.456.68.456 1.152a2.3 2.3 0 0 1-.12.732l-.732 2.364ZM4.156 2.652c.464 0 .804.088 1.02.264.216.176.324.416.324.72 0 .184-.028.36-.084.528L4.312 7.752c-.024.096-.036.18-.036.252 0 .104.02.188.06.252.04.056.096.112.168.168a.805.805 0 0 1 .12.144c.024.032.028.076.012.132a.399.399 0 0 1-.24.228c-.12.048-.304.072-.552.072H1.108C.9 9 .748 8.968.652 8.904.556 8.832.524 8.74.556 8.628c.032-.096.116-.18.252-.252a1.1 1.1 0 0 0 .3-.228c.08-.088.148-.228.204-.42L2.356 4.26a.592.592 0 0 0 .036-.18.31.31 0 0 0-.06-.204.74.74 0 0 0-.18-.168.819.819 0 0 1-.168-.168c-.032-.048-.036-.112-.012-.192.048-.184.3-.344.756-.48a4.714 4.714 0 0 1 1.428-.216ZM4.96 0c.312 0 .572.104.78.312a.99.99 0 0 1 .312.744c0 .208-.056.412-.168.612-.104.2-.256.364-.456.492-.192.12-.408.18-.648.18-.304 0-.56-.1-.768-.3a1.11 1.11 0 0 1-.312-.768c0-.2.052-.396.156-.588.104-.2.252-.364.444-.492S4.712 0 4.96 0Z"></path></svg>
+        <svg class="witch" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 10" fill="none"><path class="bigboibanner-fill" d="M34.532 7.345a.334.334 0 0 0-.024.144c0 .056.012.1.036.132a.163.163 0 0 0 .12.048c.096 0 .176-.04.24-.12.072-.088.12-.132.144-.132.04 0 .072.028.096.084a.4.4 0 0 1 .036.18c.008.232-.068.46-.228.684-.16.216-.396.396-.708.54-.304.136-.672.204-1.104.204-.528 0-.948-.12-1.26-.36a1.228 1.228 0 0 1-.48-.984c0-.296.072-.628.216-.996l.66-1.728a.746.746 0 0 0 .06-.252.286.286 0 0 0-.108-.24.326.326 0 0 0-.24-.096c-.152 0-.308.072-.468.216-.152.136-.276.36-.372.672v-.024l-.756 2.436c-.024.096-.036.18-.036.252 0 .104.02.188.06.252.04.056.096.112.168.168a.805.805 0 0 1 .12.144c.024.032.028.076.012.132a.399.399 0 0 1-.24.228c-.12.048-.304.072-.552.072h-2.736c-.208 0-.36-.032-.456-.096-.096-.072-.128-.164-.096-.276.032-.096.116-.18.252-.252a1.1 1.1 0 0 0 .3-.228c.08-.088.148-.228.204-.42l1.824-5.988a.592.592 0 0 0 .036-.18.32.32 0 0 0-.072-.216.832.832 0 0 0-.168-.168 1.28 1.28 0 0 1-.18-.168C28.8.96 28.796.897 28.82.817c.048-.184.3-.344.756-.48a4.97 4.97 0 0 1 1.428-.204c.464 0 .804.088 1.02.264a.866.866 0 0 1 .336.72c0 .176-.028.348-.084.516l-.648 2.112c.312-.408.64-.692.984-.852.352-.16.732-.24 1.14-.24.488 0 .88.148 1.176.444.304.296.456.68.456 1.152a2.3 2.3 0 0 1-.12.732l-.732 2.364ZM25.028 2.594c.488 0 .916.072 1.284.216.368.136.652.328.852.576.208.24.312.508.312.804 0 .32-.112.584-.336.792-.216.208-.512.312-.888.312-.384 0-.684-.096-.9-.288-.216-.2-.324-.468-.324-.804 0-.16.024-.328.072-.504a1.963 1.963 0 0 0-.9.528c-.256.256-.428.596-.516 1.02-.048.24-.072.456-.072.648 0 .432.12.76.36.984.24.224.584.336 1.032.336.256 0 .476-.024.66-.072.184-.056.372-.128.564-.216.16-.08.276-.12.348-.12.048 0 .08.012.096.036.016.016.024.056.024.12.008.296-.116.608-.372.936-.248.32-.596.592-1.044.816-.44.216-.936.324-1.488.324-.576 0-1.088-.104-1.536-.312a2.489 2.489 0 0 1-1.032-.912c-.24-.4-.36-.864-.36-1.392 0-.248.032-.524.096-.828.216-.992.692-1.74 1.428-2.244.744-.504 1.624-.756 2.64-.756ZM20.88 2.808c.152 0 .268.032.348.096a.309.309 0 0 1 .132.264c0 .032-.008.088-.024.168-.104.352-.344.528-.72.528h-.696l-.9 2.964c-.04.12-.06.244-.06.372 0 .144.04.244.12.3a.58.58 0 0 0 .336.084c.128 0 .288-.016.48-.048.096-.024.18-.036.252-.036.056 0 .096.02.12.06a.178.178 0 0 1 .048.132c.008.16-.112.356-.36.588-.24.224-.568.42-.984.588-.416.16-.876.24-1.38.24-.544 0-.98-.124-1.308-.372-.328-.248-.492-.588-.492-1.02 0-.2.032-.392.096-.576l.768-2.376c.04-.136.06-.244.06-.324 0-.16-.04-.296-.12-.408a1.718 1.718 0 0 0-.312-.348 1.739 1.739 0 0 1-.252-.276.36.36 0 0 1-.036-.276.4.4 0 0 1 .204-.24c.104-.056.268-.084.492-.084h.672l.756-.756c.264-.264.504-.448.72-.552.224-.104.512-.156.864-.156.504 0 .756.192.756.576 0 .12-.016.232-.048.336l-.168.552h.636ZM14.277 2.652c.464 0 .804.088 1.02.264.216.176.324.416.324.72 0 .184-.028.36-.084.528l-1.104 3.588c-.024.096-.036.18-.036.252 0 .104.02.188.06.252.04.056.096.112.168.168a.805.805 0 0 1 .12.144c.024.032.028.076.012.132a.399.399 0 0 1-.24.228c-.12.048-.304.072-.552.072h-2.736c-.208 0-.36-.032-.456-.096-.096-.072-.128-.164-.096-.276.032-.096.116-.18.252-.252a1.1 1.1 0 0 0 .3-.228c.08-.088.148-.228.204-.42l1.044-3.468a.592.592 0 0 0 .036-.18.31.31 0 0 0-.06-.204.74.74 0 0 0-.18-.168.819.819 0 0 1-.168-.168c-.032-.048-.036-.112-.012-.192.048-.184.3-.344.756-.48a4.714 4.714 0 0 1 1.428-.216ZM15.081 0c.312 0 .572.104.78.312a.99.99 0 0 1 .312.744c0 .208-.056.412-.168.612-.104.2-.256.364-.456.492-.192.12-.408.18-.648.18-.304 0-.56-.1-.768-.3a1.11 1.11 0 0 1-.312-.768c0-.2.052-.396.156-.588.104-.2.252-.364.444-.492s.412-.192.66-.192ZM11.268 4.356c0 .712-.248 1.44-.745 2.184A6.384 6.384 0 0 1 8.64 8.388c-.752.48-1.492.72-2.22.72-.576 0-1.064-.1-1.464-.3-.4-.2-.66-.488-.78-.864-.296.36-.624.632-.984.816-.36.184-.736.276-1.128.276-.544 0-.988-.132-1.332-.396-.336-.272-.504-.668-.504-1.188 0-.272.044-.552.132-.84l.672-2.352a.656.656 0 0 0 .024-.144c0-.08-.02-.148-.06-.204a1.122 1.122 0 0 0-.168-.18c-.12-.104-.18-.196-.18-.276-.008-.112.06-.232.204-.36.144-.128.344-.232.6-.312.264-.088.56-.132.888-.132.536 0 .952.132 1.248.396.304.256.456.592.456 1.008 0 .184-.032.384-.096.6l-.612 2.04a1.034 1.034 0 0 0-.048.228c0 .104.028.184.084.24a.369.369 0 0 0 .252.084.488.488 0 0 0 .36-.144c.104-.104.204-.268.3-.492l.684-2.352a.656.656 0 0 0 .024-.144c0-.08-.02-.148-.06-.204a1.122 1.122 0 0 0-.168-.18c-.12-.104-.18-.196-.18-.276-.008-.112.06-.232.204-.36.144-.128.344-.232.6-.312.264-.088.56-.132.888-.132.544 0 .964.128 1.26.384.296.256.444.596.444 1.02 0 .168-.032.368-.096.6l-.78 2.568a.511.511 0 0 0-.024.18c0 .104.036.184.108.24a.478.478 0 0 0 .3.084c.176 0 .38-.076.612-.228.24-.16.472-.384.696-.672a3.72 3.72 0 0 0 .564-1.044c-.32-.28-.548-.556-.684-.828a1.952 1.952 0 0 1-.192-.84c0-.408.112-.752.336-1.032.224-.288.548-.432.972-.432.424 0 .776.152 1.056.456.28.304.42.72.42 1.248Z"></path></svg>
+      </div>
+      <div class="stat-block">
+        <div class="stat-name">
+          <h2>Name</h2>
+          <p>Frills</p>
+        </div>
+        <div class="stat-race">
+          <h2>Race</h2>
+          <p>Human</p>
+        </div>
+        <div class="stat-level">
+          <h2>Pronouns</h2>
+          <p>she/her</p>
+        </div>
+        <div class="stat-alignment">
+          <h2>Alignment</h2>
+          <p>Chaotic Good</p>
+        </div>
+        <div class="stat-class">
+          <h2>Class & Level</h2>
+          <p>Sorcerer, 8</p>
+        </div>
+      </div>
+      <div class="character-portrait">
+        <img src="/images/avatars/andycarolan.png" alt="Avatar of a woman with brown hair, styled in spacebuns. Wearing pink dungarees and a pink top. In a simple line illustration style" />
+      </div>
+    </div>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+    <div class="ability-scores">
+      <h2 class="visually-hidden">Stats</h2>
+      <div class="score-strength">
+        <h3>Strength</h3>
+        <p class="score">9</p>
+        <p class="score-modifier">-1</p>
+      </div>
+      <div class="score-dexterity">
+        <h3>Dexterity</h3>
+        <p class="score">12</p>
+        <p class="score-modifier">+1</p>
+      </div>
+      <div class="score-constitution">
+        <h3>Constitution</h3>
+        <p class="score">15</p>
+        <p class="score-modifier">+2</p>
+      </div>
+      <div class="score-wisdom">
+        <h3>Wisdom</h3>
+        <p class="score">17</p>
+        <p class="score-modifier">+3</p>
+      </div>
+      <div class="score-intelligence">
+        <h3>Intelligence</h3>
+        <p class="score">14</p>
+        <p class="score-modifier">+2</p>
+      </div>
+      <div class="score-charisma">
+        <h3>Charisma</h3>
+        <p class="score">15</p>
+        <p class="score-modifier">+2</p>
+      </div>
+    </div>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+    <div class="adventurer-tome">
+      <div class="adventure-tome-main">
+        <div class="tome-entry">
+          <div class="vitals">
+            <div class="vital-bar">
+              <label for="hp">Health</label>
+              <progress id="hp" value="35" max="50"></progress>
+            </div>
+            <div class="vital-bar">
+              <label for="mana">Mana</label>
+              <progress id="mana" value="44" max="100"></progress>
+            </div>
+            <div class="vital-bar">
+              <label for="xp">Experience</label>
+              <progress id="xp" value="1000" max="14000"></progress>
+            </div>
+          </div>
+        </div>
+        <div class="tome-entry">
+          <h2 class="tome-entry-title">
+            <span>Backstory</span>
+          </h2>
+          <p>Siwmae! Ffrils ydw i! An average mortal human, brimming with a plethora of hobbies and complexities. Grew up in the sticks in the South West of England, moved to Wales for the love of reading complicated road signs, family heritage and for love itself.</p>
+          <p>I spend my time consuming media, tinkering with my website, reading about myths and legends, and picking up flowers, sticks and stones on walks with the familiar.</p>
+          <p>Dw i'n dysgu Cymraeg (mostly by osmosis and googling). Dw i wedi dysgu pethau bach fel "dw i wrth fy modd yn yfed llawer o de".</p>
+        </div>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+        <div class="tome-entry">
+          <h2 class="tome-entry-title">
+            <span>Companions</span>
+          </h2>
+          <ul class="unstyled">
+            <li>
+              <h3>Fiancé</h3>
+              Level 9 Human Bard. Inspiration and morale boost specialisms. Firm rock in emotional tides.
+            </li>
+            <li>
+              <h3>Familiar</h3>
+              Level 1 Canine Paladin. Skilled at sniffing out treats and picking the best sword sticks, but sometimes thinks a plastic bag is a threat.
+            </li>
+          </ul>
+        </div>
+        <div class="tome-entry">
+          <h2 class="tome-entry-title">
+            <span>Correspondence</span>
+          </h2>
+          <ul>
+            <li><a href="https://indieweb.social/@frills">@frills@indieweb.social</a></li>
+            <li><p>fri11s ✨ proton 🟡 me</p></li>
+            <li><a href="/guestbook">My Guestbook</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="adventure-tome-stats">
+        <div class="tome-entry">
+          <button class="button" id="inspire">Inspiration</button>
+        </div>
+        <div class="tome-entry">
+          <h2 class="tome-entry-title">
+            <span>Skills</span>
+          </h2>
+          <div class="skill-scores">
+            <ul class="unstyled">
+              <li class="skill">
+                <span class="skill-modifier">+1</span>
+                <span>Acrobatics</span>
+              </li>
+              <li class="skill">
+                <span class="skill-modifier">+3</span>
+                <span>Animal Handling</span>
+              </li>
+              <li class="skill proficient">
+                <span class="skill-modifier">+5</span>
+                <span>Arcana <span class="visually-hidden">(Proficient)</span></span>
+              </li>
+              <li class="skill">
+                <span class="skill-modifier">-1</span>
+                <span>Athletics</span>
+              </li>
+              <li class="skill">
+                <span class="skill-modifier">+2</span>
+                <span>Deception</span>
+              </li>
+              <li class="skill">
+                <span class="skill-modifier">+2</span>
+                <span>History</span>
+              </li>
+              <li class="skill proficient">
+                <span class="skill-modifier">+6</span>
+                <span>Insight <span class="visually-hidden">(Proficient)</span></span>
+              </li>
+              <li class="skill">
+                <span class="skill-modifier">+2</span>
+                <span>Intimidation</span>
+              </li>
+              <li class="skill proficient">
+                <span class="skill-modifier">+5</span>
+                <span>Investigation</span>
+              </li>
+              <li class="skill">
+                <span class="skill-modifier">+3</span>
+                <span>Medicine</span>
+              </li>
+              <li class="skill">
+                <span class="skill-modifier">+2</span>
+                <span>Nature</span>
+              </li>
+              <li class="skill proficient">
+                <span class="skill-modifier">+6</span>
+                <span>Perception <span class="visually-hidden">(Proficient)</span></span>
+              </li>
+              <li class="skill">
+                <span class="skill-modifier">+2</span>
+                <span>Performance</span>
+              </li>
+              <li class="skill">
+                <span class="skill-modifier">+2</span>
+                <span>Persuasion</span>
+              </li>
+              <li class="skill">
+                <span class="skill-modifier">+2</span>
+                <span>Religion</span>
+              </li>
+              <li class="skill">
+                <span class="skill-modifier">+1</span>
+                <span>Sleight of Hand</span>
+              </li>
+              <li class="skill">
+                <span class="skill-modifier">+1</span>
+                <span>Stealth</span>
+              </li>
+              <li class="skill">
+                <span class="skill-modifier">+3</span>
+                <span>Survival</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tome-entry">
+          <h2 class="tome-entry-title">
+            <span>Proficiencies</span>
+          </h2>
+          <ul class="unstyled">
+            <li>English (native)</li>
+            <li>Internet Slang (native)</li>
+            <li>Welsh (beginner/dysgu)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="adventure-tome-items">
+        <div class="tome-entry">
+          <h2 class="tome-entry-title">
+            <span>Inventory</span>
+          </h2>
+          <ul class="unstyled">
+            <li>🧥 Clothes, common</li>
+            <li>🖋️ Ink pen</li>
+            <li>🍶 Perfume (vial)</li>
+            <li>🪢 Leash (dog)</li>
+            <li>⌨️ Mechanical keyboard</li>
+            <li>🍜 Packets of ramen noodles</li>
+            <li>📚 Stack of half-used, heavily doodled notepads</li>
+            <li>🫘 Small bag of snacks</li>
+            <li>🎮 Entertainment devices</li>
+            <li>🛠️ Tinker's Tools</li>
+            <li>💧 Waterskin</li>
+            <li>🍂 Welsh Brew tea leaves</li>
+          </ul>
+        </div>
+        <div class="tome-entry">
+          <h2 class="tome-entry-title">
+            <span>Magic Items</span>
+          </h2>
+          <ul class="unstyled">
+            <li>💍 Engagement band</li>
+            <li>📿 Silver amulet</li>
+            <li>☕️ Favourite mug</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout
