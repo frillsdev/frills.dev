@@ -3,7 +3,9 @@ title: Roald Dahl’s The Witches
 description: A mini movie review
 date: 2025-01-03 21:00:00
 tags:
-- personal
+    - review
+    - media
+    - movie
 rss: true
 kudos: 🐁
 ---

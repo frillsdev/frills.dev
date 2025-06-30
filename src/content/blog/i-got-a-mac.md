@@ -2,7 +2,8 @@
 title: Ode to Dylan (my old Macbook)
 date: 2025-02-10 13:00:00
 tags:
-- personal
+    - personal
+    - apple
 rss: true
 kudos: 💻
 heroImage: /images/blog/2025/february/i-got-a-mac.webp

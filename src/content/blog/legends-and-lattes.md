@@ -3,7 +3,9 @@ title: Legends & Lattes
 description: A cozy book by Travis Baldree
 date: 2024-11-22 13:00:00
 tags:
-- personal
+- review
+- media
+- book
 rss: true
 kudos: 📖
 ---

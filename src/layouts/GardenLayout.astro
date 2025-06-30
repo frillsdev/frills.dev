@@ -63,18 +63,20 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
 
                   <footer>
                     {post.data.tags?.length > 0 && (
-                      <p class="tags">
+                      <p class="badge-grid">
                         <span class="emoji" aria-label="Tags">
                           🏷️
                         </span>
-                        {post.data.tags.map((tag) => (
-                          <span class="badge" key={tag}>
-                            {tag}
-                          </span>
-                        ))}
+                        <span class="badge-wrap">
+                          {post.data.tags.map((tag) => (
+                            <span class="badge" key={tag}>
+                              {tag}
+                            </span>
+                          ))}
+                        </span>
                       </p>
                     )}
-                    <p class="mb-0">
+                    <p class="badge-grid mb-0">
                       <span class="emoji" aria-hidden="true">
                         {post.collection === "bookmarks" ?
                           "🔗"
@@ -82,13 +84,15 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
                           "📝"
                         : ""}
                       </span>
-                      <span class="badge">
-                        {post.collection === "bookmarks" ?
-                          "Bookmarked "
-                        : post.collection === "blog" ?
-                          "Published "
-                        : ""}
-                        <TimeAgo dateTime={post.data.date} />
+                      <span class="badge-wrap">
+                        <span class="badge">
+                          {post.collection === "bookmarks" ?
+                            "Bookmarked "
+                          : post.collection === "blog" ?
+                            "Published "
+                          : ""}
+                          <TimeAgo dateTime={post.data.date} />
+                        </span>
                       </span>
                     </p>
                   </footer>
@@ -99,7 +103,8 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
         }
       </div>
       <footer class="end">
-        <pre class="pb-2" role="img" aria-label="An ASCII art flowerbed full of red, purple, yellow, pink and blue flowers. Made by Joan G. Stark" class="ascii-flowerbed"><span class="c-yellow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _<span class="ascii-butterfly" /></span>
+        <figure>
+          <pre role="img" aria-label="A colourful bed of flowers in ASCII characters" class="ascii-flowerbed"><span class="c-yellow">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _<span class="ascii-butterfly" /></span>
 <span class="c-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="c-yellow">_(_)_</span><span class="c-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span><span class="c-magenta">wWWWw</span><span class="c-white">&nbsp;&nbsp; </span><span class="c-red">_</span>
 <span class="c-white">&nbsp;&nbsp;&nbsp; </span><span class="c-red">@@@@</span><span class="c-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="c-yellow">(_)</span><span class="c-orange">@</span><span class="c-yellow">(_)</span><span class="c-white">&nbsp; </span><span class="c-blue">vVVVv</span><span class="c-white">&nbsp;&nbsp;&nbsp; </span><span class="c-light-yellow">_</span><span class="c-white">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="c-light-pink">@@@@</span><span class="c-white">&nbsp; </span><span class="c-magenta">(___)</span><span class="c-white"> </span><span class="c-red">_(_)_
 </span><span class="c-white">&nbsp;&nbsp; </span><span class="c-red">@@</span><span class="c-orange">()</span><span class="c-red">@@</span><span class="c-white">&nbsp;</span><span class="c-magenta">wWWWw</span><span class="c-white">&nbsp; </span><span class="c-yellow">(_)</span><span class="c-green">\</span><span class="c-white">&nbsp;&nbsp; </span><span class="c-blue">(___)</span><span class="c-white">&nbsp;</span><span class="c-light-yellow">&nbsp;_(_)_</span><span class="c-white">&nbsp; </span><span class="c-light-pink">@@</span><span class="c-orange">()</span><span class="c-light-pink">@@</span><span class="c-white">&nbsp;&nbsp; </span><span class="c-green">Y</span><span class="c-white">&nbsp; </span><span class="c-red">(_)</span><span class="c-yellow">@</span><span class="c-red">(_)
@@ -109,7 +114,9 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
 <span class="">&nbsp;jgs</span><span class="c-green">|///&nbsp; \\|/// \\\\|//\\|///\|///&nbsp; \\\|//&nbsp; \\|//&nbsp; \\\|/</span>
 <span class="c-green">&nbsp;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
 </pre>
-        <p>you’ve wandered to the edge of the garden — the rest is still growing.</p>
+          <figcaption>Art by late ASCII artist Joan G. Stark</figcaption>
+        </figure>
+        <p>you’ve wandered to the edge of the garden... the rest is still growing.</p>
         <p>leave a note in the <a href="/guestbook">guestbook</a> before you go?</p>
       </footer>
     </section>
@@ -130,7 +137,13 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
     article:hover,
     article:focus-within {
       border-color: var(--linkhover);
-      transform: scale(1.025);
+    }
+
+    @media (min-width: 48rem) {
+      article:hover,
+      article:focus-within {
+        transform: scale(1.025);
+      }
     }
 
     article:hover .external,
@@ -162,8 +175,10 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
       flex: 1 1 auto;
     }
 
-    .listing {
-      grid-area: sidebar / sidebar / main / main;
+    @media (min-width: 48rem) {
+      .listing {
+        grid-area: sidebar / sidebar / main / main;
+      }
     }
 
     .image {
@@ -192,6 +207,8 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
       padding: 0.25rem 0.5rem;
       border-radius: 0.25rem;
       background-color: var(--bg);
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
     }
 
     .title {
@@ -226,22 +243,35 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
     }
 
     article footer,
-    .tags {
+    .badge-grid {
       font-size: 0.8rem;
-      display: flex;
-      gap: 1ch;
       margin-bottom: 0;
     }
 
-    .tags {
+    .badge-grid {
       align-items: center;
+      gap: 0.5rem;
+      display: grid;
+      grid-template-columns: 1rem auto;
+      align-items: flex-start;
+    }
+
+    .badge-grid .emoji {
+      transform: translateY(0.5ch);
+    }
+
+    .badge-wrap {
+      display: flex;
       flex-wrap: wrap;
+      gap: 0.25rem;
     }
 
     article footer {
+      display: flex;
       padding-top: 1rem;
       flex-direction: column;
       justify-content: flex-start;
+      row-gap: 0.5rem;
     }
 
     .end {
@@ -256,6 +286,25 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
       line-height: 1;
       font-family: monospace;
       white-space: pre;
+      font-size: 0.5rem;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .end figure {
+      margin-bottom: 5rem;
+      font-size: 0.5rem;
+    }
+
+    .end figcaption {
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+
+    @media (min-width: 48rem) {
+      .end pre {
+        font-size: 1rem;
+      }
     }
 
     .c-white {

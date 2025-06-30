@@ -4,6 +4,8 @@ description: The Wheel turns to Ostara.
 date: 2025-03-19 12:00:00
 tags:
   - witchcraft
+  - wheel-of-the-year
+  - pagan
 rss: true
 scripts: '<script>
             (function() {

@@ -2,7 +2,8 @@
 title: I got an iPhone
 date: 2025-01-03 19:00:00
 tags:
-- personal
+    - personal
+    - apple
 rss: true
 kudos: 📱
 ---

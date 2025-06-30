@@ -8,9 +8,9 @@ import Logo from "./Logo.astro";
   <nav aria-label="Top level" class="page__nav page__nav--top">
     <ul>
       <NavLink href="/about" emoji="🌷">About</NavLink>
+      <NavLink href="/garden" emoji="🌱">Garden</NavLink>
       <NavLink href="/blog" emoji="📝">Blog</NavLink>
       <NavLink href="/links" emoji="🔗">Links</NavLink>
-      <NavLink href="/garden" emoji="🌱">Garden</NavLink>
       <NavLink href="/bookmarks" emoji="🔗">Bookmarks</NavLink>
       <NavLink href="/experiments" emoji="🧪">Experiments</NavLink>
       <NavLink href="/curios" emoji="🪐">Curios</NavLink>
@@ -22,6 +22,7 @@ import Logo from "./Logo.astro";
 <style>
   header {
     padding: 1.5rem 0 0 0;
+    gap: 2rem;
   }
 
   ul {
@@ -31,6 +32,13 @@ import Logo from "./Logo.astro";
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+  }
+
+  @media (min-width: 48rem) {
+    ul {
+      gap: 1.5rem;
+    }
   }
 </style>
