@@ -1,16 +1,18 @@
 ---
 title: My Media Orbit
-description: In this orbit&colon; brainy chaos, glittery pop music, and silly game videos I commonly consume.
+description: In this orbit&colon; brainy chaos, glittery pop music, and silly
+  game videos I commonly consume.
 date: 2025-06-27 16:23:08
 updatedDate: 2025-06-27 16:23:08
 draft: true
 tags:
-    - personal
-    - media
-    - podcast
-    - TV
-    - video
-    - music
+  - personal
+  - media
+  - podcast
+  - TV
+  - video
+  - music
+  - newsletters
 rss: true
 ---
 I struggled with the name of this blog post.
@@ -42,5 +44,13 @@ I'm not a big podcast listener. I rather listen to music, but there are a few th
 - [City Girl](https://open.spotify.com/artist/6yby1ACnfwVigbSSaH3kEQ)
 - [Nitro Fun](https://open.spotify.com/artist/4XU5f8nGiPMr6eetud6epC)
 - [Pendulum](https://open.spotify.com/artist/7MqnCTCAX6SsIYYdJCQj9B)
+
+## Newsletters
+I don't subscribe to many newsletters. My emails are a bit of a wild west, I much prefer using RSS, however these are some of the ones that are good enough to send me a notification when then drop.
+- [a11yweekly](https://a11yweekly.com/)
+- [cassidoo](https://cassidoo.co/newsletter/)
+- [oxymoron by Tom Greenwood](https://tomgreenwood.substack.com/)
+- [Curiously Green](https://www.wholegraindigital.com/curiously-green/)
+- [Pansy Shop](https://www.pansy-shop.com/)
 
 I found it tough to know where to draw the line. There is plenty more media that I consume on a semi-regular basis, but things can fall off my radar for a few months then I have a binge. The collection above are ones that I am generally quite good at keeping up with, or keep returning to habitually.
