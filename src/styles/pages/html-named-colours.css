@@ -78,7 +78,7 @@
 .namedColourButton:active,
 .namedColourButton[aria-pressed="true"] {
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
   transform: none;
   box-shadow: none;
 }

@@ -17,7 +17,7 @@ const isActive = href === pathname || href === "/" + (subpath?.[0] || "");
   a {
     text-decoration: underline;
     color: var(--link);
-    text-underline-offset: 2px;
+    text-underline-offset: 4px;
     transition: 0.3s ease color;
     position: relative;
   }
@@ -33,7 +33,7 @@ const isActive = href === pathname || href === "/" + (subpath?.[0] || "");
     text-decoration-line: underline;
     text-decoration-thickness: 2px;
     text-decoration-style: wavy;
-    text-underline-offset: 2px;
+    text-underline-offset: 4px;
   }
 
   a[aria-current]:not(:hover):not(:focus):not(:active) {

@@ -3,12 +3,15 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
-import readingTime from "astro-reading-time";
+import { remarkReadingTime } from './plugins/remark-reading-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://frills.dev',
-  integrations: [mdx(), sitemap(), react(), readingTime()],
+  integrations: [mdx(), sitemap(), react()],
+  markdown: {
+    remarkPlugins: [remarkReadingTime],
+  },
 
   prefetch: {
     prefetchAll: true

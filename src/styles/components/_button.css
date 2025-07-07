@@ -92,7 +92,7 @@ button[aria-pressed="true"] {
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
   text-decoration-style: wavy;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
 }
 
 button.dotted {
@@ -107,7 +107,7 @@ button.dotted {
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
   text-decoration-style: dotted;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
 }
 button.dotted:hover,
 button.dotted:focus,
@@ -120,7 +120,7 @@ button.dotted:active {
   color: var(--linkhover);
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
   }
 
 /* Button groups */

@@ -1,12 +1,95 @@
 ---
-import type { CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 
-import BaseLayout from "./BaseLayout.astro";
+const { title, description, date, updatedDate, timeToRead, slug, rawContent } = Astro.props;
 
-const { title, description, date, updatedDate, heroImage } = Astro.props;
+const wordCount = rawContent ? rawContent.trim().split(/\s+/).length : null;
 ---
 
 <BaseLayout>
-    <slot />
+  <div class="grid grid__2">
+    <article class="reading-width post">
+      <h1>{title}</h1>
+      <div class="metainfo">
+        {
+          timeToRead && (
+            <p>
+              <span class="emoji" aria-hidden="true">
+                ⏰
+              </span>
+              <span class="value">{timeToRead}</span>
+            </p>
+          )
+        }
+        {
+          wordCount && (
+            <p>
+              <span class="emoji" aria-hidden="true">
+                📝
+              </span>
+              <span class="value">{wordCount} words</span>
+            </p>
+          )
+        }
+        {
+          slug && (
+            <p>
+              <span class="emoji" aria-hidden="true">
+                🔗
+              </span>
+              <span class="value">
+                {slug}
+              </span>
+            </p>
+          )
+        }
+      </div>
+
+      <div class="post-content">
+        <slot />
+      </div>
+    </article>
+  </div>
+
+  <style>
+    article {
+      grid-area: main;
+    }
+
+    .metainfo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .metainfo .emoji,
+    .metainfo .value {
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+
+    .metainfo .value {
+      color: var(--subtext);
+      letter-spacing: -0.25px;
+    }
+
+    .post-content a:hover {
+      text-decoration: underline;
+      text-decoration-color: currentColor;
+    }
+  </style>
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll(".post-content a");
+      const colours = Array.from({ length: 6 }, (_, i) => `var(--post-link-${i + 1})`);
+      const shuffled = colours.sort(() => Math.random() - 0.5);
+      links.forEach((link, index) => {
+        const colour = shuffled[index % shuffled.length];
+        link.style.setProperty("--color", colour);
+      });
+    });
+  </script>
 </BaseLayout>

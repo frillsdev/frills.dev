@@ -45,9 +45,9 @@ h6 {
 }
 
 a {
-  text-decoration: underline;
+  text-decoration-line: underline;
   color: var(--link);
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
   transition: 0.3s ease color;
 }
 
@@ -85,7 +85,7 @@ a.hidden:active {
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
   text-decoration-style: wavy;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
 }
 
 p {
@@ -94,8 +94,8 @@ p {
 
 .highlight,
 em {
-  font-style: normal;
-  color: var(--highlight);
+  font-style: italic;
+  color: var(--title)
 }
 
 .small {
@@ -139,4 +139,15 @@ blockquote p:last-child {
     margin-left: -3rem;
     margin-right: -3rem;
   }
+}
+
+.post a:link {
+  color: var(--title);
+  text-decoration-color: var(--color, currentColor);
+}
+.post a:visited {
+  color: var(--title);
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: var(--color, currentColor);
 }

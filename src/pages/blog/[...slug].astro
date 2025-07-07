@@ -10,27 +10,16 @@ export async function getStaticPaths() {
     props: post,
   }));
 }
+
 type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
-const { Content } = await render(post);
+const { Content, remarkPluginFrontmatter } = await render(post);
+
+const slug = `/blog/${post.id}`;
+const rawContent = post.body;
 ---
 
-<BlogPost {...post.data}>
-  <div class="grid grid__2">
-	<article class="reading-width">
-    <Content />
-	</article>
-  </div>
-
-  <style>
-    article {
-      grid-area: main;
-    }
-    .date {
-      font-size: 80%;
-      opacity: 0.7;
-      margin-top: 0.25rem;
-    }
-  </style>
+<BlogPost {...post.data} title={post.data.title} timeToRead={remarkPluginFrontmatter.minutesRead} slug={slug} rawContent={rawContent}>
+  <Content />
 </BlogPost>

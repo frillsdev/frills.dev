@@ -19,7 +19,7 @@ I struggled with the name of this blog post.
 
 What I want to encapsulate here is the kind of media that I consume on a frequent basis. 
 
-Kinda inspired by [Ava's recent traded blog title: Personal Canon](https://blog.avas.space/trade-personal-canon/), but I have also been keen to share my common media consumption for a while.
+Kinda inspired by [Ava's traded blog title: Personal Canon](https://blog.avas.space/trade-personal-canon/), but I have also been keen to share my common media consumption for a while.
 
 So, here we are with 'Media Orbit'.
 

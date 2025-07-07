@@ -37,7 +37,7 @@ ul.files details>summary::active {
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
   text-decoration-style: wavy;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
 }
 
 ul.files details>summary::marker,

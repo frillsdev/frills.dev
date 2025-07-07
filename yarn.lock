@@ -10,13 +10,13 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
-"@astrojs/cloudflare@12.5.4":
-  version "12.5.4"
-  resolved "https://registry.yarnpkg.com/@astrojs/cloudflare/-/cloudflare-12.5.4.tgz#872bfb9cca3bd13d502b995c4ec67b215c0ef613"
-  integrity sha512-WKUeMP2tIbddEu0tlVEPj8o9m/8CJB6who3a3jupuIyR56ltmW924ZOMYtp/C9uxH7KeDJXrMszRj3LHs9U97w==
+"@astrojs/cloudflare@12.6.0":
+  version "12.6.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/cloudflare/-/cloudflare-12.6.0.tgz#16a0436503eb3dd5fcd89d60cc5efc2d3693aa38"
+  integrity sha512-pQ8bokC59GEiXvyXpC4swBNoL7C/EknP+82KFzQwgR/Aeo5N1oPiAoPHgJbpPya/YF4E26WODdCQfBQDvLRfuw==
   dependencies:
     "@astrojs/internal-helpers" "0.6.1"
-    "@astrojs/underscore-redirects" "0.6.1"
+    "@astrojs/underscore-redirects" "1.0.0"
     "@cloudflare/workers-types" "^4.20250507.0"
     tinyglobby "^0.2.13"
     vite "^6.3.5"
@@ -94,7 +94,7 @@
     ultrahtml "^1.6.0"
     vite "^6.3.5"
 
-"@astrojs/rss@4.0.12":
+"@astrojs/rss@^4.0.12":
   version "4.0.12"
   resolved "https://registry.yarnpkg.com/@astrojs/rss/-/rss-4.0.12.tgz#ce3505a184232b59b596dbb77e496ca8b1b00fd2"
   integrity sha512-O5yyxHuDVb6DQ6VLOrbUVFSm+NpObulPxjs6XT9q3tC+RoKbN4HXMZLpv0LvXd1qdAjzVgJ1NFD+zKHJNDXikw==
@@ -124,10 +124,10 @@
     is-wsl "^3.1.0"
     which-pm-runs "^1.1.0"
 
-"@astrojs/underscore-redirects@0.6.1":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@astrojs/underscore-redirects/-/underscore-redirects-0.6.1.tgz#a9b979fa368ded14dc3cae872c40f9021ecc80c6"
-  integrity sha512-4bMLrs2KW+8/vHEE5Ffv2HbxCbbgXO+2N6MpoCsMXUlUoi7pgEEx8kbkzMXJ2dZtWF3gvwm9lvgjnFeanC2LGg==
+"@astrojs/underscore-redirects@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@astrojs/underscore-redirects/-/underscore-redirects-1.0.0.tgz#c38689ce358877351419a9da31ccf2b849bc75d2"
+  integrity sha512-qZxHwVnmb5FXuvRsaIGaqWgnftjCuMY+GSbaVZdBmE4j8AfgPqKPxYp8SUERyJcjpKCEmO4wD6ybuGH8A2kVRQ==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.27.1":
   version "7.27.1"
@@ -1779,10 +1779,10 @@ astro-reading-time@^0.1.14:
     mdast-util-to-string "^4.0.0"
     reading-time "^1.5.0"
 
-astro@5.9.2:
-  version "5.9.2"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-5.9.2.tgz#04978c535bb412430acbfd232079d95b030e530b"
-  integrity sha512-K/zZlQOWMpamfLDOls5jvG7lrsjH1gkk3ESRZyZDCkVBtKHMF4LbjwCicm/iBb3mX3V/PerqRYzLbOy3/4JLCQ==
+astro@5.11.0:
+  version "5.11.0"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-5.11.0.tgz#346e5f774f37c5a68b46f67a459476865a28210d"
+  integrity sha512-MEICntERthUxJPSSDsDiZuwiCMrsaYy3fnDhp4c6ScUfldCB8RBnB/myYdpTFXpwYBy6SgVsHQ1H4MuuA7ro/Q==
   dependencies:
     "@astrojs/compiler" "^2.12.2"
     "@astrojs/internal-helpers" "0.6.1"

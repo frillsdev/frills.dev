@@ -27,7 +27,7 @@
   display: block;
   margin-bottom: 1rem;
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
   color: var(--link);
   word-break: break-all;
 }
@@ -42,7 +42,7 @@
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
   text-decoration-style: wavy;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
 }
 
 .bookmarks.cards .card__favicon {
