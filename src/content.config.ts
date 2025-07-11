@@ -42,7 +42,6 @@ const links = defineCollection({
 		bg: z.string().optional(),
 		color: z.string().optional(),
 		size: z.string().optional(),
-		category: z.enum(["links", "friends", "creatives", "tools", "bookmarks"])
 	})
 });
 

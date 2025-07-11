@@ -4,5 +4,4 @@ href: https://melonking.net/
 src: melonking.png
 type: button
 category: links
-category: links
 ---
