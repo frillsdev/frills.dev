@@ -38,15 +38,13 @@ const wordCount = rawContent ? rawContent.trim().split(/\s+/).length : null;
               <span class="emoji" aria-hidden="true">
                 🔗
               </span>
-              <span class="value">
-                {slug}
-              </span>
+              <span class="value">{slug}</span>
             </p>
           )
         }
       </div>
 
-      <div class="post-content">
+      <div class="post">
         <slot />
       </div>
     </article>
@@ -74,22 +72,5 @@ const wordCount = rawContent ? rawContent.trim().split(/\s+/).length : null;
       color: var(--subtext);
       letter-spacing: -0.25px;
     }
-
-    .post-content a:hover {
-      text-decoration: underline;
-      text-decoration-color: currentColor;
-    }
   </style>
-
-  <script is:inline>
-    document.addEventListener("DOMContentLoaded", () => {
-      const links = document.querySelectorAll(".post-content a");
-      const colours = Array.from({ length: 6 }, (_, i) => `var(--post-link-${i + 1})`);
-      const shuffled = colours.sort(() => Math.random() - 0.5);
-      links.forEach((link, index) => {
-        const colour = shuffled[index % shuffled.length];
-        link.style.setProperty("--color", colour);
-      });
-    });
-  </script>
 </BaseLayout>

@@ -1,0 +1,87 @@
+:root {
+  --underline-offset: 2px;
+  --underline-thickness: 1.5px;
+  --underline-style: wavy;
+}
+
+a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-underline-offset: var(--underline-offset);
+  text-decoration-color: var(--link);
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration-line: underline;
+  text-decoration-style: var(--underline-style);
+  text-decoration-thickness: var(--underline-thickness);
+  text-underline-offset: var(--underline-offset);
+}
+
+a[aria-current]:not(:hover):not(:focus):not(:active) {
+  text-decoration-style: dotted;
+  text-decoration-thickness: var(--underline-thickness);
+}
+
+nav a {
+  color: var(--link);
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active,
+nav a:visited:hover,
+nav a:visited:focus,
+nav a:visited:active {
+  color: var(--linkhover);
+  text-decoration-color: var(--linkhover);
+}
+
+nav a:visited {
+  color: var(--linkvisited);
+  text-decoration-color: var(--linkvisited);
+}
+
+main a {
+  color: var(--title);
+  text-decoration-color: var(--color, currentColor);
+}
+
+main a:visited {
+  color: var(--text);
+  text-decoration-color: var(--color, currentColor);
+}
+
+nav a:hover,
+nav a:hover,
+nav a:visited:focus,
+nav a:visited:focus {
+  color: var(--linkhover)
+}
+
+a.hidden,
+a.hidden:visited {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+main a.inherit-color,
+main a.inherit-color:hover {
+  color: inherit;
+  position: relative;
+  z-index: 2;
+  text-decoration-thickness: var(--underline-thickness);
+  text-decoration-color: inherit;
+}
+
+main a.hidden:hover,
+main a.hidden:focus,
+main a.hidden:active {
+  color: var(--linkhover);
+  text-decoration: underline;
+  text-decoration-style: var(--underline-style);
+  text-decoration-thickness: var(--underline-thickness);
+  text-underline-offset: var(--underline-offset);
+}

@@ -45,7 +45,7 @@ import LatestBook from "../components/LatestBook.jsx";
         </figure>
       </article>
       <div class="av-br">
-        <div class="item">
+        <div class="item post">
           <h2 class="visually-hidden">Intro</h2>
           <p>
             <Greeting client:only="react" forceMessage={""}><span slot="fallback">Greetings</span></Greeting>, world wide web adventurer! Step into my humble internet emporium, where a delightful array of digital knick-knacks, whimsical whirligigs, half-baked thoughts and musings await you.
@@ -72,7 +72,7 @@ import LatestBook from "../components/LatestBook.jsx";
         <article class="callout" style="background:indigo!important; color:Thistle">
           <div class="callout-image">
             <img src="https://emojicdn.elk.sh/🌌?style=apple" alt="" />
-          </div><div class="callout-content"><header><h2>Latest status</h2></header>Having insane fun with Astro! <small class="d-b subtext">27/04/25</small> <a href="/status/" style="color:Thistle" class="subtext">See past statuses</a></div>
+          </div><div class="callout-content"><header><h2>Latest status</h2></header>Having insane fun with Astro! <small class="d-b subtext">27/04/25</small> <a href="/status/" style="color:Thistle" class="subtext inherit-color">See past statuses</a></div>
         </article>
       </div>
 
@@ -81,7 +81,7 @@ import LatestBook from "../components/LatestBook.jsx";
       </div>
 
       <div class="item pos-r">
-        <CallOut as="article" emoji={"📚"} headerText={"<h2>Currently Reading</h2>"} bodyText={"<ol class='unstyled mb-0'><li><a href='https://app.thestorygraph.com/books/536ef25c-0b0f-48e8-a6bb-67856f21a223' class='hidden'>Welsh Witchcraft</a><small class='d-b subtext'> Mhara Starling </small>  </li>  <li><a href='https://app.thestorygraph.com/books/d9c7ed04-6148-4e01-a118-d96cba16f507' class='hidden'>The Midnight Library</a><small class='d-b subtext'>Matt Haig</small></li><li><a href='https://app.thestorygraph.com/profile/frills' class='large-target'>See what I'm reading on StoryGraph</a></li></ol>"} />
+        <CallOut as="article" emoji={"📚"} headerText={"<h2>Currently Reading</h2>"} bodyText={"<ol class='unstyled mb-0'><li><a href='https://app.thestorygraph.com/books/536ef25c-0b0f-48e8-a6bb-67856f21a223' class='hidden'>Welsh Witchcraft</a><small class='d-b subtext'> Mhara Starling </small>  </li>  <li><a href='https://app.thestorygraph.com/books/d9c7ed04-6148-4e01-a118-d96cba16f507' class='hidden'>The Midnight Library</a><small class='d-b subtext'>Matt Haig</small></li><li><a href='https://app.thestorygraph.com/profile/frills' class='large-target inherit-color'>See what I'm reading on StoryGraph</a></li></ol>"} />
       </div>
       <section class="item item--card item--latestposts" aria-labelledby="latestposts--title">
         <header>
@@ -110,16 +110,16 @@ import LatestBook from "../components/LatestBook.jsx";
           <h2 class="visually-hidden">RSS feeds</h2>
           <ul class="unstyled inline small">
             <li>
-              <a href="/all.xml" class="rss">All<span class="visually-hidden"> RSS feeds</span></a>
+              <a href="/all.xml" class="rss inherit-color">All<span class="visually-hidden"> RSS feeds</span></a>
             </li>
             <li>
-              <a href="/rss.xml" class="rss">Blog<span class="visually-hidden"> RSS feed</span></a>
+              <a href="/rss.xml" class="rss inherit-color">Blog<span class="visually-hidden"> RSS feed</span></a>
             </li>
             <li>
-              <a href="/bookmarks.xml" class="rss">Bookmarks<span class="visually-hidden"> RSS feed</span></a>
+              <a href="/bookmarks.xml" class="rss inherit-color">Bookmarks<span class="visually-hidden"> RSS feed</span></a>
             </li>
             <li>
-              <a href="/changelog.xml" class="rss">Changelog<span class="visually-hidden"> RSS feed</span></a>
+              <a href="/changelog.xml" class="rss inherit-color">Changelog<span class="visually-hidden"> RSS feed</span></a>
             </li>
           </ul>
         </div>

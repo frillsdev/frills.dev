@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import * as CONSTS from "../consts";
 import { ClientRouter } from "astro:transitions";
+import LinkColouriser from "../components/utils/LinkColouriser";
 ---
 
 <!doctype html>
@@ -57,6 +58,7 @@ import { ClientRouter } from "astro:transitions";
       <Header transition:persist />
       <main>
         <slot />
+        <LinkColouriser client:load />
       </main>
     </div>
     <Footer transition:persist />

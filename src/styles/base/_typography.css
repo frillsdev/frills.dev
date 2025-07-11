@@ -44,50 +44,6 @@ h6 {
   font-size: 1rem;
 }
 
-a {
-  text-decoration-line: underline;
-  color: var(--link);
-  text-underline-offset: 4px;
-  transition: 0.3s ease color;
-}
-
-a:visited {
-  color: var(--linkvisited)
-}
-
-a:hover,
-a:focus {
-  color: var(--linkhover)
-}
-
-a.hidden,
-a.hidden:visited {
-  text-decoration: inherit;
-  color: inherit;
-}
-
-a.inherit-color,
-a.inherit-color:hover,
-a.inherit-color:visited {
-  color: inherit;
-  position: relative;
-  z-index: 2;
-  text-decoration-thickness: 1px;
-}
-
-a:hover,
-a:focus,
-a:active,
-a.hidden:hover,
-a.hidden:focus,
-a.hidden:active {
-  color: var(--linkhover);
-  text-decoration-line: underline;
-  text-decoration-thickness: 2px;
-  text-decoration-style: wavy;
-  text-underline-offset: 4px;
-}
-
 p {
   margin: 0 0 1rem
 }
@@ -139,15 +95,4 @@ blockquote p:last-child {
     margin-left: -3rem;
     margin-right: -3rem;
   }
-}
-
-.post a:link {
-  color: var(--title);
-  text-decoration-color: var(--color, currentColor);
-}
-.post a:visited {
-  color: var(--title);
-  text-decoration: underline;
-  text-decoration-style: dashed;
-  text-decoration-color: var(--color, currentColor);
 }

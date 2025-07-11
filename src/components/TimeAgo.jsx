@@ -45,8 +45,8 @@ export default function TimeAgo({ dateTime }) {
       relDateTime = `${years} year${years !== 1 ? "s" : ""} ago`;
     }
 
-    return { relDateTime, formattedTitle };
+    return { relDateTime, formattedTitle, date };
   }, [dateTime]);
 
-  return <span title={content.formattedTitle}>{content.relDateTime}</span>;
+  return <span title={content.formattedTitle} data-timeago={content.date}>{content.relDateTime}</span>;
 }

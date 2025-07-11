@@ -1,0 +1,56 @@
+.footnotes {
+  position: relative;
+  padding-top: 2rem;
+}
+
+.footnotes::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: var(--bodybg);
+  height: 20px;
+  -webkit-mask: var(--wiggle);
+  mask: var(--wiggle);
+}
+
+.footnotes h2 {
+  font-size: 1.25rem;
+}
+
+.data-footnote-backref {
+  background-color: var(--bodybg);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  margin-left: 0.25rem;
+  line-height: 1;
+  font-size: 0;
+  transition: 0.3s ease all;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.data-footnote-backref::before {
+  content: '↩';
+  font-size: 0.75rem;
+  transition: 0.3s ease all;
+  }
+
+.data-footnote-backref:hover,
+.data-footnote-backref:focus,
+.data-footnote-backref:active {
+  background-color: var(--linkhover);
+  color: var(--bg);
+  text-decoration: none;
+}
+
+.data-footnote-backref:hover::before,
+.data-footnote-backref:focus::before,
+.data-footnote-backref:active::before {
+  transform: rotate(90deg);
+}

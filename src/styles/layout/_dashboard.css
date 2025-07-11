@@ -5,6 +5,7 @@
   margin-bottom: 2rem;
   font-size: 90%;
   flex: 1;
+  grid-area: main;
 }
 
 @media (min-width: 1435px) {

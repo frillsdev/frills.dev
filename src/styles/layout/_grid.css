@@ -28,7 +28,7 @@
   }
 
   .grid__2 {
-    grid-template-columns: 1fr minmax(20rem, 35rem) 1fr;
+    grid-template-columns: 12rem minmax(20rem, 35rem) 1fr;
     grid-auto-rows: auto;
     grid-template-areas: "sidebar main main"
   }

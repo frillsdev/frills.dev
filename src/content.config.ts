@@ -28,12 +28,26 @@ const bookmarks = defineCollection({
 		url: z.string().url(),
 		description: z.string(),
 		date: z.coerce.date(),
-		tags: z.array(z.string()).optional(), // 💡 this line
+		tags: z.array(z.string()).optional(),
 		rss: z.boolean().default(true),
 	}),
+});
+
+const links = defineCollection({
+	schema: z.object({
+		name: z.string(),
+		href: z.string().url(),
+		type: z.enum(["button", "link"]).default("link"),
+		src: z.string().optional(),
+		bg: z.string().optional(),
+		color: z.string().optional(),
+		size: z.string().optional(),
+		category: z.enum(["links", "friends", "creatives", "tools", "bookmarks"])
+	})
 });
 
 export const collections = {
 	blog,
 	bookmarks,
+	links
 };

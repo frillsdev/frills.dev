@@ -1,0 +1,77 @@
+@keyframes speak-bump {
+    0% {
+        content: '🔈';
+        transform: scale(0.9);
+    }
+
+    10% {
+        content: '🔉';
+        transform: scale(1);
+    }
+
+    20% {
+        content: '🔊';
+        transform: scale(1.25);
+    }
+
+    30% {
+        content: '🔉';
+        transform: scale(1);
+    }
+
+    45% {
+        content: '🔈';
+        transform: scale(0.9);
+    }
+
+    60% {
+        content: '🔉';
+        transform: scale(1.05);
+    }
+
+    70% {
+        content: '🔊';
+        transform: scale(1.2);
+    }
+
+    80% {
+        content: '🔉';
+        transform: scale(1);
+    }
+
+    100% {
+        content: '🔈';
+        transform: scale(0.9);
+    }
+}
+[data-speak] {
+    color: inherit;
+    border: 0;
+    background: none;
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+    transition: 0.3s ease all;
+    padding: 0 1px;
+    border-radius: 2px;
+    margin-right: 1.2rem;
+    position: relative;
+}
+
+[data-speak]::after {
+    content: '🔊';
+    transition: 0.3s ease all;
+    position: absolute;
+    right: -1.2rem;
+}
+
+[data-speak]:hover,
+[data-speak]:focus,
+[data-speak]:active {
+    background-color: var(--linkhover);
+    color: var(--bodybg);
+}
+
+[data-speak]:hover::after {
+    animation: speak-bump 1.6s ease-in-out infinite;
+}

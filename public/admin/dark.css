@@ -1,4 +1,4 @@
-@media (min-width: 1120px) {
+#preview-pane@media (min-width: 1120px) {
     .css-1f3mf5k-StyledModal {
         width: calc(940px);
     }
@@ -624,6 +624,7 @@ p[class*="WorkflowTopDescription"] {
 
 #preview-pane {
     background-color: var(--body-bg-color);
+    color: var(--primary-text-color);
     border-radius: 0;
 }
 

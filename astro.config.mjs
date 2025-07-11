@@ -1,16 +1,16 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 import { remarkReadingTime } from './plugins/remark-reading-time.mjs';
+import remarkGfm from 'remark-gfm';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://frills.dev',
   integrations: [mdx(), sitemap(), react()],
   markdown: {
-    remarkPlugins: [remarkReadingTime],
+    remarkPlugins: [remarkReadingTime, remarkGfm],
   },
 
   prefetch: {

@@ -3,7 +3,9 @@ title: Of Celtic Blood
 date: 2025-07-08 14:31:00
 updatedDate: ""
 draft: true
-tags: []
+tags:
+    - personal
+    - imposter syndrome
 rss: true
 ---
 I am British. English, Scottish and Welsh blood runs through my veins -- I've never had an ancestry test, but that is my direct lineage up to my parent's parents.
@@ -17,9 +19,10 @@ Originating on the Isle of Skye, my ancestors migrated south because of the war,
 
 My English side is far more straightforward. An English family had eight boys, one of which became a policeman and met my Granny Elsie. They stayed put in the quiet towns of south England, and spawned my dad and his brothers.
 
-You would think with these very solid [Brittonic](https://en.wikipedia.org/wiki/Brittonic_languages) and [Pictish](https://en.wikipedia.org/wiki/Pictish_language) foundations, that I would feel at home in each country of the United Kingdom. And in part, I do, some stronger than others. But in part, I don't. Being a mix of all doesn't give me a strong connection to any of them and I feel like an imposter.
-This is most apparent to me as I live in Wales, Cardiff to be specific, I'm surrounded by a cosmopolitan landscape of people but also a strong sense of national pride.[1]
-Wales is a very inviting place, from the rolling hills of the valleys to the people who will tell you about their mother's ailments even though you're a stranger at the bus stop. Any Welsh person would say you are Welsh by being here, by living in Wales, for 6 months or 10 years. You become part of the colourful tapestry [2].
+You would think with these very solid foundations, that I would feel at home in each country of the United Kingdom. And in part, I do, some stronger than others. But in part, I don't. Being a mix of all doesn't give me a strong connection to any of them and I feel like an imposter.
+This is most apparent to me as I live in Wales, Cardiff to be specific, I'm surrounded by a cosmopolitan landscape of people but also a strong sense of national pride.[^1]
+
+Wales is a very inviting place, from the rolling hills of the valleys to the people who will tell you about their mother's ailments even though you're a stranger at the bus stop. Any Welsh person would say you are Welsh by being here, by living in Wales, for 6 months or 10 years. You become part of the colourful tapestry [^2].
 
 But despite that, I still feel like an imposter. I feel the need to justify my quarter-Welsh blood. I don't know the language, I don't know the songs or the words to the anthem. This divide makes me feel othered, Welsh but not enough.
 I've been learning Welsh (or dysgu Cymraeg) but not to a point that I could converse. I know some words and recognise a lot.
@@ -32,5 +35,5 @@ The internal conflict isn't necessary. You are who you are. You carry your ances
 
 I am English, Welsh and Scottish. I am all of my ancestors, and so are you.
 
-[1] Being Welsh is very distinct from being English. Don't ever get the Welsh & English mixed up.
-[2] A great example of this is the Italian political refugees that settled in Wales - [BBC Blogs - Wales - The Italians in Wales](https://www.bbc.co.uk/webarchive/https%3A%2F%2Fwww.bbc.co.uk%2Fblogs%2Fwales%2Fentries%2Ffdcff8e1-66dc-34e2-b279-a6e7280958cc)
+[^1]: Being Welsh is very distinct from being English. Don't ever get the Welsh & English mixed up.
+[^2]: A great example of this is the Italian political refugees that settled in Wales - [BBC Blogs - Wales - The Italians in Wales](https://www.bbc.co.uk/webarchive/https%3A%2F%2Fwww.bbc.co.uk%2Fblogs%2Fwales%2Fentries%2Ffdcff8e1-66dc-34e2-b279-a6e7280958cc)

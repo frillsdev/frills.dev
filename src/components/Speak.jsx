@@ -1,3 +1,4 @@
+import "../styles/components/_speak.css";
 
 export default function Speak({speak}) {
 
@@ -8,5 +9,5 @@ let buttonSpeak = () => {
       window.speechSynthesis.speak(utterThis);
 }
 
-  return <>(<button data-speak="Frills" type="button" className="dotted" aria-label="Say 'Frills'" onClick={buttonSpeak}>{speak['speakPhonetics']}</button> 🔊)</>;
+  return <>(<button data-speak="Frills" type="button" className="button" aria-label="Say 'Frills'" onClick={buttonSpeak}>{speak['speakPhonetics']}</button>)</>;
 }

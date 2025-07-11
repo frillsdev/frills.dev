@@ -11,12 +11,13 @@
 @import url('./base/_page.css');
 @import url('./base/_page__empty.css');
 @import url('./base/_typography.css');
+@import url('./base/_link.css');
 @import url('./base/_backgrounds.css');
 @import url('./layout/_grid.css');
-/* 
-@import url('./layout/_dashboard.css');
 
-@import url('./components/_articles.css');
+@import url('./components/_footnotes.css');
+
+/* @import url('./components/_articles.css');
 @import url('./components/_details.css');
 @import url('./components/_button.css');
 @import url('./components/_links.css');

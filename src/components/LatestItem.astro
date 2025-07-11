@@ -12,7 +12,7 @@ const latest = sortedItems[0];
   latest && (
     <article class="pb-1 h-sm">
       <h3>{title}</h3>
-      <a href={`${basePath}/${latest.id.replace(/\.mdx?$/, "")}`}>{latest.data.title}</a>
+      <a href={`${basePath}/${latest.id.replace(/\.mdx?$/, "")}`} class="inherit-color">{latest.data.title}</a>
       {latest.data.description && <p class="description">{latest.data.description}</p>}
     </article>
   )
