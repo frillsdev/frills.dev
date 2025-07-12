@@ -10,11 +10,11 @@ tags:
   - imposter syndromeo
 rss: true
 ---
-I am British. English, Scottish and Welsh blood runs through my veins — I’ve never taken an ancestry test, but that’s my lineage, traced directly to my grandparents. roughly, it breaks down like this:
+I am British. English, Scottish and Welsh blood runs through my veins — I’ve never taken an ancestry test, but that’s my lineage, traced directly to my grandparents. rough breakdown is:
 
-    50% English
-    25% Welsh
-    25% Scottish
+- 50% English
+- 25% Welsh
+- 25% Scottish
 
 On my Scottish side, we belong to Clan MacLeod — we have a tartan, a motto (“hold fast”), and roots in the Isle of Skye. My ancestors moved south during wartime, or so I am told. My Scottish granny met my welsh grandad at university near London. He was the first in his family to get into higher education and leave the hills of Wales.
 
