@@ -1,6 +1,6 @@
 ---
 name: Dizzy
 href: https://doctordizzy.space/
-src: dizzy.png
+src: buttons/dizzy.png
 type: button
 ---

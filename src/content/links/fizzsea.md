@@ -1,6 +1,6 @@
 ---
 name: Fizzsea
 href: https://fizzsea.neocities.org/
-src: fizzsea.png
+src: buttons/fizzsea.png
 type: button
 ---

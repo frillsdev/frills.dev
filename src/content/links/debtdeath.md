@@ -1,6 +1,6 @@
 ---
 name: debtdeath
 href: https://debtdeath.neocities.org/
-src: debtdeath.png
+src: buttons/debtdeath.png
 type: button
 ---

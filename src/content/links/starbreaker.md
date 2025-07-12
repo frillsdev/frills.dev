@@ -1,6 +1,6 @@
 ---
 name: Starbreaker
 href: https://starbreaker.org/
-src: starbreaker.png
+src: buttons/starbreaker.png
 type: button
 ---

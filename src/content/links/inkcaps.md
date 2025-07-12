@@ -1,6 +1,6 @@
 ---
 name: Inkcaps
 href: https://inkcaps.neocities.org/
-src: inkcaps.png
+src: buttons/inkcaps.png
 type: button
 ---

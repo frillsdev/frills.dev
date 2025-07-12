@@ -1,6 +1,6 @@
 ---
 name: Flamed Fury
 href: https://flamedfury.com
-src: flamedfury.webp
+src: buttons/flamedfury.webp
 type: button
 ---

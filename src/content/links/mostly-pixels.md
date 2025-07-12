@@ -1,6 +1,6 @@
 ---
 name: Mostly Pixels
 href: https://mostlypixels.com/
-src: mostlypixels.png
+src: buttons/mostlypixels.png
 type: button
 ---

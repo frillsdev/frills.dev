@@ -1,6 +1,6 @@
 ---
 name: Neonaut
 href: https://neonaut.neocities.org/
-src: neonaut.png
+src: buttons/neonaut.png
 type: button
 ---

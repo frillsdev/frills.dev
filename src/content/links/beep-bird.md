@@ -1,6 +1,6 @@
 ---
 name: Beep Bird
 href: https://www.beepbird.net
-src: beepbird.webp
+src: buttons/beepbird.webp
 type: button
 ---

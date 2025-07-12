@@ -1,6 +1,6 @@
 ---
 name: Nonkiru
 href: https://nonkiru.art
-src: nonkiru.png
+src: buttons/nonkiru.png
 type: button
 ---

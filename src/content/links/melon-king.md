@@ -1,6 +1,6 @@
 ---
 name: Melon King
 href: https://melonking.net/
-src: melonking.png
+src: buttons/melonking.png
 type: button
 ---

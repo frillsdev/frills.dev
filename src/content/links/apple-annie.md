@@ -1,6 +1,6 @@
 ---
 name: Apple Annie
 href: https://weblog.anniegreens.lol/
-src: appleannie.webp
+src: buttons/appleannie.webp
 type: button
 ---

@@ -1,6 +1,6 @@
 ---
 name: Leviathren
 href: https://leviathren.neocities.org
-src: leviathren.png
+src: buttons/leviathren.png
 type: button
 ---

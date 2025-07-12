@@ -1,6 +1,6 @@
 ---
 name: Soya Toast
 href: https://soyatoast.neocities.org/
-src: soyatoast.png
+src: buttons/soyatoast.png
 type: button
 ---

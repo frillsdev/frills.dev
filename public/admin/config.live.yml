@@ -1,0 +1,65 @@
+backend:
+  name: github
+  repo: frillsdev/frills.dev
+  branch: main
+  auth_scope: repo
+  site_domain: https://frills-dev.pages.dev
+  base_url: https://frills-dev.pages.dev
+  auth_endpoint: /api/auth
+  commit_messages:
+    create: 📝 Add {{collection}} - {{slug}}
+    update: 📝 Update {{collection}} - {{slug}}
+    delete: 🔥 Delete {{collection}} - {{slug}}
+    uploadMedia: 🖼️ Upload {{path}}
+    deleteMedia: 🔥 Delete “{{path}}”
+    openAuthoring: "{{message}}"
+
+logo_url: /images/logo-cms.gif
+
+media_folder: "public/images/uploads"
+public_folder: "/public/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    slug: "{{slug}}"
+    format: "frontmatter"
+    extension: "md"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Publication Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss" }
+      - { label: "Updated Date", name: "updatedDate", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", required: false }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true, required: false }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "Include in RSS", name: "rss", widget: "boolean", default: true }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "bookmarks"
+    label: "Bookmarks"
+    folder: "src/content/bookmarks"
+    slug: "{{slug}}"
+    format: "frontmatter"
+    extension: "md"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Publication Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", default: "" }
+      - { label: "Include in RSS", name: "rss", widget: "boolean", default: true }
+  - name: "links"
+    label: "Links"
+    folder: "src/content/links"
+    slug: "{{slug}}"
+    format: "frontmatter"
+    extension: "md"
+    create: true
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "URL", name: "href", widget: "string" }
+      - { label: "Type", name: "type", widget: "select", options: ["button", "link"] }
+      - { label: "Button", name: "src", widget: "image", required: false, media_folder: 'buttons' }
+      - { label: "Background", name: "bg", widget: "string", required: false }
+      - { label: "Text colour", name: "color", widget: "string", required: false }

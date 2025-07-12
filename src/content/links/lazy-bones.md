@@ -1,6 +1,6 @@
 ---
 name: Lazy Bones
 href: https://lazybones.neocities.org/
-src: lazybones.png
+src: buttons/lazybones.png
 type: button
 ---

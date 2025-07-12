@@ -1,7 +1,7 @@
 ---
 name: Whiona
 href: https://whiona.me/
-src: whiona.png
+src: buttons/whiona.png
 type: button
 category: links
 ---

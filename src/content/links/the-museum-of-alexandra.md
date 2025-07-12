@@ -1,6 +1,6 @@
 ---
 name: The Museum of Alexandra
 href: https://xandra.cc/
-src: xandra.png
+src: buttons/xandra.png
 type: button
 ---

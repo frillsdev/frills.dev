@@ -1,6 +1,6 @@
 ---
 name: Wavebeem
 href: https://www.wavebeem.com/
-src: wavebeem.webp
+src: buttons/wavebeem.webp
 type: button
 ---

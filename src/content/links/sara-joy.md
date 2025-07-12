@@ -1,6 +1,6 @@
 ---
 name: Sara Joy
 href: https://sarajoy.dev/
-src: sarajoy.png
+src: buttons/sarajoy.png
 type: button
 ---

@@ -1,6 +1,6 @@
 ---
 name: Robb Knight
 href: https://rknight.me/
-src: robbknight.png
+src: buttons/robbknight.png
 type: button
 ---

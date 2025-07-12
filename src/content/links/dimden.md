@@ -1,6 +1,6 @@
 ---
 name: Dimden
 href: https://dimden.dev/
-src: dimden.png
+src: buttons/dimden.png
 type: button
 ---

@@ -1,6 +1,6 @@
 ---
 name: Sneek Realm
 href: https://sneekrealm.neocities.org/
-src: sneekrealm.png
+src: buttons/sneekrealm.png
 type: button
 ---

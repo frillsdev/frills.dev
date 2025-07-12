@@ -1,6 +1,6 @@
 ---
 name: Tearoom.earth
 href: https://tearoom.earth/
-src: tearoom.earth.png
+src: buttons/tearoom.earth.png
 type: button
 ---

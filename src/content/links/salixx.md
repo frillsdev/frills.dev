@@ -1,6 +1,6 @@
 ---
 name: Salixx
 href: https://salixx.neocities.org/
-src: salixx.png
+src: buttons/salixx.png
 type: button
 ---

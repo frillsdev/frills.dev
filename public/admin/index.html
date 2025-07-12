@@ -6,7 +6,58 @@
     <title>FrillsCMS</title>
   </head>
   <body>
-    <link rel="stylesheet" href="/admin/dark.css">
+    <link rel="stylesheet" href="/admin/dark.css" />
     <script src="https://unpkg.com/decap-cms@3.1.0-beta.5/dist/decap-cms.js"></script>
+    <script>
+      const LinkPreview = createClass({
+        render: function () {
+          const entry = this.props.entry;
+          const name = entry.getIn(["data", "name"]);
+          const href = entry.getIn(["data", "href"]);
+          const type = entry.getIn(["data", "type"]);
+          const src = entry.getIn(["data", "src"]);
+          const bg = entry.getIn(["data", "bg"]);
+          const color = entry.getIn(["data", "color"]);
+
+          if (type === "button") {
+            return h("ul", { className: "links" }, [
+              h("li", { className: "links__button" }, [
+                h("a", { href, target: "_blank", rel: "noopener noreferrer" }, [
+                  h("img", {
+                    src: `../images/uploads/${src}`,
+                    alt: name,
+                    className: "enbiggen",
+                    loading: "lazy",
+                  }),
+                ]),
+              ]),
+            ]);
+          }
+
+          return h("ul", { className: "links" }, [
+            h("li", { className: "links__link" }, [
+              h(
+                "a",
+                {
+                  href,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  style: {
+                    backgroundColor: bg,
+                    color: color,
+                  },
+                },
+                name
+              ),
+            ]),
+          ]);
+        },
+      });
+
+      CMS.registerPreviewTemplate("links", LinkPreview);
+
+      CMS.registerPreviewStyle("../../src/styles/main.css");
+      CMS.registerPreviewStyle("/admin/preview.css");
+    </script>
   </body>
 </html>

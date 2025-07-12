@@ -1,6 +1,6 @@
 ---
 name: Doqmeat
 href: https://doqmeat.neocities.org
-src: doqmeat.png
+src: buttons/doqmeat.png
 type: button
 ---

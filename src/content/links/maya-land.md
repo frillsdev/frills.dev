@@ -1,6 +1,6 @@
 ---
 name: Maya Land
 href: https://maya.land/
-src: maya_land.png
+src: buttons/maya_land.png
 type: button
 ---

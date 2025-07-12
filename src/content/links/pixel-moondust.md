@@ -1,6 +1,6 @@
 ---
 name: Pixel Moondust
 href: https://pixelmoondust.neocities.org/
-src: pixelmoondust.png
+src: buttons/pixelmoondust.png
 type: button
 ---

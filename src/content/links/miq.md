@@ -1,6 +1,6 @@
 ---
 name: Miq
 href: https://miq.neocities.org/
-src: miq.png
+src: buttons/miq.png
 type: button
 ---

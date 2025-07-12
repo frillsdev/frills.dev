@@ -1,6 +1,6 @@
 ---
 name: Lost Letters
 href: https://lostletters.neocities.org/
-src: lostletters.png
+src: buttons/lostletters.png
 type: button
 ---

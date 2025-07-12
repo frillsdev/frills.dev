@@ -1,6 +1,6 @@
 ---
 name: Foreverliketh.is
 href: https://foreverliketh.is/
-src: foreverliketh.is.png
+src: buttons/foreverliketh.is.png
 type: button
 ---

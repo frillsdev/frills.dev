@@ -1,6 +1,6 @@
 ---
 name: Hillhouse
 href: https://hillhouse.neocities.org/
-src: hillhouse.png
+src: buttons/hillhouse.png
 type: button
 ---

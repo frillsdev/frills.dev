@@ -1,6 +1,6 @@
 ---
 name: Maria
 href: https://maria.town/
-src: maria_town.png
+src: buttons/maria_town.png
 type: button
 ---

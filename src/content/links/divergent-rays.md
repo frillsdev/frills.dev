@@ -1,6 +1,6 @@
 ---
 name: Divergent Rays
 href: https://divergentrays.com/
-src: divergentrays.png
+src: buttons/divergentrays.png
 type: button
 ---

@@ -1,6 +1,6 @@
 ---
 name: Met Moxie
 href: https://moxiemoshpit.com
-src: metmoxie.png
+src: buttons/metmoxie.png
 type: button
 ---
