@@ -1,7 +1,11 @@
 ---
 import GardenLayout from "../../layouts/GardenLayout.astro";
+import GardenFooter from "./footer.astro";
 ---
 
 <GardenLayout collections={["blog", "bookmarks"]} title="Garden">
   <slot />
+  <Fragment slot="footer">
+    <GardenFooter />
+  </Fragment>
 </GardenLayout>
