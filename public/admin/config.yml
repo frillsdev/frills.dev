@@ -63,5 +63,3 @@ collections:
       - { label: "Button", name: "src", widget: "image", required: false, hidden: '{{fields.type !== "button"}}' }
       - { label: "Background", name: "bg", widget: "string", required: false, hidden: '{{fields.type !== "link"}}' }
       - { label: "Text colour", name: "color", widget: "string", required: false, hidden: '{{fields.type !== "link"}}' }
-
-	})
