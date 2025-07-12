@@ -49,7 +49,7 @@ collections:
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Publication Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", default: "" }
       - { label: "Include in RSS", name: "rss", widget: "boolean", default: true }
-  - links: "links"
+  - name: "links"
     label: "Links"
     folder: "src/content/links"
     slug: "{{slug}}"
