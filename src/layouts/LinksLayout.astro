@@ -1,127 +1,135 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import { getCollection } from "astro:content";
-const { title = "Links", categoryFilter } = Astro.props;
+const { title = "Links" } = Astro.props;
 
-const allLinks = await getCollection("links");
-
-// optionally filter by category
-const links = categoryFilter ? allLinks.filter((entry) => entry.data.category === categoryFilter) : allLinks;
+const links = await getCollection("links");
 ---
 
 <BaseLayout>
-    <h1>{title}</h1>
+  <h1>{title}</h1>
 
-    <ul class="links">
-      {
-        links.map((entry) => {
-          const { name, href, type, src, bg, color, size, category } = entry.data;
+  <ul class="links">
+    {
+      links.map((entry) => {
+        const { name, href, type, src, bg, color } = entry.data;
+        if (type === "button") {
           return (
-              <li class={`links__${type}`}>
+            <li class={`links__${type}`}>
               <a href={href} rel="noopener noreferrer">
                 {src && <img src={`/images/buttons/${src}`} alt={name} loading="lazy" class="links__image" />}
               </a>
             </li>
           );
-        })
-      }
-    </ul>
-
-    <style>
-      /* Links */
-      .links:not(li) {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 1rem;
-        padding: 0;
-        margin: 0 0 2rem;
-        width: 100%;
-      }
-
-      @media (min-width: 576px) {
-        .links:not(li) {
-          grid-template-columns: repeat(auto-fit, minmax(176px, 1fr));
         }
-      }
+        if (type === "link") {
+          return (
+            <li class={`links__${type}`}>
+              <a href={href} rel="noopener noreferrer" style={`background: ${bg}; color: ${color}`}>
+                {name}
+              </a>
+            </li>
+          );
+        }
+      })
+    }
+  </ul>
 
-      .links--highcontrast .links__link a {
-        background: var(--bg) !important;
-        color: var(--text) !important;
-        box-shadow: inset 0 0 0 1px var(--text) !important;
-        text-decoration: underline !important;
-        text-underline-offset: 4px;
-      }
+  <style>
+    /* Links */
+    .links:not(li) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      padding: 0;
+      margin: 0 0 2rem;
+      width: 100%;
+    }
 
-      .links__button,
-      .links__link {
-        aspect-ratio: 88 / 31;
-        width: 100%;
-        height: auto;
-        display: block;
+    @media (min-width: 576px) {
+      .links:not(li) {
+        grid-template-columns: repeat(auto-fit, minmax(176px, 1fr));
       }
+    }
 
-      .links__button a,
-      .links__link a {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        transition: transform 0.4s ease;
-        will-change: transform;
-        backface-visibility: hidden;
-      }
+    .links--highcontrast .links__link a {
+      background: var(--bg) !important;
+      color: var(--text) !important;
+      box-shadow: inset 0 0 0 1px var(--text) !important;
+      text-decoration: underline !important;
+      text-underline-offset: 4px;
+    }
 
-      .links__button img {
-        display: block;
-        width: 100%;
-        height: auto;
-        image-rendering: pixelated;
-      }
+    .links__button,
+    .links__link {
+      aspect-ratio: 88 / 31;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-      .links__link a {
-        width: 100%;
-        height: 100%;
-        background: #fff;
-        overflow: hidden;
-        word-break: normal;
-        padding: 0 calc(0.4rem + 2px);
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 1rem;
-        line-height: 1.1;
-        position: relative;
-        backface-visibility: hidden;
-      }
+    .links__button a,
+    .links__link a {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.4s ease;
+      will-change: transform;
+      backface-visibility: hidden;
+    }
 
-      .links__link a::before {
-        content: "";
-        border-top: 0.4rem solid white;
-        border-left: 0.4rem solid white;
-        border-bottom: 0.4rem solid black;
-        border-right: 0.4rem solid black;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        mix-blend-mode: soft-light;
-      }
+    .links__button img {
+      display: block;
+      width: 100%;
+      height: auto;
+      image-rendering: pixelated;
+    }
 
-      .links__link a:active,
-      .links__link a:focus,
-      .links__link a:hover,
-      .links__button a:active,
-      .links__button a:focus,
-      .links__button a:hover {
-        transform: translate(2px, 2px) translateZ(0);
-        text-decoration: none;
-        z-index: 1;
-      }
+    .links__link a {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      overflow: hidden;
+      word-break: normal;
+      padding: 0 calc(0.4rem + 2px);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.1;
+      position: relative;
+      backface-visibility: hidden;
+    }
 
-      .enbiggen {
-        width: 176px;
-        height: auto;
-      }
-    </style>
+    .links__link a::before {
+      content: "";
+      border-top: 0.4rem solid white;
+      border-left: 0.4rem solid white;
+      border-bottom: 0.4rem solid black;
+      border-right: 0.4rem solid black;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      mix-blend-mode: soft-light;
+    }
+
+    .links__link a:active,
+    .links__link a:focus,
+    .links__link a:hover,
+    .links__button a:active,
+    .links__button a:focus,
+    .links__button a:hover {
+      transform: translate(2px, 2px) translateZ(0);
+      text-decoration: none;
+      z-index: 1;
+    }
+
+    .enbiggen {
+      width: 176px;
+      height: auto;
+    }
+  </style>
 </BaseLayout>
