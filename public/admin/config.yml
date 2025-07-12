@@ -60,6 +60,6 @@ collections:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "URL", name: "href", widget: "string" }
       - { label: "Type", name: "type", widget: "select", options: ["button", "link"] }
-      - { label: "Button", name: "src", widget: "image", required: false, hidden: '{{fields.type !== "button"}}' }
-      - { label: "Background", name: "bg", widget: "string", required: false, hidden: '{{fields.type !== "link"}}' }
-      - { label: "Text colour", name: "color", widget: "string", required: false, hidden: '{{fields.type !== "link"}}' }
+      - { label: "Button", name: "src", widget: "image", required: false, media_folder: 'buttons' }
+      - { label: "Background", name: "bg", widget: "string", required: false }
+      - { label: "Text colour", name: "color", widget: "string", required: false }
