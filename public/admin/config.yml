@@ -49,3 +49,19 @@ collections:
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Publication Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", default: "" }
       - { label: "Include in RSS", name: "rss", widget: "boolean", default: true }
+  - links: "links"
+    label: "Links"
+    folder: "src/content/links"
+    slug: "{{slug}}"
+    format: "frontmatter"
+    extension: "md"
+    create: true
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "URL", name: "href", widget: "string" }
+      - { label: "Type", name: "type", widget: "select", options: ["button", "link"] }
+      - { label: "Button", name: "src", widget: "image", required: false, hidden: '{{fields.type !== "button"}}' }
+      - { label: "Background", name: "bg", widget: "string", required: false, hidden: '{{fields.type !== "link"}}' }
+      - { label: "Text colour", name: "color", widget: "string", required: false, hidden: '{{fields.type !== "link"}}' }
+
+	})

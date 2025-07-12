@@ -41,7 +41,6 @@ const links = defineCollection({
 		src: z.string().optional(),
 		bg: z.string().optional(),
 		color: z.string().optional(),
-		size: z.string().optional(),
 	})
 });
 
