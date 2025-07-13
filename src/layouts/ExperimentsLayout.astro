@@ -1,0 +1,11 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { getCollection } from "astro:content";
+const { title = "Links" } = Astro.props;
+
+const links = await getCollection("experiments");
+---
+
+<BaseLayout>
+  <slot/>
+</BaseLayout>

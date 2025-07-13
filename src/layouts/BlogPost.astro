@@ -51,8 +51,10 @@ const wordCount = rawContent ? rawContent.trim().split(/\s+/).length : null;
   </div>
 
   <style>
-    article {
-      grid-area: main;
+    @media (min-width: 48rem) {
+      article {
+        grid-area: main;
+      }
     }
 
     .metainfo {

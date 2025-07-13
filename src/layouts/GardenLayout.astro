@@ -82,6 +82,8 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
                           "🔗"
                         : post.collection === "blog" ?
                           "📝"
+                        : post.collection === "experiments" ?
+                          "🧪"
                         : ""}
                       </span>
                       <span class="badge-wrap">
@@ -90,6 +92,8 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
                             "Bookmarked "
                           : post.collection === "blog" ?
                             "Published "
+                          : post.collection === "experiments" ?
+                            "Created "
                           : ""}
                           <TimeAgo dateTime={post.data.date} />
                         </span>
@@ -149,6 +153,62 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
       background: var(--bodybg);
     }
 
+    .collection__experiments {
+      border-color: var(--bodybg);
+      background-color: var(--bg);
+      background-image: linear-gradient(var(--bodybg) 1px, transparent 1px), linear-gradient(to right, var(--bodybg) 1px, var(--bg) 1px);
+      background-size: 2rem 2rem;
+      background-position: center top -2px;
+      position: relative;
+      border-radius: 0;
+    }
+
+    .collection__experiments::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      --thickness: 3px; /* thickness of the border */
+      --color: var(--bodybg); /* color of the border */
+      --width: 1.5rem; /* width of border */
+      background: var(--color);
+      --_g: #0000 90deg, #000 0;
+      --_p: var(--width) var(--width) no-repeat;
+      --mask: conic-gradient(from 90deg at top var(--thickness) left var(--thickness), var(--_g)) 0 0 / var(--_p), conic-gradient(from 180deg at top var(--thickness) right var(--thickness), var(--_g)) 100% 0 / var(--_p), conic-gradient(from 0deg at bottom var(--thickness) left var(--thickness), var(--_g)) 0 100% / var(--_p), conic-gradient(from -90deg at bottom var(--thickness) right var(--thickness), var(--_g)) 100% 100% / var(--_p);
+      -webkit-mask: var(--mask);
+      mask: var(--mask);
+      transition: 0.3s ease all;
+    }
+
+    .collection__experiments:hover,
+    .collection__experiments:focus-within {
+      border-color: var(--bodybg);
+    }
+
+    .collection__experiments:hover::before,
+    .collection__experiments:focus-within::before {
+      --color: var(--linkhover); /* color of the border */
+    }
+
+    .collection__experiments .content {
+      padding: 1.5rem 1rem;
+    }
+
+    .collection__experiments .title {
+      font-size: 1.8rem;
+      line-height: 1.1;
+      color: var(--bg);
+      text-shadow:
+        0.5px 0.5px 0 var(--title),
+        -0.5px 0.5px 0 var(--title),
+        -0.5px -0.5px 0 var(--title),
+        0.5px -0.5px 0 var(--title);
+    }
+
+    .collection__experiments .badge {
+      border: 1px solid var(--bodybg);
+      background: var(--bg);
+    }
+
     .content {
       display: flex;
       flex-direction: column;
@@ -198,6 +258,7 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
     .title {
       display: block;
       font-size: 1.2rem;
+      line-height: 1.2;
       font-weight: 700;
       margin-bottom: 0.5rem;
       color: var(--title);

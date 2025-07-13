@@ -25,6 +25,10 @@ body::before {
   z-index: 99999999;
 }
 
+:target {
+  scroll-margin-top: 1rem;
+}
+
 *:focus-visible {
   outline: 3px solid orangered;
   outline-offset: 5px;

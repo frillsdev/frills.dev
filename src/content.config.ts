@@ -2,10 +2,10 @@ import { glob } from 'astro/loaders';
 import { defineCollection, z } from 'astro:content';
 
 const blog = defineCollection({
-	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
 	schema: z.object({
 		title: z.string(),
 		description: z.string().optional(),
+		draft: z.boolean().default(true),
 		date: z.coerce.date(),
 		updatedDate: z
 			.union([z.string(), z.date()])
@@ -18,11 +18,12 @@ const blog = defineCollection({
 		heroImage: z.string().optional(),
 		heroImageWeighted: z.string().optional(),
 		tags: z.array(z.string()).optional(),
+		rss: z.boolean().default(true),
+		kudos: z.string().optional(),
 	}),
 });
 
 const bookmarks = defineCollection({
-	loader: glob({ base: './src/content/bookmarks', pattern: '**/*.md' }),
 	schema: z.object({
 		title: z.string(),
 		url: z.string().url(),
@@ -44,8 +45,19 @@ const links = defineCollection({
 	})
 });
 
+const experiments = defineCollection({
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		image: z.string().optional(),
+		date: z.coerce.date(),
+		rss: z.boolean().default(true),
+	})
+});
+
 export const collections = {
 	blog,
 	bookmarks,
-	links
+	links,
+	experiments
 };

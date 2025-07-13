@@ -19,7 +19,8 @@
   font-size: 1.25rem;
 }
 
-.data-footnote-backref {
+.data-footnote-backref,
+[data-footnote-ref] {
   background-color: var(--bodybg);
   padding: 0.25rem;
   border-radius: 0.25rem;
@@ -39,7 +40,7 @@
   content: '↩';
   font-size: 0.75rem;
   transition: 0.3s ease all;
-  }
+}
 
 .data-footnote-backref:hover,
 .data-footnote-backref:focus,
@@ -53,4 +54,9 @@
 .data-footnote-backref:focus::before,
 .data-footnote-backref:active::before {
   transform: rotate(90deg);
+}
+
+[data-footnote-ref] {
+  font-size: 0.8rem;
+  width: auto;
 }
