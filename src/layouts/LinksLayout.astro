@@ -17,7 +17,7 @@ const links = await getCollection("links");
           return (
             <li class={`links__${type}`}>
               <a href={href} rel="noopener noreferrer">
-                {src && <img src={`/images/${src}`} alt={name} loading="lazy" class="links__image" />}
+                {src && <img src={`/images/uploads/${src}`} alt={name} loading="lazy" class="links__image" />}
               </a>
             </li>
           );
