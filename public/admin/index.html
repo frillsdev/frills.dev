@@ -7,6 +7,7 @@
   </head>
   <body>
     <link rel="stylesheet" href="/admin/dark.css" />
+    <link rel="icon" type="image/svg+xml" href="/admin/favicon.png" />
     <script src="https://unpkg.com/decap-cms@3.1.0-beta.5/dist/decap-cms.js"></script>
     <script>
       const LinkPreview = createClass({
@@ -56,7 +57,7 @@
 
       CMS.registerPreviewTemplate("links", LinkPreview);
 
-      CMS.registerPreviewStyle("../../src/styles/main.css");
+      CMS.registerPreviewStyle("/admin/frills.min.css");
       CMS.registerPreviewStyle("/admin/preview.css");
     </script>
   </body>

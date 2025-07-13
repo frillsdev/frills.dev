@@ -1,3 +1,7 @@
+# Run npx decap-server
+
+local_backend: true
+
 backend:
   name: github
   repo: frillsdev/frills.dev
