@@ -995,7 +995,6 @@ body {
     color: var(--text);
     background-color: var(--bg);
     position: relative;
-    padding-top: .25rem
 }
 
 body:before {
