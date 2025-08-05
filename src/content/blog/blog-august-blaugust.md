@@ -7,6 +7,9 @@ draft: false
 tags:
   - blaugust
   - "2025"
+  - game
+  - minecraft
+  - personal
 rss: true
 ---
 ![My Minecraft avatar wears a gold helmet, and diamond pants and boots, standing outside of my viking inspired starter home, made of dark oak, spruce and oak. The floor is covered in snow, and smoke rises from the chimney. Snow falls gently from the grey sky](/public/images/uploads/mc-viking-house-1-1-.png)
