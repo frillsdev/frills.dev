@@ -31,3 +31,5 @@ There is no teleporting, no /spawn, no /home. At first, this was tough -- I was 
 There is a world map, so you won't ever get completely lost either.
 
 The amount of care and attention put into this server is evident from the rich world building and genuinely top notch (iykyk) community, the only negative feedback I have is *get the public library finished rockit!!*
+
+<a href="https://minecraftservers.org/server/605564" target="_blank"><img src="https://status.minecraftservers.org/classic/605564.png" width="100%" height="auto" alt="TogetherCraft Minecraft server" width="540" height="90" /></a>
