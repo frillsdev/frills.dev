@@ -1,6 +1,7 @@
 ---
-title: Blog + August = Blaugust
-description: I try to catch up and actually commit to complete the annual Blaugust challenge
+title: Crafting Together
+description: I talk about my current hyperfocus and try to commit to completing
+  the annual Blaugust challenge
 date: 2025-08-05 13:40:48
 updatedDate: ""
 draft: false
